@@ -27,24 +27,25 @@
 	<div class="centrar">
 		<form method="POST" action="../procesos/crearUsuario.php">
             <h3 class="titulosHeaderBlack">Registrar un Nuevo Usuario</h3>
+            <br>
             <div class="centrar marginAbajo">
                 <label for="inputNombre" class="textoCuerpoBlack spanEspaciado">Nombre</label>
-                <input type="text" id="inputNombre" class="txtbox" placeholder="Juan" name="nombre">
+                <input type="text" id="inputNombre" class="txtbox" placeholder="Juan" name="nombre" size="25">
             </div>
-            
+            <br>
             <div class="centrar marginAbajo">
                 <br><label for="inputApellido" class="textoCuerpoBlack spanEspaciado">Apellido</label>
-                <input type="text" id="inputApellido" class="txtbox" placeholder="Jonzales" name="apellido">
+                <input type="text" id="inputApellido" class="txtbox" placeholder="Jonzales" name="apellido" size="25">
             </div>
-
+            <br>
             <div class="centrar marginAbajo">
                 <br><label for="inputEmail" class="textoCuerpoBlack">Correo Electronico</label>
-                <input type="email" id="inputEmail" class="txtbox" placeholder="Ejem: correo@hotmail.com" name="email">
+                <input type="email" id="inputEmail" class="txtbox" placeholder="Ejem: correo@hotmail.com" name="email" size=25>
             </div>
-
+            <br>
             <div class="centrar marginAbajo"></div>
                 <label for="inputPassword" class="textoCuerpoBlack spanEspaciado">Contrasena</label>
-                <input type="password" id="inputPassword" class="txtbox" name="password">
+                <input type="password" id="inputPassword" class="txtbox" name="password" size="25">
             </div>
 
             <br><br>

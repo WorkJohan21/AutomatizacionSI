@@ -29,61 +29,18 @@
 	<br><br>
 	<div clas="centrar">
 		<form class="form-signin" method="POST" action="../paginas/menuPrincipal.html">
-            <h3 class="titulosHeader">Inventario de Equipo</h3>
+            <h3 class="titulosHeaderBlack">Inventario de Equipo</h3>
             <br>
-            <div>
-                <label style="margin-left: 30%" >Equipo</label>
-
-                <label style="margin-left: 40%"  >Cantidad disponible</label>
-            </div>
-            
-            <div>
-                <label style="margin-left: 30%" >Pantalla de 86"</label>
-    
-                <label style="margin-left: 40%" >1</label>
-            </div>
-
-            <div>
-                <label style="margin-left: 30%" >Rotafolia con tablero blanco</label>
-    
-                <label style="margin-left: 33.8%" >3</label>
-            </div>
-
-            <div>
-                <label style="margin-left: 30%" >Emgrapadora Semi Industrial e Industrial</label>
-    
-                <label style="margin-left: 28%" >6</label>
-            </div>
-
-            <div>
-                <label style="margin-left: 30%" >Estanderte UTP</label>
-    
-                <label style="margin-left: 40%" >0</label>
-            </div>
-
-            <div>
-                <label style="margin-left: 30%" >Karaoke</label>
-    
-                <label style="margin-left: 43.4%" >1</label>
-            </div>
-
-            <div>
-                <label style="margin-left: 30%" >Astas y Bases</label>
-    
-                <label style="margin-left: 41%" >0</label>
-            </div>
-
-            <div>
-                <label style="margin-left: 30%" >Radiograbadora con USB y CD</label>
-    
-                <label style="margin-left: 32.9%" >0</label>
-            </div>
-
-            <div>
-                <label style="margin-left: 30%" >Flores Artificiales para Centro de Mesa</label>
-    
-                <label style="margin-left: 29.1%" >5</label>
-            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Equipo</th>
+                        <th>Cant. Disponible</th>
+                        <th>Cant. Total</th>
+                    </tr>
+                </thead>
+                
+            </table>
             <br>
             <div class="mt-4">
                 <a href="menuPrincipal.html"><button class="redondo" type="submit"><label class="textoCuerpo">Regresar</label></button></a>

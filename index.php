@@ -27,7 +27,7 @@
 	</header>
 	<br><br>
 	<div class="centrar">
-		<form method="POST" action="paginas/menuPrincipal.html">
+		<form method="POST" action="procesos/procesarLogin.php">
             <h3 class="titulosHeaderBlack ">Acceder al Sistema</h3>
 
             <label for="inputEmail" class="textoCuerpoBlack ">Correo Electronico</label>

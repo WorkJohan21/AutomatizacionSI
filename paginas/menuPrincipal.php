@@ -1,3 +1,9 @@
+<?php
+    include("../secciones/verificar.php");
+    include("../secciones/consultaUser.php");
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,7 +54,7 @@
             </div>
 
             <div class="cajaopc">
-                <a href="Inventario.html"><button class="opciones"><img src="../imagenes/caja.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Inventario</h5></button></a>
+                <a href="Inventario.php"><button class="opciones"><img src="../imagenes/caja.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Inventario</h5></button></a>
             </div>
 
             <div class="cajaopc">

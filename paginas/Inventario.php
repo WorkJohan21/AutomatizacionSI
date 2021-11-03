@@ -1,4 +1,10 @@
-<!--Pantalla Inventario-->
+<?php
+    include("../procesos/verificar.php");
+    include("../procesos/consultaUser.php");
+
+    $sql=$conn->query("SELECT * FROM equipo");
+    //$datoEquipo=result->fetch(PDO::FETCH_OBJ);
+?>
 
 <!DOCTYPE html>
 <html>
@@ -31,7 +37,7 @@
 		<form class="form-signin" method="POST" action="../paginas/menuPrincipal.html">
             <h3 class="titulosHeaderBlack">Inventario de Equipo</h3>
             <br>
-            <table>
+            <table align="center">
                 <thead>
                     <tr>
                         <th>Equipo</th>
@@ -39,11 +45,19 @@
                         <th>Cant. Total</th>
                     </tr>
                 </thead>
-                
+                <tbody>
+                    <?php while ($elementosEquipo=$sql->fetch(PDO::FETCH_OBJ)) { ?>
+                        <tr>
+                            <td><?php echo $elementosEquipo->nombreEquipo ?></td>
+                            <td><?php echo $elementosEquipo->cantDispo; ?></td>
+                            <td><?php echo $elementosEquipo->cantTotal; ?></td>
+                        </tr>    
+                </tbody>
+                <?php } ?>
             </table>
             <br>
             <div class="mt-4">
-                <a href="menuPrincipal.html"><button class="redondo" type="submit"><label class="textoCuerpo">Regresar</label></button></a>
+                <a href="menuPrincipal.php"><button class="redondo" type="submit"><label class="textoCuerpo">Regresar</label></button></a>
             </div>
 		
 	</form>

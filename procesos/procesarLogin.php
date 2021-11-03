@@ -18,7 +18,7 @@
             echo "Tiene autorizacion para acceder";
             $_SESSION['sw']=true;
             $_SESSION['id']=$row["id"];
-            header("Location: ../paginas/menuPrincipal.html");
+            header("Location: ../paginas/menuPrincipal.php");
             exit;
         }
         else
@@ -28,7 +28,7 @@
                 alert( "<?php echo $a; ?>" );
                 </script>
             <?php
-            header("Location: ../index.html?msg=Datos incorrectos para ingresar, intente nuevamente");
+            header("Location: ../index.php?msg=Datos incorrectos para ingresar, intente nuevamente");
             exit;
         }
 

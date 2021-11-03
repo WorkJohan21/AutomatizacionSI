@@ -34,7 +34,7 @@
 	</header>
 	<br><br>
 	<div clas="centrar">
-		<form class="form-signin" method="POST" action="../paginas/menuPrincipal.html">
+		<form class="form-signin" method="POST" action="menuPrincipal.php">
             <h3 class="titulosHeaderBlack">Inventario de Equipo</h3>
             <br>
             <table align="center">

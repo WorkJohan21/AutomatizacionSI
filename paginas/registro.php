@@ -45,7 +45,7 @@
             <br>
             <div class="centrar marginAbajo"></div>
                 <label for="inputPassword" class="textoCuerpoBlack spanEspaciado">Contrasena</label>
-                <input type="password" id="inputPassword" class="txtbox" name="password" size="25">
+                <input type="password" id="inputPassword" class="txtbox" placehohlder="****" name="password" size="25">
             </div>
 
             <br><br>

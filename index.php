@@ -34,7 +34,7 @@
             <input type="email" id="inputEmail" class="txtbox" placeholder="Ejem: correo@hotmail.com" name="email">
 
             <br><br><label for="inputPassword" class="textoCuerpoBlack spanEspaciado">Contrasena</label>
-            <input type="password" id="inputPassword" class="txtbox" name="password">
+            <input type="password" id="inputPassword" class="txtbox" placeholder="****" name="password">
 
             <div class="checkbox mb-3">
                 <br><label>

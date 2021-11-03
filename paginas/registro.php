@@ -54,7 +54,7 @@
             </div>
             <div class="mt-4">
                 <div class="d-flex justify-content-center links">
-                    <label class="textoCuerpoBlack">Ya tienes una cuenta?</label><a href="../index.html" class="ml-2"><label class="textoCuerpoBlack"></label>Iniciar Sesion</label></a>
+                    <label class="textoCuerpoBlack">Ya tienes una cuenta?</label><a href="../index.php" class="ml-2"><label class="textoCuerpoBlack"></label>Iniciar Sesion</label></a>
                 </div>
 		    </div>
 	    </form>

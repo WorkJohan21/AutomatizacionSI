@@ -45,7 +45,7 @@
             </div>
 
             <div class="cajaopc">
-                <a href="formEquipo.html"><button class="opciones"><img src="../imagenes/formulario.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Formulario de Solicitud de Equipo</h5></button></a>
+                <a href="formEquipo.php"><button class="opciones"><img src="../imagenes/formulario.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Formulario de Solicitud de Equipo</h5></button></a>
             </div>
             
             <div class="cajaopc">

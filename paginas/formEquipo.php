@@ -79,7 +79,12 @@
             <label class="textoCuerpoWhite labelEspacio">Unidad que lo Organiza</label>
             
             <select name="unidadOrg" id="unidadOrg" class="txtbox">
-              <option value="3">Facultad de Sistemas</option> 
+              <option value="1">Facultad de Ciencias y Tecnología</option>
+              <option value="2">Facultad de Ingeniería Civil</option>
+              <option value="3">Facultad de Ingeniería Eléctrica</option>
+              <option value="4">Facultad de Ingeniería Industrial</option>
+              <option value="5">Facultad de Ingeniería Mecánica</option>
+              <option value="6">Facultad de Sistemas</option> 
               <!--el valor 3 es uno predeterminado en la base de datos-->
               
             </select>

@@ -114,7 +114,7 @@
             <input type="text" id="celular" class="txtbox" placeholder="" name="celular">
             <br><br>
 </div> 
-            <a href="menuPrincipal.php"><button class="redondo espacioBoton" type="button"><label class="textoCuerpo">Regresar</label></button></a>
+            <a href="menuPrincipal.php"><button class="redondo espacioBoton" type="button"><label class="textoCuerpo">REGRESAR</label></button></a>
             <button class="redondo" type="reset"><label class="textoCuerpo">BORRAR</label></button>
             <button class="redondo" type="button" id="okButton" onclick="myFunction()"><label class="textoCuerpo">ENVIAR</label></button>
 
@@ -218,7 +218,7 @@
 </div>
             <br><br>
 </div> 
-          <button class="redondo espacioBoton" type="button" onclick="myFunction3()"><label class="textoCuerpo">Regresar</label></button>
+          <button class="redondo espacioBoton" type="button" onclick="myFunction3()"><label class="textoCuerpo">REGRESAR</label></button>
           <button class="redondo" type="reset"><label class="textoCuerpo">BORRAR</label></button>
           <button class="redondo" type="button" id="okButton" onclick="myFunction2()"><label class="textoCuerpo">ENVIAR</label></button>
           
@@ -255,7 +255,7 @@
             <br><br>
 </div> 
             
-            <button class="redondo espacioBoton" type="button" onclick="myFunction()"><label class="textoCuerpo">Regresar</label></button>
+            <button class="redondo espacioBoton" type="button" onclick="myFunction()"><label class="textoCuerpo">REGRESAR</label></button>
 			      <button class="redondo" type="reset"><label class="textoCuerpo">BORRAR</label></button>
             <button class="redondo" type="submit"><label class="textoCuerpo">ENVIAR</label></button>
            

@@ -34,7 +34,7 @@
 	<header class="tope">
 		<img src="../imagenes/logo.png" class="logo">
 	    <h3 class="titulosHeader">Universidad Tecnológica de Panamá<br>Departamento de Protocolo, Ceremonial y Eventos<br><i>"Camino a la excelencia a través del mejoramiento continuo"</i></h3>
-        <div class="salir"><a href="../procesos/salir.php"><button class="butonLogout">Salir</button></a></div>
+        <div class="salir"><a href="../procesos/salir.php"><button class="butonLogout">SALIR</button></a></div>
     </header>
 	<br>
     <h3 class="titulosHeaderBlack">Formulario de Servicios Internos</h3>

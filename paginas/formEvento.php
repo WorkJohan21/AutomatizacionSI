@@ -79,19 +79,22 @@
 			<!--INICIO DEL DIVPRIMERO-->		
 				<div id="divPrimero">		
 					<div class="cajamarron">
-						Nombre completo de la actividad:<input class="txtbox" type="text" name="nombreActividad" size="20" maxlength="40" autofocus 
+						<label class="textoCuerpoWhite">Nombre completo de la actividad:</label>
+						<input class="txtbox" type="text" name="nombreActividad" size="20" maxlength="40" autofocus 
 						placeholder="" title="Escriba el nombre de la actividad"/>
 						<br><br>
-						Facultad o unidad que organiza:  <select name="facultad">
+						<label class="textoCuerpoWhite"> Facultad o unidad que organiza:</label>  <select name="facultad">
 						<?php while ($facultades=$sql->fetch(PDO::FETCH_OBJ)) { ?>
 								<option value="<?php $facultades->idFacultad ?>"><?php echo $facultades->nombreFacultad ?></option>
 							<?php } ?>	
 						</select>
 						<br><br>
-						Fecha del evento:<input class="txtbox" type="date" name="fecha" size="20" maxlength="20" autofocus
+
+						<label class="textoCuerpoWhite">Fecha del evento:</label>
+						<input class="txtbox" type="date" name="fecha" size="20" maxlength="20" autofocus
 						placeholder="" title="Facultad de la universidad"/>
 						<br><br>
-						Periodo cubierto:
+						<label class="textoCuerpoWhite">Periodo cubierto:</label>
 						<select name="hora">
 							<option value="7">7</option>
 							<option value="8">8</option>
@@ -166,90 +169,95 @@
 							<option value="18">18</option>
 						</select>
 						<br><br>
-						Lugar donde se realizará:  <select name="facultad">
+						<label class="textoCuerpoWhite">Lugar donde se realizará:</label>  <select name="facultad">
 						<?php while ($lugares=$sql2->fetch(PDO::FETCH_OBJ)) { ?>
 								<option value="<?php $lugares->idLugar ?>"><?php echo $lugares->nombreLugar ?></option>
 							<?php } ?>	
 						</select>
 						<br><br>
-						Tipo de actividad:
+						<label class="textoCuerpoWhite">Tipo de actividad:</label>
 						<br>
 						<input class="checkbox" type= "checkbox" name="actividad1" value="Conferencias">
-						<label for="actividad1">Conferencias</label>
+						<label for="actividad1" class="textoCuerpoWhite">Conferencias</label>
 						<br>
 						<input class="checkbox" type= "checkbox" name="actividad2" value="Ferias">
-						<label for="actividad2">Ferias</label>
+						<label for="actividad2" class="textoCuerpoWhite">Ferias</label>
 						<br>
 						<input class="checkbox" type= "checkbox" name="actividad3" value="Seminarios">
-						<label for="actividad3">Seminarios</label>
+						<label for="actividad3" class="textoCuerpoWhite">Seminarios</label>
 						<br>
 						<input class="checkbox" type= "checkbox" name="actividad4" value="Actos Culturales">
-						<label for="actividad4">Actos Culturales</label>
+						<label for="actividad4" class="textoCuerpoWhite">Actos Culturales</label>
 						<br>
 						<input class="checkbox" type= "checkbox" name="actividad5" value="Inauguraciones">
-						<label for="actividad5">Inauguraciones</label>
+						<label for="actividad5" class="textoCuerpoWhite">Inauguraciones</label>
 						<br>
 						<input class="checkbox" type= "checkbox" name="actividad6" value="Congresos">
-						<label for="actividad6">Congresos</label>
+						<label for="actividad6" class="textoCuerpoWhite">Congresos</label>
 						<br>
-						Otros. Especificique <input type="txtbox" type="text" name="otraactividad" size="20" maxlength="20" autofocus placeholder="" title="Escriba otro tipo de actividad que vaya a realizar">
+						<label class="textoCuerpoWhite">Otros. Especificique </label> <input type="txtbox" type="text" name="otraactividad" size="20" maxlength="20" autofocus placeholder="" title="Escriba otro tipo de actividad que vaya a realizar">
 						<br>
 						<br>
-						<h4>SERVICIOS DE PROTOCOLO, CEREMONIAL Y ORGANIZACIÓN DE EVENTOS</h4>
+						<label class="textoCuerpoWhite"><h4>SERVICIOS DE PROTOCOLO, CEREMONIAL Y ORGANIZACIÓN DE EVENTOS</h4></label>
 						<br>
-						<h5>ATENCIÓN PROTOCOLAR EN:</h5>
-						<h6>Precedencia:</h6>
+						<br>
+						<label class="textoCuerpoWhite"><h5>ATENCIÓN PROTOCOLAR EN:</h5></label>
+						<br>
+						<label class="textoCuerpoWhite">Precedencia:</label>
+						<br>
 						<input class="checkbox" type= "checkbox" name="precedencia1" value="Mesa Principal">
-						<label for="precedencia1">Mesa Principal</label>
+						<label class="textoCuerpoWhite" for="precedencia1">Mesa Principal</label>
 						<br>
 						<input class="checkbox" type= "checkbox" name="precedencia2" value="Estandartes">
-						<label for="precedencia2">Estandartes</label>
+						<label class="textoCuerpoWhite" for="precedencia2">Estandartes</label>
 						<br>
 						<input class="checkbox" type= "checkbox" name="precedencia3" value="Atención de invitados especiales">
-						<label for="precedencia3">Atención de invitados especiales</label>
+						<label class="textoCuerpoWhite" for="precedencia3">Atención de invitados especiales</label>
 						<br>
 						<input class="checkbox" type= "checkbox" name="precedencia4" value="Logos">
-						<label for="precedencia4">Logos</label>
+						<label class="textoCuerpoWhite" for="precedencia4">Logos</label>
 						<br>
 						<input class="checkbox" type= "checkbox" name="precedencia5" value="invitados">
-						<label for="precedencia5">Invitados</label>
+						<label class="textoCuerpoWhite" for="precedencia5">Invitados</label>
 						<br>
 						<input class="checkbox" type= "checkbox" name="precedencia6" value="Lista de invitados internos y externos">
-						<label for="precedencia6">Lista de invitados internos y externos</label>
+						<label class="textoCuerpoWhite" for="precedencia6">Lista de invitados internos y externos</label>
 						<br>
 						<input class="checkbox" type= "checkbox" name="precedencia7" value="Banderas">
-						<label for="precedencia7">Banderas</label>
+						<label class="textoCuerpoWhite" for="precedencia7">Banderas</label>
 						<br>
 						<input class="checkbox" type= "checkbox" name="precedencia8" value="Maestro de Ceremonias">
-						<label for="precedencia8">Maestro de Ceremonias</label>
+						<label class="textoCuerpoWhite" for="precedencia8">Maestro de Ceremonias</label>
 						<br>
 						<input class="checkbox" type= "checkbox" name="precedencia9" value="Seminario de Protocolo y Etiqueta">
-						<label for="precedencia9">Seminario de Protocolo y Etiqueta</label>
+						<label class="textoCuerpoWhite" for="precedencia9">Seminario de Protocolo y Etiqueta</label>
 						<br>
-
-						<h5>ASESORÍAS EN:</h5>
 						<br>
-						<h6>Planeación y organización del evento:</h6>
+						<label class="textoCuerpoWhite"><h5>ASESORÍAS EN:</h5></label>
+						<br>
+						<label class="textoCuerpoWhite"><h6>Planeación y organización del evento:</h6></label>
+						<br>
 						<input class="checkbox" type= "checkbox" name="planeacion1" value="Logística General">
-						<label for="planeacion1">Logística General</label>
+						<label class="textoCuerpoWhite" for="planeacion1">Logística General</label>
 						<br>
 						<input class="checkbox" type= "checkbox" name="planeacion2" value="Catering">
-						<label for="planeacion2">Catering</label>
+						<label class="textoCuerpoWhite" for="planeacion2">Catering</label>
 						<br>
 						<input class="checkbox" type= "checkbox" name="planeacion3" value="Escenografía">
-						<label for="planeacion3">Escenografía</label>
+						<label class="textoCuerpoWhite" for="planeacion3">Escenografía</label>
 						<br><br><br>
-
+						</div>
 						<button class="redondo" type="reset"><label class="textoCuerpo">BORRAR</label></button>
 						<button class="redondo" type="button" id="okButton" onclick="myFunction()"><label class="textoCuerpo">ENVIAR</label></button>
 						<br><br><br>
 						<a href="menuPrincipal.php"><button class="redondo espacioBoton2" type="button"><label class="textoCuerpo">REGRESAR</label></button></a>
-					</div>
+					
 				</div><!--FIN DEL DIVPRIMERO-->
 			
 
 			<!--INICIO DEL DIVSEGUNDO-->
 			<div id="divSegundo" hidden>		
+				<div class="cajamarron">
 					<h5>Protocolo:</h5>
 					<h6>Precedencia</h6>
 					<input class="checkbox" type= "checkbox" name="protocolo-precedencia1" value="Mesa Principal">
@@ -320,11 +328,14 @@
 					<h5>INFORMACIÓN PARA NOTA DE PRENSA:</h5>
 					<textarea name="" rows="8" cols="120" size="20" maxlength="1000" requerided placeholder="" title="Escriba el nombre de la actividad"></textarea>
 					<br>
+				</div>
+					
+				<button class="redondo" type="reset"><label class="textoCuerpo">BORRAR</label></button>
+				
+          		<button class="redondo" type="button" id="okButton" onclick="myFunction2()"><label class="textoCuerpo">ENVIAR</label></button>
 
-					<button class="redondo" type="reset"><label class="textoCuerpo">BORRAR</label></button>
-           <button class="redondo" type="button" id="okButton" onclick="myFunction2()"><label class="textoCuerpo">ENVIAR</label></button>
           <br><br><br>
-		      <button class="redondo espacioBoton2" type="button" onclick="myFunction1()"><label class="textoCuerpo">Regresar</label></button></a>
+		    	<button class="redondo espacioBoton2" type="button" onclick="myFunction1()"><label class="textoCuerpo">Regresar</label></button></a>
 			</div><!--FIN DEL DIVSEGUNDO-->
 
 

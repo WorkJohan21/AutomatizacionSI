@@ -210,6 +210,10 @@ body {
   margin-left: -250px;
 }
 
+.espaciadoaltura{
+    padding-top: 50px;
+}
+
 .spanEspaciado{
   width: 145px;
 }

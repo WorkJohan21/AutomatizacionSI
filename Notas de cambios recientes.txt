@@ -59,4 +59,4 @@ Se me dañaron los botones de el formulario de equipos, porque quería usar ese 
 
 Agregue las opciones de los lugares en el formulario 2 que estaban en la base de datos en el select del formulario de equipo
 
-Agregue el fondo chocolate al formulario de eventos, aunque me falta arreglar el margen derecho
+Agregue el fondo chocolate al formulario de eventos, aunque falta arreglar que los elementos esten en el centro

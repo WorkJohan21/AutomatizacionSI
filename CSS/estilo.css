@@ -178,7 +178,9 @@ body {
     border-radius: 5px;
     margin-bottom: 50px;
     text-align: left;
-    margin-right: auto; 
+    margin-left: 100px;
+    margin-right: 400px; 
+    align-content: center;
 }
 
 .cajapurpura{
@@ -215,7 +217,7 @@ body {
 }
 
 .espacioBoton2 {
-  margin-right: -200px;
+  margin-left: 200px;
 }
 
 .espaciadoaltura{

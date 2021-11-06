@@ -78,7 +78,7 @@
 
 			<!--INICIO DEL DIVPRIMERO-->		
 				<div id="divPrimero">		
-					<div class="cajamarron">
+					<div class="cajamarron2">
 						<label class="textoCuerpoWhite">Nombre completo de la actividad:</label>
 						<input class="txtbox" type="text" name="nombreActividad" size="20" maxlength="40" autofocus 
 						placeholder="" title="Escriba el nombre de la actividad"/>
@@ -247,10 +247,9 @@
 						<label class="textoCuerpoWhite" for="planeacion3">Escenografía</label>
 						<br><br><br>
 						</div>
-						<button class="redondo" type="reset"><label class="textoCuerpo">BORRAR</label></button>
-						<button class="redondo" type="button" id="okButton" onclick="myFunction()"><label class="textoCuerpo">ENVIAR</label></button>
-						<br><br><br>
 						<a href="menuPrincipal.php"><button class="redondo espacioBoton2" type="button"><label class="textoCuerpo">REGRESAR</label></button></a>
+						<button class="redondo espacioBoton2" type="reset"><label class="textoCuerpo">BORRAR</label></button>
+						<button class="redondo espacioBoton2" type="button" id="okButton" onclick="myFunction()"><label class="textoCuerpo">ENVIAR</label></button>		
 					
 				</div><!--FIN DEL DIVPRIMERO-->
 			

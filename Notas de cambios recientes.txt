@@ -52,3 +52,5 @@ con esto ahora se tiene un dropbox en el formulario de eventos que en lista las 
 Y por 'ultimo, ambas paginas de formularios hacen la revision de sesion para determinar si muestran su contenido, sino, reenvian al index
 
 }
+
+Agregue las opciones de los lugares en el formulario 2 que estaban en la base de datos en el select del formulario de equipo

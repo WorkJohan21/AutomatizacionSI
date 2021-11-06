@@ -1,4 +1,8 @@
 <!--Pantalla Formulario-->
+<?php
+    include("../procesos/verificar.php");
+    include("../procesos/consultaUser.php");
+?>
 
 <!DOCTYPE html>
 <html>

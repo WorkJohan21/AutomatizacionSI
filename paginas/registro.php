@@ -30,22 +30,32 @@
             <br>
             <div class="centrar marginAbajo">
                 <label for="inputNombre" class="textoCuerpoBlack spanEspaciado">Nombre</label>
-                <input type="text" id="inputNombre" class="txtbox" placeholder="Juan" name="nombre" size="25">
+                <input type="text" id="inputNombre" class="txtbox" placeholder="Juan" name="nombre" size="25" required>
             </div>
             <br>
             <div class="centrar marginAbajo">
                 <br><label for="inputApellido" class="textoCuerpoBlack spanEspaciado">Apellido</label>
-                <input type="text" id="inputApellido" class="txtbox" placeholder="Jonzales" name="apellido" size="25">
+                <input type="text" id="inputApellido" class="txtbox" placeholder="Jonzales" name="apellido" size="25" required>
+            </div>
+            <br>
+            <div class="centrar marginAbajo">
+                <br><label for="inputCelular" class="textoCuerpoBlack spanEspaciado">Celular</label>
+                <input type="text" id="inputCelular" class="txtbox" placeholder="6214-7245" name="celular" size="25" pattern="[0-9]{4}-[0-9]{4}" required>
+            </div>
+            <br>
+            <div class="centrar marginAbajo">
+                <br><label for="inputTelefono" class="textoCuerpoBlack spanEspaciado">Telefono</label>
+                <input type="text" id="inputTelefono" class="txtbox" placeholder="269-1384" name="telefono" size="25" pattern="[0-9]{3}-[0-9]{4}" required>
             </div>
             <br>
             <div class="centrar marginAbajo">
                 <br><label for="inputEmail" class="textoCuerpoBlack">Correo Electronico</label>
-                <input type="email" id="inputEmail" class="txtbox" placeholder="Ejem: correo@hotmail.com" name="email" size=25>
+                <input type="email" id="inputEmail" class="txtbox" placeholder="Ejem: correo@hotmail.com" name="email" size=25 required>
             </div>
             <br>
             <div class="centrar marginAbajo"></div>
                 <label for="inputPassword" class="textoCuerpoBlack spanEspaciado">Contrasena</label>
-                <input type="password" id="inputPassword" class="txtbox" placeholder="****" name="password" size="25">
+                <input type="password" id="inputPassword" class="txtbox" placeholder="****" name="password" size="25" required>
             </div>
 
             <br><br>

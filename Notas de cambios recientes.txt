@@ -29,4 +29,26 @@ Para poder darle una columna faltante que era el nombre de la actividad y que no
 
 Añadi procesarEquipo a procesos para q inserte a la bd.
 Añadi una clase Orden. Faltaria hacer la clase de Equipo para q se refleje en inventario.
+
+
+----------------------------------------------------------------------------------------------
+Noviembre 6 2021
+Ademas, le agregue con los campos de telefono y celular al registro del usuario y el archivo crearUsuario.php inserta los datos corresponientes
+en las 3 tablas (usuario, telefono y celular), con la esperanza de que en un futuro el apartado de datos personales en los formularios de eventos
+y equipos se llenen automaticamente
+Agregar nuevos lugares a la tabla lugar, adjunto las sentencias:
+
+INSERT INTO lugar (nombreLugar) VALUES ('Auditorio');
+INSERT INTO lugar (nombreLugar) VALUES ('Lobby Edificio 3');
+INSERT INTO lugar (nombreLugar) VALUES ('Lobby Edificio 1');
+INSERT INTO lugar (nombreLugar) VALUES ('Piso FCT');
+INSERT INTO lugar (nombreLugar) VALUES ('Piso FIC');
+INSERT INTO lugar (nombreLugar) VALUES ('Piso FIE');
+INSERT INTO lugar (nombreLugar) VALUES ('Piso FII');
+INSERT INTO lugar (nombreLugar) VALUES ('Piso FIM');
+INSERT INTO lugar (nombreLugar) VALUES ('Piso FISC');
+
+con esto ahora se tiene un dropbox en el formulario de eventos que enlista las facultades y sus sitios en los campos correspondientes.
+Y por 'ultimo, ambas paginas de formularios hacen la revision de sesion para determinar si muestran su contenido, sino, reenvian al index
+
 }

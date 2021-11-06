@@ -72,7 +72,15 @@
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Lugar donde se desarrollará</label>
             <select name="lugarActividad" id="lugarActividad" class="txtbox">
-              <option value="3">Salon Principal</option> 
+              <option value="1">Auditorio</option>
+              <option value="2">Lobby Edificio 3</option>
+              <option value="3">Lobby Edificio 1</option>
+              <option value="4">Piso FCT</option> 
+              <option value="5">Piso FIC</option> 
+              <option value="6">Piso FIE</option> 
+              <option value="7">Piso FII</option> 
+              <option value="8">Piso FIM</option> 
+              <option value="9">Piso FISC</option> 
               <!--el valor 3 es uno predeterminado en la base de datos-->
 
             </select>

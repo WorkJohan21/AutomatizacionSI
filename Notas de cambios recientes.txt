@@ -48,7 +48,7 @@ INSERT INTO lugar (nombreLugar) VALUES ('Piso FII');
 INSERT INTO lugar (nombreLugar) VALUES ('Piso FIM');
 INSERT INTO lugar (nombreLugar) VALUES ('Piso FISC');
 
-con esto ahora se tiene un dropbox en el formulario de eventos que enlista las facultades y sus sitios en los campos correspondientes.
+con esto ahora se tiene un dropbox en el formulario de eventos que en lista las facultades y sus sitios en los campos correspondientes.
 Y por 'ultimo, ambas paginas de formularios hacen la revision de sesion para determinar si muestran su contenido, sino, reenvian al index
 
 }

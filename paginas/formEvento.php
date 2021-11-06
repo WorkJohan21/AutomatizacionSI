@@ -256,92 +256,93 @@
 
 			<!--INICIO DEL DIVSEGUNDO-->
 			<div id="divSegundo" hidden>		
-				<div class="cajamarron">
-					<h5>Protocolo:</h5>
-					<h6>Precedencia</h6>
+				<div class="cajamarron2">
+					<h5 class="textoCuerpoWhite">Protocolo:</h5>
+					<h6 class="textoCuerpoWhite">Precedencia</h6>
 					<input class="checkbox" type= "checkbox" name="protocolo-precedencia1" value="Mesa Principal">
-					<label for="protocolo-precedencia1">Mesa Principal</label>
+					<label class="textoCuerpoWhite" for="protocolo-precedencia1">Mesa Principal</label>
 					<br>
 					<input class="checkbox" type= "checkbox" name="protocolo-precedencia2" value="Logos">
-					<label for="protocolo-precedencia2">Logos</label>
+					<label class="textoCuerpoWhite" for="protocolo-precedencia2">Logos</label>
 					<br>
 					<input class="checkbox" type= "checkbox" name="protocolo-precedencia3" value="Banderas">
-					<label for="protocolo-precedencia3">Banderas</label>
+					<label class="textoCuerpoWhite" for="protocolo-precedencia3">Banderas</label>
 					<br>
 					<input class="checkbox" type= "checkbox" name="protocolo-precedencia4" value="Etiqueta">
-					<label for="protocolo-precedencia4">Etiqueta</label>
+					<label class="textoCuerpoWhite" for="protocolo-precedencia4">Etiqueta</label>
 					<br>
 					<input class="checkbox" type= "checkbox" name="protocolo-precedencia5" value="Estandartes">
-					<label for="protocolo-precedencia5">Estandartes</label>
+					<label class="textoCuerpoWhite" for="protocolo-precedencia5">Estandartes</label>
 					<br>
 					<input class="checkbox" type= "checkbox" name="protocolo-precedenci6" value="Banners">
-					<label for="protocolo-precedencia6">Banners</label>
+					<label class="textoCuerpoWhite" for="protocolo-precedencia6">Banners</label>
 					<br>
 					<input class="checkbox" type= "checkbox" name="protocolo-precedencia7" value="invitados">
-					<label for="protocolo-precedencia7">Invitados</label>
+					<label class="textoCuerpoWhite" for="protocolo-precedencia7">Invitados</label>
 					<br>
-					<h6>Contenido de</h6>
+					<h6 class="textoCuerpoWhite">Contenido de</h6>
 					<input class="checkbox" type= "checkbox" name="protocolo-contenido1" value="Tarjetas">
-					<label for="protocolo-precedencia1">Tarjetas</label>
+					<label class="textoCuerpoWhite" for="protocolo-precedencia1">Tarjetas</label>
 					<br>
 					<input class="checkbox" type= "checkbox" name="protocolo-contenido2" value="Certificados">
-					<label for="protocolo-precedencia2">Certificados</label>
+					<label class="textoCuerpoWhite" for="protocolo-precedencia2">Certificados</label>
 					<br>
 					<input class="checkbox" type= "checkbox" name="protocolo-contenido3" value="Programas">
-					<label for="protocolo-precedencia3">Programas</label>
+					<label class="textoCuerpoWhite" for="protocolo-precedencia3">Programas</label>
 					<br>
 					<input class="checkbox" type= "checkbox" name="protocolo-contenido4" value="Atención de invitados especiales">
-					<label for="protocolo-precedencia4">Atención de invitados especiales</label>
+					<label class="textoCuerpoWhite" for="protocolo-precedencia4">Atención de invitados especiales</label>
 					<br>
 					<br>
-					<h5>SERVICIOS DE  PRENSA Y AUDIOVISUAL</h5>
+					<h5 class="textoCuerpoWhite">SERVICIOS DE  PRENSA Y AUDIOVISUAL</h5>
 					<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual1" value="Cobertura Periodística">
-					<label for="servicio-prensa-audiovisual1">Cobertura Periodística</label>
+					<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual1">Cobertura Periodística</label>
 					<br>
 					<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual2" value="Fotografía">
-					<label for="servicio-prensa-audiovisual2">Fotografía</label>
+					<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual2">Fotografía</label>
 					<br>
 					<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual3" value="Filmación">
-					<label for="servicio-prensa-audiovisual3">Filmación</label>
+					<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual3">Filmación</label>
 					<br>
 					<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual4" value="Divulgación en Web de la UTP">
-					<label for="servicio-prensa-audiovisual4">Divulgación en Web de la UTP</label>
+					<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual4">Divulgación en Web de la UTP</label>
 					<br>
 					<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual5" value="Equipo de sonido">
-					<label for="servicio-prensa-audiovisua5">Equipo de sonido</label>
+					<label class="textoCuerpoWhite" for="servicio-prensa-audiovisua5">Equipo de sonido</label>
 					<br>
 					<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual6" value="Entrevista en los medios de comunicación social">
-					<label for="servicio-prensa-audiovisual6">Entrevista en los medios de comunicación social</label>
+					<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual6">Entrevista en los medios de comunicación social</label>
 					<br>
 					<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual7" value="Publicar en Redes Sociales">
-					<label for="servicio-prensa-audiovisual7">Publicar en Redes Sociales (Facebook , Twitter)</label>
+					<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual7">Publicar en Redes Sociales (Facebook , Twitter)</label>
 					<br>
 					<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual8" value="Apoyo en Videoconferencias">
-					<label for="servicio-prensa-audiovisual8">Apoyo en Videoconferencias (Filmadora y equipo de audio)</label>
+					<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual8">Apoyo en Videoconferencias (Filmadora y equipo de audio)</label>
 					<br>
 					<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual9" value="Transmisión por Streaming">
-					<label for="servicio-prensa-audiovisual9">Transmisión por Streaming</label>
+					<label  class="textoCuerpoWhite" for="servicio-prensa-audiovisual9">Transmisión por Streaming</label>
 					<br>
 					<br>
 
-					<h5>INFORMACIÓN PARA NOTA DE PRENSA:</h5>
+					<h5 class="textoCuerpoWhite">INFORMACIÓN PARA NOTA DE PRENSA:</h5>
 					<textarea name="" rows="8" cols="120" size="20" maxlength="1000" requerided placeholder="" title="Escriba el nombre de la actividad"></textarea>
 					<br>
 				</div>
-					
-				<button class="redondo" type="reset"><label class="textoCuerpo">BORRAR</label></button>
-				
-          		<button class="redondo" type="button" id="okButton" onclick="myFunction2()"><label class="textoCuerpo">ENVIAR</label></button>
 
+				<button class="redondo espacioBoton2" type="button" onclick="myFunction1()"><label class="textoCuerpo">Regresar</label></button></a>
+				<button class="redondo espacioBoton2" type="reset"><label class="textoCuerpo">BORRAR</label></button>
+				<button class="redondo espacioBoton2" type="button" id="okButton" onclick="myFunction2()"><label class="textoCuerpo">ENVIAR</label></button>		
+				
           <br><br><br>
-		    	<button class="redondo espacioBoton2" type="button" onclick="myFunction1()"><label class="textoCuerpo">Regresar</label></button></a>
+		    	
 			</div><!--FIN DEL DIVSEGUNDO-->
 
 
 			<!--INICIO DEL DIVTERCERO-->
 			<div id="divTercero" hidden>		
-					<h5>SERVICIOS DE LA SECCIÓN DE DISEÑO GRÁFICO</h5>
-					<table width="85%">
+				<div class="cajamarron2">
+					<h5 class="textoCuerpoWhite">SERVICIOS DE LA SECCIÓN DE DISEÑO GRÁFICO</h5>
+					<table width="85%" class="textoCuerpoWhite">
 					  <tr>
 					    <th>N°</th>
 					    <th>Servicios Requeridos</th>
@@ -739,41 +740,39 @@
 					<br>
 					<br>
 
-					<h3>Notas Importantes: </h3>
+					<h3 class="textoCuerpoWhite">Notas Importantes: </h3>
 					
-					1.	Los trabajos no programados deben solicitarse a la sección de Diseño Gráfico 15 días antes de la fecha requerida.
+					<p class="textoCuerpoWhite">1.	Los trabajos no programados deben solicitarse a la sección de Diseño Gráfico 15 días antes de la fecha requerida.</p>
 
-					<br><p></p>
+					<p class="textoCuerpoWhite">2.	Las actividades programadas con rango institucional que requieren papelería de promoción (brochure, afiches, banner y escenografía)
+					tendrán prioridad, pero para garantizar la calidad de <br> los trabajos la solicitud debe presentarse con un mes de anticipación a la fecha del evento.</p>
 
-					2.	Las actividades programadas con rango institucional que requieren papelería de promoción (brochure, afiches, banner y escenografía)
-					tendrán prioridad, pero para garantizar la calidad de <br> los trabajos la solicitud debe presentarse con un mes de anticipación a la fecha del evento.
+					<p class="textoCuerpoWhite">3.	Los formatos de la información que debe adjuntarse a las solicitudes:</p>
 
-					<br><p></p>
+					<p class="textoCuerpoWhite">•	Tipografía: Levantada en Word o StarOffice letra Arial tamaño 12 pts.</p>
 
-					3.	Los formatos de la información que debe adjuntarse a las solicitudes:
-					<br><p></p>
-					•	Tipografía: Levantada en Word o StarOffice letra Arial tamaño 12 pts.
-					<br><p></p>
-					•	Imágenes:  con resolución mínima de 100 - 300 dpi, en formato JPG, PSD, PDF, EPS, PNG y TIFF
-					<br><p></p>
-					•	Logotipo de las empresas o instituciones: Deben ser compatibles con Corel Draw, Photoshop e ilustrador
-					<br><p></p>
-					•	Formato: Tamaño del arte (dimensiones) y posición (horizontal o vertical)
-					<br><p></p>
+					<p class="textoCuerpoWhite">•	Imágenes:  con resolución mínima de 100 - 300 dpi, en formato JPG, PSD, PDF, EPS, PNG y TIFF.</p>
 
-					4.	Las correcciones deben estar firmadas por el jefe de la Unidad que solicita el trabajo
+					<p class="textoCuerpoWhite">•	Logotipo de las empresas o instituciones: Deben ser compatibles con Corel Draw, Photoshop e ilustrador.</p>
 
-					<br><p></p>
-					<br><p></p>
-				    <button class="redondo" type="reset"><label class="textoCuerpo">BORRAR</label></button>
-            <button class="redondo" type="button" id="okButton" onclick="myFunction3()"><label class="textoCuerpo">ENVIAR</label></button>
+					<p class="textoCuerpoWhite">•	Formato: Tamaño del arte (dimensiones) y posición (horizontal o vertical)</p>
+
+					<p class="textoCuerpoWhite">4.	Las correcciones deben estar firmadas por el jefe de la Unidad que solicita el trabajo.</p>
+				</div>
+
+				<button class="redondo espacioBoton2" type="button" onclick="myFunction()"><label class="textoCuerpo">Regresar</label></button></a>
+				<button class="redondo espacioBoton2" type="reset"><label class="textoCuerpo">BORRAR</label></button>
+				<button class="redondo espacioBoton2" type="button" id="okButton" onclick="myFunction3()"><label class="textoCuerpo">ENVIAR</label></button>
+
           <br><br><br>
-		      <button class="redondo espacioBoton2" type="button" onclick="myFunction()"><label class="textoCuerpo">Regresar</label></button>
+		     
 
 			</div><!--FIN DEL DIVTERCERO-->
 
 			<!--INICIO DEL DIVCUARTO-->
 			<div id="divCuarto" hidden>
+				<div class="cajamarron2 textoCuerpoWhite">
+
 					<h5>SERVICIOS DE LA SECCIÓN DE IMPRENTA REQUERIDOS</h5>	
 
 					<h5>Programa</h5>
@@ -909,6 +908,10 @@
 					3.	Si la actividad es de autogestión se debe cubrir el costo de los materiales para la impresión de papelería de promoción y folletos.
 					<br>
 					<h6>*Se requiere un mes para la elaboración</h6>
+				
+				</div>
+
+				<div class="cajamarron2 textoCuerpoWhite">
 
 					<h5>CONTACTO DIRECTO PARA COORDINACIÓN</h5>
 					Solicitado por: 
@@ -929,10 +932,12 @@
 					<input type="email" name="correo" size="40" maxlength="80" autofocus placeholder="Ingrese su correo electrónico" title="Escriba su correo electrónico">
 					<br>
 					<br>
-					<button class="redondo" type="reset"><label class="textoCuerpo">BORRAR</label></button>					
-					<button class="redondo" type="submit"><label class="textoCuerpo">Enviar</label></button>
+				</div>
+				<button class="redondo espacioBoton2" type="button" onclick="myFunction2()"><label class="textoCuerpo">Regresar</label></button></a>
+				<button class="redondo espacioBoton2" type="reset"><label class="textoCuerpo">BORRAR</label></button>					
+				<button class="redondo espacioBoton2" type="submit"><label class="textoCuerpo">Enviar</label></button>
           <br><br><br>
-		      <button class="redondo espacioBoton2" type="button" onclick="myFunction2()"><label class="textoCuerpo">Regresar</label></button></a>
+		      
 				</div><!--FIN DEL DIVCUARTO-->	
 				</fieldset>				
 		</form>

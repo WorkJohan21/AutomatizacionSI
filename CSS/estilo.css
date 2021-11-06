@@ -172,6 +172,15 @@ body {
     text-align: left;
 }
 
+.cajamarron2{
+    background-color: #B7A57A;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    text-align: left;
+    margin-right: auto; 
+}
+
 .cajapurpura{
     background-color:#68086C;
     padding: 10px;
@@ -202,11 +211,11 @@ body {
 }
 
 .espacioBoton {
-  margin-right: 250px;
+  margin-left: -250px;
 }
 
 .espacioBoton2 {
-  margin-left: -250px;
+  margin-right: -200px;
 }
 
 .espaciadoaltura{

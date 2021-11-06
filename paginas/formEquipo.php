@@ -81,7 +81,7 @@
                   <option value="7">Piso FII</option> 
                   <option value="8">Piso FIM</option> 
                   <option value="9">Piso FISC</option> 
-                  <!--Los valores son los mismos de la base de datos-->
+                  <!--Los valores son lso mismos de la base de datos-->
                 </select>
                 
                 <br><br>

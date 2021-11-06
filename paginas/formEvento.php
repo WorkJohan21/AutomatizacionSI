@@ -248,8 +248,8 @@
 						<br><br><br>
 						</div>
 						<a href="menuPrincipal.php"><button class="redondo espacioBoton2" type="button"><label class="textoCuerpo">REGRESAR</label></button></a>
-						<button class="redondo espacioBoton2" type="reset"><label class="textoCuerpo">BORRAR</label></button>
-						<button class="redondo espacioBoton2" type="button" id="okButton" onclick="myFunction()"><label class="textoCuerpo">ENVIAR</label></button>		
+						<button class="redondo espacioBoton3" type="reset"><label class="textoCuerpo">BORRAR</label></button>
+						<button class="redondo espacioBoton3" type="button" id="okButton" onclick="myFunction()"><label class="textoCuerpo">ENVIAR</label></button>		
 					
 				</div><!--FIN DEL DIVPRIMERO-->
 			
@@ -330,8 +330,8 @@
 				</div>
 
 				<button class="redondo espacioBoton2" type="button" onclick="myFunction1()"><label class="textoCuerpo">Regresar</label></button></a>
-				<button class="redondo espacioBoton2" type="reset"><label class="textoCuerpo">BORRAR</label></button>
-				<button class="redondo espacioBoton2" type="button" id="okButton" onclick="myFunction2()"><label class="textoCuerpo">ENVIAR</label></button>		
+				<button class="redondo espacioBoton3" type="reset"><label class="textoCuerpo">BORRAR</label></button>
+				<button class="redondo espacioBoton3" type="button" id="okButton" onclick="myFunction2()"><label class="textoCuerpo">ENVIAR</label></button>		
 				
           <br><br><br>
 		    	
@@ -761,8 +761,8 @@
 				</div>
 
 				<button class="redondo espacioBoton2" type="button" onclick="myFunction()"><label class="textoCuerpo">Regresar</label></button></a>
-				<button class="redondo espacioBoton2" type="reset"><label class="textoCuerpo">BORRAR</label></button>
-				<button class="redondo espacioBoton2" type="button" id="okButton" onclick="myFunction3()"><label class="textoCuerpo">ENVIAR</label></button>
+				<button class="redondo espacioBoton3" type="reset"><label class="textoCuerpo">BORRAR</label></button>
+				<button class="redondo espacioBoton3" type="button" id="okButton" onclick="myFunction3()"><label class="textoCuerpo">ENVIAR</label></button>
 
           <br><br><br>
 		     
@@ -934,8 +934,8 @@
 					<br>
 				</div>
 				<button class="redondo espacioBoton2" type="button" onclick="myFunction2()"><label class="textoCuerpo">Regresar</label></button></a>
-				<button class="redondo espacioBoton2" type="reset"><label class="textoCuerpo">BORRAR</label></button>					
-				<button class="redondo espacioBoton2" type="submit"><label class="textoCuerpo">Enviar</label></button>
+				<button class="redondo espacioBoton3" type="reset"><label class="textoCuerpo">BORRAR</label></button>					
+				<button class="redondo espacioBoton3" type="submit"><label class="textoCuerpo">Enviar</label></button>
           <br><br><br>
 		      
 				</div><!--FIN DEL DIVCUARTO-->	

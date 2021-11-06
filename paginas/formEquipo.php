@@ -64,75 +64,75 @@
 
 <!--PRIMER DIV DE INFORMACION ACTIVIDAD-->
 <div id="divPrimero">
-<div class="cajamarron">
-			<label class="textoCuerpoWhite ">INFORMACIÓN DE LA ACTIVIDAD EN LA CUAL SE UTILIZARÁ EL EQUIPO</label>
-			<br><br>
-            <label class="textoCuerpoWhite labelEspacio">Nombre de la Actividad</label>
-            <input type="text" id="nomActividad" class="txtbox" placeholder="" name="nomActividad">
-            <br><br>
-            <label class="textoCuerpoWhite labelEspacio">Lugar donde se desarrollará</label>
-            <select name="lugarActividad" id="lugarActividad" class="txtbox">
-              <option value="1">Auditorio</option>
-              <option value="2">Lobby Edificio 3</option>
-              <option value="3">Lobby Edificio 1</option>
-              <option value="4">Piso FCT</option> 
-              <option value="5">Piso FIC</option> 
-              <option value="6">Piso FIE</option> 
-              <option value="7">Piso FII</option> 
-              <option value="8">Piso FIM</option> 
-              <option value="9">Piso FISC</option> 
-              <!--el valor 3 es uno predeterminado en la base de datos-->
+    <div class="cajamarron">
+          <label class="textoCuerpoWhite">INFORMACIÓN DE LA ACTIVIDAD EN LA CUAL SE UTILIZARÁ EL EQUIPO</label>
+          <br><br>
+                <label class="textoCuerpoWhite labelEspacio">Nombre de la Actividad</label>
+                <input type="text" id="nomActividad" class="txtbox" placeholder="" name="nomActividad">
+                <br><br>
+                <label class="textoCuerpoWhite labelEspacio">Lugar donde se desarrollará</label>
+                <select name="lugarActividad" id="lugarActividad" class="txtbox">
+                  <option value="1">Auditorio</option>
+                  <option value="2">Lobby Edificio 3</option>
+                  <option value="3">Lobby Edificio 1</option>
+                  <option value="4">Piso FCT</option> 
+                  <option value="5">Piso FIC</option> 
+                  <option value="6">Piso FIE</option> 
+                  <option value="7">Piso FII</option> 
+                  <option value="8">Piso FIM</option> 
+                  <option value="9">Piso FISC</option> 
+                  <!--Los valores son lso mismos de la base de datos-->
+                </select>
+                
+                <br><br>
+                <label class="textoCuerpoWhite labelEspacio">Fecha de la Actividad</label>
+                <input type="date" id="fechaActividad" class="txtbox" placeholder="" name="fechaActividad">       
+                <br><br>
+                <label class="textoCuerpoWhite labelEspacio">Unidad que lo Organiza</label>
+                
+                <select name="unidadOrg" id="unidadOrg" class="txtbox">
+                  <option value="1">Facultad de Ciencias y Tecnología</option>
+                  <option value="2">Facultad de Ingeniería Civil</option>
+                  <option value="3">Facultad de Ingeniería Eléctrica</option>
+                  <option value="4">Facultad de Ingeniería Industrial</option>
+                  <option value="5">Facultad de Ingeniería Mecánica</option>
+                  <option value="6">Facultad de Sistemas</option> 
+                 <!--Los valores son lso mismos de la base de datos-->                  
+                </select>
 
-            </select>
-            <br><br>
-            <label class="textoCuerpoWhite labelEspacio">Fecha de la Actividad</label>
-            <input type="date" id="fechaActividad" class="txtbox" placeholder="" name="fechaActividad">       
-            <br><br>
-            <label class="textoCuerpoWhite labelEspacio">Unidad que lo Organiza</label>
-            
-            <select name="unidadOrg" id="unidadOrg" class="txtbox">
-              <option value="1">Facultad de Ciencias y Tecnología</option>
-              <option value="2">Facultad de Ingeniería Civil</option>
-              <option value="3">Facultad de Ingeniería Eléctrica</option>
-              <option value="4">Facultad de Ingeniería Industrial</option>
-              <option value="5">Facultad de Ingeniería Mecánica</option>
-              <option value="6">Facultad de Sistemas</option> 
-              <!--el valor 3 es uno predeterminado en la base de datos-->
-              
-            </select>
-            <br><br>
-            <label class="textoCuerpoWhite labelEspacio">Hora de la Actividad</label>
-            <input type="time" id="horaActividad" class="txtbox" placeholder="" name="horaActividad">
-            <br><br>
-</div><!--FIN DEL DIVPRIMERO-->
+                <br><br>
+                <label class="textoCuerpoWhite labelEspacio">Hora de la Actividad</label>
+                <input type="time" id="horaActividad" class="txtbox" placeholder="" name="horaActividad">
+                <br><br>
+    </div><!--FIN DEL DIVPRIMERO-->
 
-<!--SEGUNDO DIV DE INFORMACION DE PERSONA-->
-<div class="cajamarron">
-			<label class="textoCuerpoWhite ">INFORMACIÓN DE LA PERSONA QUE SOLICITA EL EQUIPO</label>
-			<br><br>
-            <label class="textoCuerpoWhite labelEspacio">Nombre del Solicitante</label>
-            <input type="text" id="nomSolicitante" class="txtbox" placeholder="" name="nomSolicitante">
-            <br><br>
-            <label class="textoCuerpoWhite labelEspacio"> Unidad donde labora</label>
-            <input type="text" id="unidadLabor" class="txtbox" placeholder="" name="unidadLabor">     
-            <br><br>
-            <label class="textoCuerpoWhite labelEspacio">Teléfono</label>
-            <input type="text" id="telefono" class="txtbox" placeholder="" name="telefono">       
-            <br><br>
-            <label class="textoCuerpoWhite labelEspacio">Correo Electrónico</label>
-            <input type="text" id="correo" class="txtbox" placeholder="" name="correo">
-            <br><br>
-            <label class="textoCuerpoWhite labelEspacio">Celular</label>
-            <input type="text" id="celular" class="txtbox" placeholder="" name="celular">
-            <br><br>
-</div> 
-            <a href="menuPrincipal.php"><button class="redondo espacioBoton" type="button"><label class="textoCuerpo">REGRESAR</label></button></a>
-            <button class="redondo" type="reset"><label class="textoCuerpo">BORRAR</label></button>
-            <button class="redondo" type="button" id="okButton" onclick="myFunction()"><label class="textoCuerpo">ENVIAR</label></button>
+    <!--SEGUNDO DIV DE INFORMACION DE PERSONA-->
+    <div class="cajamarron">
+          <label class="textoCuerpoWhite ">INFORMACIÓN DE LA PERSONA QUE SOLICITA EL EQUIPO</label>
+          <br><br>
+                <label class="textoCuerpoWhite labelEspacio">Nombre del Solicitante</label>
+                <input type="text" id="nomSolicitante" class="txtbox" placeholder="" name="nomSolicitante">
+                <br><br>
+                <label class="textoCuerpoWhite labelEspacio"> Unidad donde labora</label>
+                <input type="text" id="unidadLabor" class="txtbox" placeholder="" name="unidadLabor">     
+                <br><br>
+                <label class="textoCuerpoWhite labelEspacio">Teléfono</label>
+                <input type="text" id="telefono" class="txtbox" placeholder="" name="telefono">       
+                <br><br>
+                <label class="textoCuerpoWhite labelEspacio">Correo Electrónico</label>
+                <input type="text" id="correo" class="txtbox" placeholder="" name="correo">
+                <br><br>
+                <label class="textoCuerpoWhite labelEspacio">Celular</label>
+                <input type="text" id="celular" class="txtbox" placeholder="" name="celular">
+                <br><br>
+    </div> 
+                <a href="menuPrincipal.php"><button class="redondo espacioBoton" type="button"><label class="textoCuerpo">REGRESAR</label></button></a>
+                <button class="redondo" type="reset"><label class="textoCuerpo">BORRAR</label></button>
+                <button class="redondo" type="button" id="okButton" onclick="myFunction()"><label class="textoCuerpo">ENVIAR</label></button>
 
-            
+                
 
-</div><!--FIN DEL DIVSEGUNDO EQUIPO SELECCIONADO ACTIVO-->
+    </div><!--FIN DEL DIVSEGUNDO EQUIPO SELECCIONADO ACTIVO-->
 
 <!--TERCER DIV DE INFORMACION DE EQUIPO-->
 <div id="divSegundo" hidden>

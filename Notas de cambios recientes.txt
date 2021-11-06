@@ -53,4 +53,8 @@ Y por 'ultimo, ambas paginas de formularios hacen la revision de sesion para det
 
 }
 
+--Christian
+
 Agregue las opciones de los lugares en el formulario 2 que estaban en la base de datos en el select del formulario de equipo
+
+Agregue el fondo chocolate al formulario de eventos, aunque me falta arreglar el margen derecho

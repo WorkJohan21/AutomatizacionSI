@@ -37,7 +37,7 @@
 		<form class="form-signin" method="POST" action="menuPrincipal.php">
             <h3 class="titulosHeaderBlack">Inventario de Equipo</h3>
             <br>
-            <table align="center">
+            <table align="center" cellspacing="20" cellpadding="10">
                 <thead>
                     <tr>
                         <th>Equipo</th>

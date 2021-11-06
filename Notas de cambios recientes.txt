@@ -55,7 +55,12 @@ Y por 'ultimo, ambas paginas de formularios hacen la revision de sesion para det
 
 --Christian
 
-Se me dañaron los botones de el formulario de equipos, porque quería usar ese estilo en los del form de eventos y se me dañó todom trate de revertirlo pero no pude :(
+Se me dañaron los botones de el formulario de equipos, porque quería usar ese estilo en los del form de eventos y no me acordé que eran de allá hasta que lo revise
+de nuevo.:(
+
+El formulario de eventos ya lo arreglé.
+
+El formulario de equipos ahora es el que hay qye arreglarlé los botones
 
 Agregue las opciones de los lugares en el formulario 2 que estaban en la base de datos en el select del formulario de equipo
 

@@ -1,0 +1,32 @@
+
+Noviembre 5 2021{
+
+Para poder usar el FormEquipo.php:
+
+Añadir sentencia SQL en la Base de datos:
+***************************************************************
+ALTER TABLE orden
+ADD COLUMN nomActividad2 VARCHAR(100) AFTER idFacultad;
+***************************************************************
+
+INSERT INTO `lugar` (idLugar,nombreLugar) value ('3','Salon Principal');
+
+INSERT INTO `facultad` (idFacultad,nombreFacultad) value ('1','FCT');
+
+INSERT INTO `facultad` (idFacultad,nombreFacultad) value ('2','FIC');
+
+INSERT INTO `facultad` (idFacultad,nombreFacultad) value ('3','FIE');
+
+INSERT INTO `facultad` (idFacultad,nombreFacultad) value ('4','FII');
+
+INSERT INTO `facultad` (idFacultad,nombreFacultad) value ('5','FIM');
+
+INSERT INTO `facultad` (idFacultad,nombreFacultad) value ('6','FISC');
+
+***************************************************************
+
+Para poder darle una columna faltante que era el nombre de la actividad y que no rompa los FK de tabla lugar y facultad.
+
+Añadi procesarEquipo a procesos para q inserte a la bd.
+Añadi una clase Orden. Faltaria hacer la clase de Equipo para q se refleje en inventario.
+}

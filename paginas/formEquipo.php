@@ -54,7 +54,8 @@
 	</header>
 	<br><br>
 	<div class="centrar">
-		<form method="POST" action="menuPrincipal.php">
+		<form method="POST" action="../procesos/procesarEquipo.php">
+      <p class="text-danger"> <?php if (isset ($_GET['msg'])) echo $_GET['msg'];?> </p>
             <h3 class="titulosHeaderBlack">FORMULARIO DE SOLICITUD Y PRÉSTAMO DE EQUIPO</h3>
 
 <!--PRIMER DIV DE INFORMACION ACTIVIDAD-->
@@ -66,16 +67,30 @@
             <input type="text" id="nomActividad" class="txtbox" placeholder="" name="nomActividad">
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Lugar donde se desarrollará</label>
-            <input type="text" id="lugarActividad" class="txtbox" placeholder="" name="lugarActividad">     
+            <select name="lugarActividad" id="lugarActividad" class="txtbox">
+              <option value="3">Salon Principal</option> 
+              <!--el valor 3 es uno predeterminado en la base de datos-->
+
+            </select>
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Fecha de la Actividad</label>
-            <input type="text" id="fechaActividad" class="txtbox" placeholder="" name="fechaActividad">       
+            <input type="date" id="fechaActividad" class="txtbox" placeholder="" name="fechaActividad">       
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Unidad que lo Organiza</label>
-            <input type="text" id="unidadOrg" class="txtbox" placeholder="" name="unidadOrg">
+            
+            <select name="unidadOrg" id="unidadOrg" class="txtbox">
+              <option value="1">Facultad de Ciencias y Tecnología</option>
+              <option value="2">Facultad de Ingeniería Civil</option>
+              <option value="3">Facultad de Ingeniería Eléctrica</option>
+              <option value="4">Facultad de Ingeniería Industrial</option>
+              <option value="5">Facultad de Ingeniería Mecánica</option>
+              <option value="6">Facultad de Sistemas</option> 
+              <!--el valor 3 es uno predeterminado en la base de datos-->
+              
+            </select>
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Hora de la Actividad</label>
-            <input type="text" id="horaActividad" class="txtbox" placeholder="" name="horaActividad">
+            <input type="time" id="horaActividad" class="txtbox" placeholder="" name="horaActividad">
             <br><br>
 </div><!--FIN DEL DIVPRIMERO-->
 
@@ -99,7 +114,7 @@
             <input type="text" id="celular" class="txtbox" placeholder="" name="celular">
             <br><br>
 </div> 
-            <a href="menuPrincipal.php"><button class="redondo espacioBoton" type="button"><label class="textoCuerpo">Regresar</label></button></a>
+            <a href="menuPrincipal.php"><button class="redondo espacioBoton" type="button"><label class="textoCuerpo">REGRESAR</label></button></a>
             <button class="redondo" type="reset"><label class="textoCuerpo">BORRAR</label></button>
             <button class="redondo" type="button" id="okButton" onclick="myFunction()"><label class="textoCuerpo">ENVIAR</label></button>
 
@@ -122,76 +137,76 @@
             <br><br>
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Pantalla de 86"</span>
-        <input class="boxderecha" type="checkbox" value=""> 
-            <input type="text" id="nomSolicitante" class="boxderecha" placeholder="" name="nomSolicitante">
+        <input class="boxderecha" type="checkbox" value="Pantalla de 86 plgs">
+            <input type="number" id="pantalla_cant" class="boxderecha" placeholder="" name="pantalla_cant" min="1" value="1">
     </label>
 
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Banderas de Diversos Países</span>
         <input class="boxderecha" type="checkbox" value="">     
-            <input type="text" id="" class="boxderecha" placeholder="" name="">
+            <input type="number" id="" class="boxderecha" placeholder="" name="" min="0">
     </label>
 
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Estandarte UTP</span>  
         <input class="boxderecha" type="checkbox" value="">  
-            <input type="text" id="" class="boxderecha" placeholder="" name="">
+            <input type="number" id="" class="boxderecha" placeholder="" name="" min="0">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Astas y Bases</span>  
         <input class="boxderecha" type="checkbox" value="">  
-            <input type="text" id="" class="boxderecha" placeholder="" name="">
+            <input type="number" id="" class="boxderecha" placeholder="" name="" min="0">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio"> Soporte para Banner (Araña)</span>
         <input class="boxderecha" type="checkbox" value="">    
-            <input type="text" id="" class="boxderecha" placeholder="" name="">
+            <input type="number" id="" class="boxderecha" placeholder="" name="" min="0">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Flores Artificiales para Centro de Mesa </span>
         <input class="boxderecha" type="checkbox" value="">     
-            <input type="text" id="" class="boxderecha" placeholder="" name="">
+            <input type="number" id="" class="boxderecha" placeholder="" name="" min="0">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Habladores (1)</span>  
         <input class="boxderecha" type="checkbox" value="">  
-            <input type="text" id="" class="boxderecha" placeholder="" name="">
+            <input type="number" id="" class="boxderecha" placeholder="" name="" min="0">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Bombas Manuales para Inflar Globos</span>
         <input class="boxderecha" type="checkbox" value="">    
-            <input type="text" id="" class="boxderecha" placeholder="" name="">
+            <input type="number" id="" class="boxderecha" placeholder="" name="" min="0">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Rotafolio con Tablero Blanco</span>
         <input class="boxderecha" type="checkbox" value="">    
-            <input type="text" id="" class="boxderecha" placeholder="" name="">
+            <input type="number" id="" class="boxderecha" placeholder="" name="" min="0">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Karaoke</span>  
         <input class="boxderecha" type="checkbox" value="">  
-            <input type="text" id="" class="boxderecha" placeholder="" name="">
+            <input type="number" id="" class="boxderecha" placeholder="" name="" min="0">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Radiograbadora con Lector USB y CD</span>
         <input class="boxderecha" type="checkbox" value="">    
-            <input type="text" id="" class="boxderecha" placeholder="" name="">
+            <input type="number" id="" class="boxderecha" placeholder="" name="" min="0">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Engrapadoras semi Industrial e Industrial</span>
         <input class="boxderecha" type="checkbox" value="">    
-            <input type="text" id="" class="boxderecha" placeholder="" name="">
+            <input type="number" id="" class="boxderecha" placeholder="" name="" min="0">
     </label>
 
             <label class="list-group-item d-flex gap-2">
@@ -203,7 +218,7 @@
 </div>
             <br><br>
 </div> 
-          <button class="redondo espacioBoton" type="button" onclick="myFunction3()"><label class="textoCuerpo">Regresar</label></button>
+          <button class="redondo espacioBoton" type="button" onclick="myFunction3()"><label class="textoCuerpo">REGRESAR</label></button>
           <button class="redondo" type="reset"><label class="textoCuerpo">BORRAR</label></button>
           <button class="redondo" type="button" id="okButton" onclick="myFunction2()"><label class="textoCuerpo">ENVIAR</label></button>
           
@@ -215,7 +230,7 @@
             <label class="textoCuerpoWhite ">INFORMACIÓN DEL DÍA DE RETIRO</label>
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Retiro del Equipo (Fecha)</label>
-            <input type="text" id="fechaRetiro" class="txtbox" placeholder="" name="fechaRetiro">
+            <input type="date" id="fechaRetiro" class="txtbox" placeholder="" name="fechaRetiro">
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Quién Retira</label>
             <input type="text" id="personaRetira" class="txtbox" placeholder="" name="personaRetira">     
@@ -230,26 +245,25 @@
             <label class="textoCuerpoWhite ">INFORMACIÓN DEL DÍA DE DEVOLUCIÓN</label>
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Devolución (Fecha)</label>
-            <input type="text" id="fechaDevlucion" class="txtbox" placeholder="" name="fechaDevlucion">     
+            <input type="date" id="fechaDevlucion" class="txtbox" placeholder="" name="fechaDevlucion">     
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Quién Devuelve</label>
             <input type="text" id="personaDevlv" class="txtbox" placeholder="" name="personaDevlv">       
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Quién Recibe (DIPROCE)</label>
-            <input type="text" id="personaRecv" class="txtbox" placeholder="" name="personaRecv">
+            <input type="text" id="personaRecv" class="txtbox" placeholder="" name="personaRecv" required>
             <br><br>
 </div> 
             
-            <button class="redondo espacioBoton" type="button" onclick="myFunction()"><label class="textoCuerpo">Regresar</label></button>
+            <button class="redondo espacioBoton" type="button" onclick="myFunction()"><label class="textoCuerpo">REGRESAR</label></button>
 			      <button class="redondo" type="reset"><label class="textoCuerpo">BORRAR</label></button>
-            <a href="menuPrincipal.php"><button class="redondo" type="submit"><label class="textoCuerpo">ENVIAR</label></button></a>
+            <button class="redondo" type="submit"><label class="textoCuerpo">ENVIAR</label></button>
            
             <br><br>
 		</div>
 
 
   </div><!--FIN DEL DIVTERCERO-->
-
 	</form>
 <br><br>
   

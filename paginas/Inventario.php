@@ -57,7 +57,7 @@
             </table>
             <br>
             <div class="mt-4">
-                <a href="menuPrincipal.php"><button class="redondo" type="submit"><label class="textoCuerpo">Regresar</label></button></a>
+                <a href="menuPrincipal.php"><button class="redondo" type="submit"><label class="textoCuerpo">REGRESAR</label></button></a>
             </div>
 		
 	</form>

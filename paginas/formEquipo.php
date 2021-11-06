@@ -64,7 +64,7 @@
 
 <!--PRIMER DIV DE INFORMACION ACTIVIDAD-->
 <div id="divPrimero">
-    <div class="cajamarron">
+    <div class="cajamarron2">
           <label class="textoCuerpoWhite">INFORMACIÓN DE LA ACTIVIDAD EN LA CUAL SE UTILIZARÁ EL EQUIPO</label>
           <br><br>
                 <label class="textoCuerpoWhite labelEspacio">Nombre de la Actividad</label>
@@ -81,7 +81,7 @@
                   <option value="7">Piso FII</option> 
                   <option value="8">Piso FIM</option> 
                   <option value="9">Piso FISC</option> 
-                  <!--Los valores son lso mismos de la base de datos-->
+                  <!--Los valores son los mismos de la base de datos-->
                 </select>
                 
                 <br><br>

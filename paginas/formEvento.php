@@ -131,7 +131,7 @@
 							<option value="17">17</option>
 							<option value="18">18</option>
 						</select>
-						a
+						<label class="textoCuerpoWhite">a</label>
 						<select name="hora">
 							<option value="7">7</option>
 							<option value="8">8</option>

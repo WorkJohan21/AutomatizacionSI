@@ -30,16 +30,20 @@
 		<form method="POST" action="procesos/procesarLogin.php">
             <h3 class="titulosHeaderBlack ">Acceder al Sistema</h3>
 
-            <label for="inputEmail" class="textoCuerpoBlack ">Correo Electronico</label>
-            <input type="email" id="inputEmail" class="txtbox" placeholder="Ejem: correo@hotmail.com" name="email" size=25>
+            <div class="mt-4">
 
-            <br><br><label for="inputPassword" class="textoCuerpoBlack spanEspaciado">Contrasena</label>
-            <input type="password" id="inputPassword" class="txtbox" placeholder="*****" name="password" size="25">
+                <label for="inputEmail" class="textoCuerpoBlack espaciadoaltura">Correo Electronico</label>
+                <input type="email" id="inputEmail" class="txtbox" placeholder="Ejem: correo@hotmail.com" name="email" size=25>
 
-            <div class="checkbox mb-3">
-                <br><label>
-                    <input type="checkbox" value="remember-me">Recordar Usuario
-                </label>
+                <br><br><label for="inputPassword" class="textoCuerpoBlack spanEspaciado">Contrasena</label>
+                <input type="password" id="inputPassword" class="txtbox" placeholder="*****" name="password" size="25">
+
+                <div class="checkbox mb-3">
+                    <br><label>
+                        <input type="checkbox" value="remember-me">Recordar Usuario
+                    </label>
+                </div>
+
             </div>
 
             <button class="redondo" type="submit"><label class="textoCuerpo">Iniciar Sesion</label></button>
@@ -54,6 +58,7 @@
                     
                 </div>
             </div>
+
         </form>
 	</div>
 	

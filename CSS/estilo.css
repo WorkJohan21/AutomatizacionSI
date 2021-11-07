@@ -226,6 +226,10 @@ body {
     margin-left: 260px;
 }
 
+.espacioBoton5{     /*Es del formulario de evento, no tocar*/
+    margin-left: 100px;
+}
+
 .espaciadoaltura{
     padding-top: 50px;
 }

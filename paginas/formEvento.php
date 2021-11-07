@@ -66,284 +66,289 @@
 	    <h3 class="titulosHeader">Universidad Tecnológica de Panamá<br>Departamento de Protocolo, Ceremonial y Eventos<br><i>"Camino a la excelencia a través del mejoramiento continuo"</i></h3>
 	</header>
 
-	<section>
-		<article>
-			<h3 class="centrar">FORMULARIO DE SOLICITUD DE EVENTOS</h3>					    
-		</article>
-
 		<div class="centrar">
-			<form class="form1" action="menuPrincipal.php" method="post" accept-charset="utf-8">
-					<fieldset class="fieldset1">
-						<legend></legend> 
+			<form class="" action="menuPrincipal.php" method="post" accept-charset="utf-8">
+						<h3 class="centrar">FORMULARIO DE SOLICITUD DE EVENTOS</h3>					    
 						<br><br>
 
 				<!--INICIO DEL DIVPRIMERO-->	
 
 					<div id="divPrimero">		
-						<div class="cajamarron2">
-							<label class="textoCuerpoWhite">Nombre completo de la actividad:</label>
-							<input class="txtbox" type="text" name="nombreActividad" size="20" maxlength="40" autofocus 
-							placeholder="" title="Escriba el nombre de la actividad"/>
-							<br><br>
-							<label class="textoCuerpoWhite"> Facultad o unidad que organiza:</label>  <select name="facultad">
-							<?php while ($facultades=$sql->fetch(PDO::FETCH_OBJ)) { ?>
-									<option value="<?php $facultades->idFacultad ?>"><?php echo $facultades->nombreFacultad ?></option>
-								<?php } ?>	
-							</select>
-							<br><br>
+							<div class="cajamarron">
+										<label class="textoCuerpoWhite">Nombre completo de la actividad:</label>
+										<input class="txtbox" type="text" name="nombreActividad" size="20" maxlength="40" autofocus 
+										placeholder="" title="Escriba el nombre de la actividad"/>
+										<br><br>
+										<label class="textoCuerpoWhite"> Facultad o unidad que organiza:</label>  <select name="facultad">
+										<?php while ($facultades=$sql->fetch(PDO::FETCH_OBJ)) { ?>
+												<option value="<?php $facultades->idFacultad ?>"><?php echo $facultades->nombreFacultad ?></option>
+											<?php } ?>	
+										</select>
+										<br><br>
 
-							<label class="textoCuerpoWhite">Fecha del evento:</label>
-							<input class="txtbox" type="date" name="fecha" size="20" maxlength="20" autofocus
-							placeholder="" title="Facultad de la universidad"/>
-							<br><br>
-							<label class="textoCuerpoWhite">Periodo cubierto:</label>
-							<select name="hora">
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
-								<option value="11">11</option>
-								<option value="12">12</option>
-								<option value="13">13</option>
-								<option value="14">14</option>
-								<option value="15">15</option>
-								<option value="16">16</option>
-								<option value="17">17</option>
-								<option value="18">18</option>
-							</select>
-							<select name="minuto">
-								<option value="00">00</option>
-								<option value="01">01</option>
-								<option value="02">02</option>
-								<option value="03">03</option>
-								<option value="04">04</option>
-								<option value="05">05</option>
-								<option value="06">06</option>
-								<option value="07">07</option>
-								<option value="08">08</option>
-								<option value="09">09</option>
-								<option value="07">07</option>
-								<option value="10">10</option>
-								<option value="11">11</option>
-								<option value="12">12</option>
-								<option value="13">13</option>
-								<option value="14">14</option>
-								<option value="15">15</option>
-								<option value="16">16</option>
-								<option value="17">17</option>
-								<option value="18">18</option>
-							</select>
-							<label class="textoCuerpoWhite">a</label>
-							<select name="hora">
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
-								<option value="11">11</option>
-								<option value="12">12</option>
-								<option value="13">13</option>
-								<option value="14">14</option>
-								<option value="15">15</option>
-								<option value="16">16</option>
-								<option value="17">17</option>
-								<option value="18">18</option>
-							</select>
-							<select name="minuto">
-								<option value="00">00</option>
-								<option value="01">01</option>
-								<option value="02">02</option>
-								<option value="03">03</option>
-								<option value="04">04</option>
-								<option value="05">05</option>
-								<option value="06">06</option>
-								<option value="07">07</option>
-								<option value="08">08</option>
-								<option value="09">09</option>
-								<option value="07">07</option>
-								<option value="10">10</option>
-								<option value="11">11</option>
-								<option value="12">12</option>
-								<option value="13">13</option>
-								<option value="14">14</option>
-								<option value="15">15</option>
-								<option value="16">16</option>
-								<option value="17">17</option>
-								<option value="18">18</option>
-							</select>
-							<br><br>
-							<label class="textoCuerpoWhite">Lugar donde se realizará:</label>  <select name="facultad">
-							<?php while ($lugares=$sql2->fetch(PDO::FETCH_OBJ)) { ?>
-									<option value="<?php $lugares->idLugar ?>"><?php echo $lugares->nombreLugar ?></option>
-								<?php } ?>	
-							</select>
-							<br><br>
-							<label class="textoCuerpoWhite">Tipo de actividad:</label>
-							<br>
-							<input class="checkbox" type= "checkbox" name="actividad1" value="Conferencias">
-							<label for="actividad1" class="textoCuerpoWhite">Conferencias</label>
-							<br>
-							<input class="checkbox" type= "checkbox" name="actividad2" value="Ferias">
-							<label for="actividad2" class="textoCuerpoWhite">Ferias</label>
-							<br>
-							<input class="checkbox" type= "checkbox" name="actividad3" value="Seminarios">
-							<label for="actividad3" class="textoCuerpoWhite">Seminarios</label>
-							<br>
-							<input class="checkbox" type= "checkbox" name="actividad4" value="Actos Culturales">
-							<label for="actividad4" class="textoCuerpoWhite">Actos Culturales</label>
-							<br>
-							<input class="checkbox" type= "checkbox" name="actividad5" value="Inauguraciones">
-							<label for="actividad5" class="textoCuerpoWhite">Inauguraciones</label>
-							<br>
-							<input class="checkbox" type= "checkbox" name="actividad6" value="Congresos">
-							<label for="actividad6" class="textoCuerpoWhite">Congresos</label>
-							<br>
-							<label class="textoCuerpoWhite">Otros. Especificique </label> <input type="txtbox" type="text" name="otraactividad" size="20" maxlength="20" autofocus placeholder="" title="Escriba otro tipo de actividad que vaya a realizar">
-							<br>
-							<br>
-							<label class="textoCuerpoWhite"><h4>SERVICIOS DE PROTOCOLO, CEREMONIAL Y ORGANIZACIÓN DE EVENTOS</h4></label>
-							<br>
-							<br>
-							<label class="textoCuerpoWhite"><h5>ATENCIÓN PROTOCOLAR EN:</h5></label>
-							<br>
-							<label class="textoCuerpoWhite">Precedencia:</label>
-							<br>
-							<input class="checkbox" type= "checkbox" name="precedencia1" value="Mesa Principal">
-							<label class="textoCuerpoWhite" for="precedencia1">Mesa Principal</label>
-							<br>
-							<input class="checkbox" type= "checkbox" name="precedencia2" value="Estandartes">
-							<label class="textoCuerpoWhite" for="precedencia2">Estandartes</label>
-							<br>
-							<input class="checkbox" type= "checkbox" name="precedencia3" value="Atención de invitados especiales">
-							<label class="textoCuerpoWhite" for="precedencia3">Atención de invitados especiales</label>
-							<br>
-							<input class="checkbox" type= "checkbox" name="precedencia4" value="Logos">
-							<label class="textoCuerpoWhite" for="precedencia4">Logos</label>
-							<br>
-							<input class="checkbox" type= "checkbox" name="precedencia5" value="invitados">
-							<label class="textoCuerpoWhite" for="precedencia5">Invitados</label>
-							<br>
-							<input class="checkbox" type= "checkbox" name="precedencia6" value="Lista de invitados internos y externos">
-							<label class="textoCuerpoWhite" for="precedencia6">Lista de invitados internos y externos</label>
-							<br>
-							<input class="checkbox" type= "checkbox" name="precedencia7" value="Banderas">
-							<label class="textoCuerpoWhite" for="precedencia7">Banderas</label>
-							<br>
-							<input class="checkbox" type= "checkbox" name="precedencia8" value="Maestro de Ceremonias">
-							<label class="textoCuerpoWhite" for="precedencia8">Maestro de Ceremonias</label>
-							<br>
-							<input class="checkbox" type= "checkbox" name="precedencia9" value="Seminario de Protocolo y Etiqueta">
-							<label class="textoCuerpoWhite" for="precedencia9">Seminario de Protocolo y Etiqueta</label>
-							<br>
-							<br>
-							<label class="textoCuerpoWhite"><h5>ASESORÍAS EN:</h5></label>
-							<br>
-							<label class="textoCuerpoWhite"><h6>Planeación y organización del evento:</h6></label>
-							<br>
-							<input class="checkbox" type= "checkbox" name="planeacion1" value="Logística General">
-							<label class="textoCuerpoWhite" for="planeacion1">Logística General</label>
-							<br>
-							<input class="checkbox" type= "checkbox" name="planeacion2" value="Catering">
-							<label class="textoCuerpoWhite" for="planeacion2">Catering</label>
-							<br>
-							<input class="checkbox" type= "checkbox" name="planeacion3" value="Escenografía">
-							<label class="textoCuerpoWhite" for="planeacion3">Escenografía</label>
-							<br><br><br>
-							</div>
-		
-							<a href="menuPrincipal.php"><button class="redondo espacioBoton" type="button"><label class="textoCuerpo">REGRESAR</label></button></a>
-							<button class="redondo espacioBoton3" type="reset"><label class="textoCuerpo">BORRAR</label></button>
-							<button class="redondo espacioBoton3" type="button" id="okButton" onclick="myFunction()"><label class="textoCuerpo">ENVIAR</label></button>		
-						
+										<label class="textoCuerpoWhite">Fecha del evento:</label>
+										<input class="txtbox" type="date" name="fecha" size="20" maxlength="20" autofocus
+										placeholder="" title="Facultad de la universidad"/>
+										<br><br>
+										<label class="textoCuerpoWhite">Periodo cubierto:</label>
+										<select name="hora">
+											<option value="7">7</option>
+											<option value="8">8</option>
+											<option value="9">9</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+											<option value="17">17</option>
+											<option value="18">18</option>
+										</select>
+										<select name="minuto">
+											<option value="00">00</option>
+											<option value="01">01</option>
+											<option value="02">02</option>
+											<option value="03">03</option>
+											<option value="04">04</option>
+											<option value="05">05</option>
+											<option value="06">06</option>
+											<option value="07">07</option>
+											<option value="08">08</option>
+											<option value="09">09</option>
+											<option value="07">07</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+											<option value="17">17</option>
+											<option value="18">18</option>
+										</select>
+										<label class="textoCuerpoWhite">a</label>
+										<select name="hora">
+											<option value="7">7</option>
+											<option value="8">8</option>
+											<option value="9">9</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+											<option value="17">17</option>
+											<option value="18">18</option>
+										</select>
+										<select name="minuto">
+											<option value="00">00</option>
+											<option value="01">01</option>
+											<option value="02">02</option>
+											<option value="03">03</option>
+											<option value="04">04</option>
+											<option value="05">05</option>
+											<option value="06">06</option>
+											<option value="07">07</option>
+											<option value="08">08</option>
+											<option value="09">09</option>
+											<option value="07">07</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+											<option value="17">17</option>
+											<option value="18">18</option>
+										</select>
+										<br><br>
+										<label class="textoCuerpoWhite">Lugar donde se realizará:</label>  <select name="facultad">
+										<?php while ($lugares=$sql2->fetch(PDO::FETCH_OBJ)) { ?>
+												<option value="<?php $lugares->idLugar ?>"><?php echo $lugares->nombreLugar ?></option>
+											<?php } ?>	
+										</select>
+										<br><br>
+										<label class="textoCuerpoWhite">Tipo de actividad:</label>
+										<br>
+										<input class="checkbox" type= "checkbox" name="actividad1" value="Conferencias">
+										<label for="actividad1" class="textoCuerpoWhite">Conferencias</label>
+										<br>
+										<input class="checkbox" type= "checkbox" name="actividad2" value="Ferias">
+										<label for="actividad2" class="textoCuerpoWhite">Ferias</label>
+										<br>
+										<input class="checkbox" type= "checkbox" name="actividad3" value="Seminarios">
+										<label for="actividad3" class="textoCuerpoWhite">Seminarios</label>
+										<br>
+										<input class="checkbox" type= "checkbox" name="actividad4" value="Actos Culturales">
+										<label for="actividad4" class="textoCuerpoWhite">Actos Culturales</label>
+										<br>
+										<input class="checkbox" type= "checkbox" name="actividad5" value="Inauguraciones">
+										<label for="actividad5" class="textoCuerpoWhite">Inauguraciones</label>
+										<br>
+										<input class="checkbox" type= "checkbox" name="actividad6" value="Congresos">
+										<label for="actividad6" class="textoCuerpoWhite">Congresos</label>
+										<br>
+										<label class="textoCuerpoWhite">Otros. Especificique </label> <input type="txtbox" type="text" name="otraactividad" size="20" maxlength="20" autofocus placeholder="" title="Escriba otro tipo de actividad que vaya a realizar">
+										<br>
+										<br>
+						</div>
+
+						<div class="cajamarron">
+										<label class="textoCuerpoWhite"><h4>SERVICIOS DE PROTOCOLO, CEREMONIAL Y ORGANIZACIÓN DE EVENTOS</h4></label>
+										<br>
+										<br>
+										<label class="textoCuerpoWhite"><h5>ATENCIÓN PROTOCOLAR EN:</h5></label>
+										<br>
+										<label class="textoCuerpoWhite">Precedencia:</label>
+										<br>
+										<input class="checkbox" type= "checkbox" name="precedencia1" value="Mesa Principal">
+										<label class="textoCuerpoWhite" for="precedencia1">Mesa Principal</label>
+										<br>
+										<input class="checkbox" type= "checkbox" name="precedencia2" value="Estandartes">
+										<label class="textoCuerpoWhite" for="precedencia2">Estandartes</label>
+										<br>
+										<input class="checkbox" type= "checkbox" name="precedencia3" value="Atención de invitados especiales">
+										<label class="textoCuerpoWhite" for="precedencia3">Atención de invitados especiales</label>
+										<br>
+										<input class="checkbox" type= "checkbox" name="precedencia4" value="Logos">
+										<label class="textoCuerpoWhite" for="precedencia4">Logos</label>
+										<br>
+										<input class="checkbox" type= "checkbox" name="precedencia5" value="invitados">
+										<label class="textoCuerpoWhite" for="precedencia5">Invitados</label>
+										<br>
+										<input class="checkbox" type= "checkbox" name="precedencia6" value="Lista de invitados internos y externos">
+										<label class="textoCuerpoWhite" for="precedencia6">Lista de invitados internos y externos</label>
+										<br>
+										<input class="checkbox" type= "checkbox" name="precedencia7" value="Banderas">
+										<label class="textoCuerpoWhite" for="precedencia7">Banderas</label>
+										<br>
+										<input class="checkbox" type= "checkbox" name="precedencia8" value="Maestro de Ceremonias">
+										<label class="textoCuerpoWhite" for="precedencia8">Maestro de Ceremonias</label>
+										<br>
+										<input class="checkbox" type= "checkbox" name="precedencia9" value="Seminario de Protocolo y Etiqueta">
+										<label class="textoCuerpoWhite" for="precedencia9">Seminario de Protocolo y Etiqueta</label>
+										<br>
+										<br>
+										<label class="textoCuerpoWhite"><h5>ASESORÍAS EN:</h5></label>
+										<br>
+										<label class="textoCuerpoWhite"><h6>Planeación y organización del evento:</h6></label>
+										<br>
+										<input class="checkbox" type= "checkbox" name="planeacion1" value="Logística General">
+										<label class="textoCuerpoWhite" for="planeacion1">Logística General</label>
+										<br>
+										<input class="checkbox" type= "checkbox" name="planeacion2" value="Catering">
+										<label class="textoCuerpoWhite" for="planeacion2">Catering</label>
+										<br>
+										<input class="checkbox" type= "checkbox" name="planeacion3" value="Escenografía">
+										<label class="textoCuerpoWhite" for="planeacion3">Escenografía</label>
+										<br><br><br>
+						</div>
+			
+								<a href="menuPrincipal.php"><button class="redondo espacioBoton5" type="button"><label class="textoCuerpo">REGRESAR</label></button></a>
+								<button class="redondo espacioBoton3" type="reset"><label class="textoCuerpo">BORRAR</label></button>
+								<button class="redondo espacioBoton3" type="button" id="okButton" onclick="myFunction()"><label class="textoCuerpo">ENVIAR</label></button>		
+
+								<br><br><br>
+							
 					</div><!--FIN DEL DIVPRIMERO-->
-				
+
 
 				<!--INICIO DEL DIVSEGUNDO-->
 				<div id="divSegundo" hidden>		
-					<div class="cajamarron2">
-						<h5 class="textoCuerpoWhite">Protocolo:</h5>
-						<h6 class="textoCuerpoWhite">Precedencia</h6>
-						<input class="checkbox" type= "checkbox" name="protocolo-precedencia1" value="Mesa Principal">
-						<label class="textoCuerpoWhite" for="protocolo-precedencia1">Mesa Principal</label>
-						<br>
-						<input class="checkbox" type= "checkbox" name="protocolo-precedencia2" value="Logos">
-						<label class="textoCuerpoWhite" for="protocolo-precedencia2">Logos</label>
-						<br>
-						<input class="checkbox" type= "checkbox" name="protocolo-precedencia3" value="Banderas">
-						<label class="textoCuerpoWhite" for="protocolo-precedencia3">Banderas</label>
-						<br>
-						<input class="checkbox" type= "checkbox" name="protocolo-precedencia4" value="Etiqueta">
-						<label class="textoCuerpoWhite" for="protocolo-precedencia4">Etiqueta</label>
-						<br>
-						<input class="checkbox" type= "checkbox" name="protocolo-precedencia5" value="Estandartes">
-						<label class="textoCuerpoWhite" for="protocolo-precedencia5">Estandartes</label>
-						<br>
-						<input class="checkbox" type= "checkbox" name="protocolo-precedenci6" value="Banners">
-						<label class="textoCuerpoWhite" for="protocolo-precedencia6">Banners</label>
-						<br>
-						<input class="checkbox" type= "checkbox" name="protocolo-precedencia7" value="invitados">
-						<label class="textoCuerpoWhite" for="protocolo-precedencia7">Invitados</label>
-						<br>
-						<h6 class="textoCuerpoWhite">Contenido de</h6>
-						<input class="checkbox" type= "checkbox" name="protocolo-contenido1" value="Tarjetas">
-						<label class="textoCuerpoWhite" for="protocolo-precedencia1">Tarjetas</label>
-						<br>
-						<input class="checkbox" type= "checkbox" name="protocolo-contenido2" value="Certificados">
-						<label class="textoCuerpoWhite" for="protocolo-precedencia2">Certificados</label>
-						<br>
-						<input class="checkbox" type= "checkbox" name="protocolo-contenido3" value="Programas">
-						<label class="textoCuerpoWhite" for="protocolo-precedencia3">Programas</label>
-						<br>
-						<input class="checkbox" type= "checkbox" name="protocolo-contenido4" value="Atención de invitados especiales">
-						<label class="textoCuerpoWhite" for="protocolo-precedencia4">Atención de invitados especiales</label>
-						<br>
-						<br>
+					<div class="cajamarron">
+								<h5 class="textoCuerpoWhite">Protocolo:</h5>
+								<h6 class="textoCuerpoWhite">Precedencia</h6>
+								<input class="checkbox" type= "checkbox" name="protocolo-precedencia1" value="Mesa Principal">
+								<label class="textoCuerpoWhite" for="protocolo-precedencia1">Mesa Principal</label>
+								<br>
+								<input class="checkbox" type= "checkbox" name="protocolo-precedencia2" value="Logos">
+								<label class="textoCuerpoWhite" for="protocolo-precedencia2">Logos</label>
+								<br>
+								<input class="checkbox" type= "checkbox" name="protocolo-precedencia3" value="Banderas">
+								<label class="textoCuerpoWhite" for="protocolo-precedencia3">Banderas</label>
+								<br>
+								<input class="checkbox" type= "checkbox" name="protocolo-precedencia4" value="Etiqueta">
+								<label class="textoCuerpoWhite" for="protocolo-precedencia4">Etiqueta</label>
+								<br>
+								<input class="checkbox" type= "checkbox" name="protocolo-precedencia5" value="Estandartes">
+								<label class="textoCuerpoWhite" for="protocolo-precedencia5">Estandartes</label>
+								<br>
+								<input class="checkbox" type= "checkbox" name="protocolo-precedenci6" value="Banners">
+								<label class="textoCuerpoWhite" for="protocolo-precedencia6">Banners</label>
+								<br>
+								<input class="checkbox" type= "checkbox" name="protocolo-precedencia7" value="invitados">
+								<label class="textoCuerpoWhite" for="protocolo-precedencia7">Invitados</label>
+								<br>
+								<br>
+								<h6 class="textoCuerpoWhite">Contenido de</h6>
+								<input class="checkbox" type= "checkbox" name="protocolo-contenido1" value="Tarjetas">
+								<label class="textoCuerpoWhite" for="protocolo-precedencia1">Tarjetas</label>
+								<br>
+								<input class="checkbox" type= "checkbox" name="protocolo-contenido2" value="Certificados">
+								<label class="textoCuerpoWhite" for="protocolo-precedencia2">Certificados</label>
+								<br>
+								<input class="checkbox" type= "checkbox" name="protocolo-contenido3" value="Programas">
+								<label class="textoCuerpoWhite" for="protocolo-precedencia3">Programas</label>
+								<br>
+								<input class="checkbox" type= "checkbox" name="protocolo-contenido4" value="Atención de invitados especiales">
+								<label class="textoCuerpoWhite" for="protocolo-precedencia4">Atención de invitados especiales</label>
+								<br>
+								<br>
+					</div>
+
+					<div class="cajamarron">
 						<h5 class="textoCuerpoWhite">SERVICIOS DE  PRENSA Y AUDIOVISUAL</h5>
-						<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual1" value="Cobertura Periodística">
-						<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual1">Cobertura Periodística</label>
-						<br>
-						<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual2" value="Fotografía">
-						<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual2">Fotografía</label>
-						<br>
-						<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual3" value="Filmación">
-						<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual3">Filmación</label>
-						<br>
-						<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual4" value="Divulgación en Web de la UTP">
-						<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual4">Divulgación en Web de la UTP</label>
-						<br>
-						<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual5" value="Equipo de sonido">
-						<label class="textoCuerpoWhite" for="servicio-prensa-audiovisua5">Equipo de sonido</label>
-						<br>
-						<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual6" value="Entrevista en los medios de comunicación social">
-						<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual6">Entrevista en los medios de comunicación social</label>
-						<br>
-						<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual7" value="Publicar en Redes Sociales">
-						<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual7">Publicar en Redes Sociales (Facebook , Twitter)</label>
-						<br>
-						<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual8" value="Apoyo en Videoconferencias">
-						<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual8">Apoyo en Videoconferencias (Filmadora y equipo de audio)</label>
-						<br>
-						<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual9" value="Transmisión por Streaming">
-						<label  class="textoCuerpoWhite" for="servicio-prensa-audiovisual9">Transmisión por Streaming</label>
+								<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual1" value="Cobertura Periodística">
+								<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual1">Cobertura Periodística</label>
+								<br>
+								<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual2" value="Fotografía">
+								<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual2">Fotografía</label>
+								<br>
+								<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual3" value="Filmación">
+								<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual3">Filmación</label>
+								<br>
+								<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual4" value="Divulgación en Web de la UTP">
+								<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual4">Divulgación en Web de la UTP</label>
+								<br>
+								<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual5" value="Equipo de sonido">
+								<label class="textoCuerpoWhite" for="servicio-prensa-audiovisua5">Equipo de sonido</label>
+								<br>
+								<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual6" value="Entrevista en los medios de comunicación social">
+								<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual6">Entrevista en los medios de comunicación social</label>
+								<br>
+								<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual7" value="Publicar en Redes Sociales">
+								<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual7">Publicar en Redes Sociales (Facebook , Twitter)</label>
+								<br>
+								<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual8" value="Apoyo en Videoconferencias">
+								<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual8">Apoyo en Videoconferencias (Filmadora y equipo de audio)</label>
+								<br>
+								<input class="checkbox" type= "checkbox" name="servicio-prensa-audiovisual9" value="Transmisión por Streaming">
+								<label  class="textoCuerpoWhite" for="servicio-prensa-audiovisual9">Transmisión por Streaming</label>
 						<br>
 						<br>
 
 						<h5 class="textoCuerpoWhite">INFORMACIÓN PARA NOTA DE PRENSA:</h5>
 						<textarea name="" rows="8" cols="120" size="20" maxlength="1000" requerided placeholder="" title="Escriba el nombre de la actividad"></textarea>
 						<br>
+						<br>
+						<br>
 					</div>
 
-					<button class="redondo espacioBoton" type="button" onclick="myFunction1()"><label class="textoCuerpo">Regresar</label></button></a>
+					<button class="redondo espacioBoton5" type="button" onclick="myFunction1()"><label class="textoCuerpo">Regresar</label></button></a>
 					<button class="redondo espacioBoton3" type="reset"><label class="textoCuerpo">BORRAR</label></button>
 					<button class="redondo espacioBoton3" type="button" id="okButton" onclick="myFunction2()"><label class="textoCuerpo">ENVIAR</label></button>		
 					
-			<br><br><br>
+					<br><br><br>
 					
 				</div><!--FIN DEL DIVSEGUNDO-->
 
 
 				<!--INICIO DEL DIVTERCERO-->
 				<div id="divTercero" hidden>		
-					<div class="cajamarron2">
+					<div class="cajamarron">
 						<h5 class="textoCuerpoWhite">SERVICIOS DE LA SECCIÓN DE DISEÑO GRÁFICO</h5>
 						<table width="85%" class="textoCuerpoWhite">
 						<tr>
@@ -740,9 +745,11 @@
 						</tr>
 						</table>
 
-						<br>
-						<br>
+						<br><br><br>
 
+					</div>
+					
+					<div class="cajamarron">	
 						<h3 class="textoCuerpoWhite">Notas Importantes: </h3>
 						
 						<p class="textoCuerpoWhite">1.	Los trabajos no programados deben solicitarse a la sección de Diseño Gráfico 15 días antes de la fecha requerida.</p>
@@ -761,9 +768,12 @@
 						<p class="textoCuerpoWhite">•	Formato: Tamaño del arte (dimensiones) y posición (horizontal o vertical)</p>
 
 						<p class="textoCuerpoWhite">4.	Las correcciones deben estar firmadas por el jefe de la Unidad que solicita el trabajo.</p>
+
+						<br><br><br>
+
 					</div>
 
-					<button class="redondo espacioBoton" type="button" onclick="myFunction()"><label class="textoCuerpo">Regresar</label></button></a>
+					<button class="redondo espacioBoton5" type="button" onclick="myFunction()"><label class="textoCuerpo">Regresar</label></button></a>
 					<button class="redondo espacioBoton3" type="reset"><label class="textoCuerpo">BORRAR</label></button>
 					<button class="redondo espacioBoton3" type="button" id="okButton" onclick="myFunction3()"><label class="textoCuerpo">ENVIAR</label></button>
 
@@ -774,7 +784,7 @@
 
 				<!--INICIO DEL DIVCUARTO-->
 				<div id="divCuarto" hidden>
-					<div class="cajamarron2 textoCuerpoWhite">
+					<div class="cajamarron textoCuerpoWhite">
 
 						<h5>SERVICIOS DE LA SECCIÓN DE IMPRENTA REQUERIDOS</h5>	
 
@@ -911,10 +921,10 @@
 						3.	Si la actividad es de autogestión se debe cubrir el costo de los materiales para la impresión de papelería de promoción y folletos.
 						<br>
 						<h6>*Se requiere un mes para la elaboración</h6>
-					
+						<br><br><br>					
 					</div>
 
-					<div class="cajamarron2 textoCuerpoWhite">
+					<div class="cajamarron textoCuerpoWhite">
 
 						<h5>CONTACTO DIRECTO PARA COORDINACIÓN</h5>
 						Solicitado por: 
@@ -936,18 +946,14 @@
 						<br>
 						<br>
 					</div>
-					<button class="redondo espacioBoton" type="button" onclick="myFunction2()"><label class="textoCuerpo">Regresar</label></button></a>
+					<button class="redondo espacioBoton5" type="button" onclick="myFunction2()"><label class="textoCuerpo">Regresar</label></button></a>
 					<button class="redondo espacioBoton3" type="reset"><label class="textoCuerpo">BORRAR</label></button>					
 					<button class="redondo espacioBoton3" type="submit"><label class="textoCuerpo">Enviar</label></button>
 			<br><br><br>
 				
-					</div><!--FIN DEL DIVCUARTO-->	
-					</fieldset>				
-			</form>
+					</div><!--FIN DEL DIVCUARTO-->		
 		</div>
-
-	</section>
-
+			</form>
 
 	</div>
 	<footer id="footer">
@@ -967,4 +973,5 @@
 	</div>
 
 </body>
+
 </html>

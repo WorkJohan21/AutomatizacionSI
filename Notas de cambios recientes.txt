@@ -65,3 +65,13 @@ El formulario de equipos ahora es el que hay qye arreglarlé los botones
 Agregue las opciones de los lugares en el formulario 2 que estaban en la base de datos en el select del formulario de equipo
 
 Agregue el fondo chocolate al formulario de eventos, aunque falta arreglar que los elementos esten en el centro
+
+------------------------------------------------------------------------------------------------------
+
+Noviembre 7
+
+- Christian
+
+    - Logré mejorar la posición de los botones del formulario de eventos y corregí los daños que hice en el formulario de eventos. 
+
+    - Falta mejorar la posición de los botones en el formulario de eventos para que queden perfectos.

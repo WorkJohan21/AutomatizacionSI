@@ -75,3 +75,7 @@ Noviembre 7
     - Logré mejorar la posición de los botones del formulario de eventos y corregí los daños que hice en el formulario de eventos. 
 
     - Falta mejorar la posición de los botones en el formulario de eventos para que queden perfectos.
+
+- Christian - 4:02 p.m.
+
+    - Logré arreglar los botones de ambos formularios, aunque no se si se adaptan según el tamaño de la pantalla.

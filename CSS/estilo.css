@@ -174,12 +174,11 @@ body {
 
 .cajamarron2{
     background-color: #B7A57A;
-    padding: 10px;
+    padding: 100px;
     border-radius: 5px;
-    margin-bottom: 50px;
     text-align: left;
-    margin-left: 100px;
-    margin-right: 500px; 
+    width: 100%;
+    
 }
 
 .cajapurpura{
@@ -215,13 +214,17 @@ body {
   margin-left: -250px;
 }
 
-.espacioBoton2 {
+.espacioBoton2 {         /*Es del formulario de equipo, mejor no tocar*/
   margin-left: 100px;
 }
 
 .espacioBoton3{
     margin-left: 230px;
   }
+
+.espacioBoton4{           /*Es del formulario de equipo, mejor no tocar*/
+    margin-left: 260px;
+}
 
 .espaciadoaltura{
     padding-top: 50px;

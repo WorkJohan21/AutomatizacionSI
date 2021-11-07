@@ -247,9 +247,9 @@
 										<br><br><br>
 						</div>
 			
-								<a href="menuPrincipal.php"><button class="redondo espacioBoton5" type="button"><label class="textoCuerpo">REGRESAR</label></button></a>
-								<button class="redondo espacioBoton3" type="reset"><label class="textoCuerpo">BORRAR</label></button>
-								<button class="redondo espacioBoton3" type="button" id="okButton" onclick="myFunction()"><label class="textoCuerpo">ENVIAR</label></button>		
+								<a href="menuPrincipal.php"><button class="redondo espacioBoton6" type="button"><label class="textoCuerpo">REGRESAR</label></button></a>
+								<button class="redondo espacioBoton5" type="reset"><label class="textoCuerpo">BORRAR</label></button>
+								<button class="redondo espacioBoton5" type="button" id="okButton" onclick="myFunction()"><label class="textoCuerpo">ENVIAR</label></button>		
 
 								<br><br><br>
 							
@@ -337,9 +337,9 @@
 						<br>
 					</div>
 
-					<button class="redondo espacioBoton5" type="button" onclick="myFunction1()"><label class="textoCuerpo">Regresar</label></button></a>
-					<button class="redondo espacioBoton3" type="reset"><label class="textoCuerpo">BORRAR</label></button>
-					<button class="redondo espacioBoton3" type="button" id="okButton" onclick="myFunction2()"><label class="textoCuerpo">ENVIAR</label></button>		
+					<button class="redondo espacioBoton6" type="button" onclick="myFunction1()"><label class="textoCuerpo">Regresar</label></button></a>
+					<button class="redondo espacioBoton5" type="reset"><label class="textoCuerpo">BORRAR</label></button>
+					<button class="redondo espacioBoton5" type="button" id="okButton" onclick="myFunction2()"><label class="textoCuerpo">ENVIAR</label></button>		
 					
 					<br><br><br>
 					
@@ -754,8 +754,9 @@
 						
 						<p class="textoCuerpoWhite">1.	Los trabajos no programados deben solicitarse a la sección de Diseño Gráfico 15 días antes de la fecha requerida.</p>
 
-						<p class="textoCuerpoWhite">2.	Las actividades programadas con rango institucional que requieren papelería de promoción (brochure, afiches, banner y escenografía)
-						tendrán prioridad, pero para garantizar la calidad de <br> los trabajos la solicitud debe presentarse con un mes de anticipación a la fecha del evento.</p>
+						<p class="textoCuerpoWhite">2. Las actividades programadas con rango institucional que requieren papelería de promoción 
+						(brochure, afiches, banner y escenografía) tendrán prioridad, <br> pero para garantizar la calidad de los trabajos la solicitud debe presentarse con un <br>
+						mes de anticipación a la fecha del evento.</p>
 
 						<p class="textoCuerpoWhite">3.	Los formatos de la información que debe adjuntarse a las solicitudes:</p>
 
@@ -773,9 +774,9 @@
 
 					</div>
 
-					<button class="redondo espacioBoton5" type="button" onclick="myFunction()"><label class="textoCuerpo">Regresar</label></button></a>
-					<button class="redondo espacioBoton3" type="reset"><label class="textoCuerpo">BORRAR</label></button>
-					<button class="redondo espacioBoton3" type="button" id="okButton" onclick="myFunction3()"><label class="textoCuerpo">ENVIAR</label></button>
+					<button class="redondo espacioBoton6" type="button" onclick="myFunction()"><label class="textoCuerpo">Regresar</label></button></a>
+					<button class="redondo espacioBoton5" type="reset"><label class="textoCuerpo">BORRAR</label></button>
+					<button class="redondo espacioBoton5" type="button" id="okButton" onclick="myFunction3()"><label class="textoCuerpo">ENVIAR</label></button>
 
 			<br><br><br>
 				
@@ -946,9 +947,9 @@
 						<br>
 						<br>
 					</div>
-					<button class="redondo espacioBoton5" type="button" onclick="myFunction2()"><label class="textoCuerpo">Regresar</label></button></a>
-					<button class="redondo espacioBoton3" type="reset"><label class="textoCuerpo">BORRAR</label></button>					
-					<button class="redondo espacioBoton3" type="submit"><label class="textoCuerpo">Enviar</label></button>
+					<button class="redondo espacioBoton6" type="button" onclick="myFunction2()"><label class="textoCuerpo">Regresar</label></button></a>
+					<button class="redondo espacioBoton5" type="reset"><label class="textoCuerpo">BORRAR</label></button>					
+					<button class="redondo espacioBoton5" type="submit"><label class="textoCuerpo">Enviar</label></button>
 			<br><br><br>
 				
 					</div><!--FIN DEL DIVCUARTO-->		

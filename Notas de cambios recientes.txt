@@ -79,3 +79,23 @@ Noviembre 7
 - Christian - 4:02 p.m.
 
     - Logré arreglar los botones de ambos formularios, aunque no se si se adaptan según el tamaño de la pantalla.
+
+Noviembre 8
+
+- Christian
+
+    - Añadí varios placeholder al formulario de equipo
+
+    - Para el formulario de equipos, en las facultades creo que queda mejor el nombre completo. Adjunto las lineas de modificación sql de la base de datos
+
+UPDATE `facultad` SET `nombreFacultad` = 'Facultad de Ciencias y Tecnología (FCT)' WHERE `facultad`.`idFacultad` = 1;
+
+UPDATE `facultad` SET `nombreFacultad` = 'Facultad de Ingeniería Civíl (FIC)' WHERE `facultad`.`idFacultad` = 2;
+
+UPDATE `facultad` SET `nombreFacultad` = 'Facultad de Ingeniería Eléctrica (FIE)' WHERE `facultad`.`idFacultad` = 3;
+
+UPDATE `facultad` SET `nombreFacultad` = 'Facultad de Ingeniería Industrial (FII)' WHERE `facultad`.`idFacultad` = 4;
+
+UPDATE `facultad` SET `nombreFacultad` = 'Facultad de Ingeniería  Mecánica (FIM)' WHERE `facultad`.`idFacultad` = 5;
+
+UPDATE `facultad` SET `nombreFacultad` = 'Facultad de Ingeniería Sistemas Computacionales (FISC)' WHERE `facultad`.`idFacultad` = 6;

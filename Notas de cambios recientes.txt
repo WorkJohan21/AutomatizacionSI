@@ -79,3 +79,45 @@ Noviembre 7
 - Christian - 4:02 p.m.
 
     - Logré arreglar los botones de ambos formularios, aunque no se si se adaptan según el tamaño de la pantalla.
+
+
+- Edwin 10:00 p.m
+
+    - Agregue los datos de protocolos en la tabla de datos, y los values de los checkbox de la parte de protocolos en el formulario de eventos corresponden a los id de estos en la tabla s_protocolo
+
+INSERT INTO s_protocolo (nombreProtocolo) VALUES ('Atencion Protocolar - Mesa Principal');
+INSERT INTO s_protocolo (nombreProtocolo) VALUES ('Atencion Protocolar - Estandartes');
+INSERT INTO s_protocolo (nombreProtocolo) VALUES ('Atencion Protocolar - Atencion de Invitados Especiales');
+INSERT INTO s_protocolo (nombreProtocolo) VALUES ('Atencion Protocolar - Logos');
+INSERT INTO s_protocolo (nombreProtocolo) VALUES ('Atencion Protocolar - Invitados');
+INSERT INTO s_protocolo (nombreProtocolo) VALUES ('Atencion Protocolar - Lista de Invitados internos y externos');
+INSERT INTO s_protocolo (nombreProtocolo) VALUES ('Atencion Protocolar - Banderas');
+INSERT INTO s_protocolo (nombreProtocolo) VALUES ('Atencion Protocolar - Maestro de Ceremonia');
+INSERT INTO s_protocolo (nombreProtocolo) VALUES ('Atencion Protocolar - Seminario de Protocolo y Etiqueta');
+
+INSERT INTO s_protocolo (nombreProtocolo) VALUES ('Asesorias en - Logistica General');
+INSERT INTO s_protocolo (nombreProtocolo) VALUES ('Asesorias en - Catering');
+INSERT INTO s_protocolo (nombreProtocolo) VALUES ('Asesorias en - Escenografia');
+
+INSERT INTO s_protocolo (nombreProtocolo) VALUES ('pPrecedencia - Mesa Principal');
+INSERT INTO s_protocolo (nombreProtocolo) VALUES ('pPrecedencia - Logos');
+INSERT INTO s_protocolo (nombreProtocolo) VALUES ('pPrecedencia - Banderas');
+INSERT INTO s_protocolo (nombreProtocolo) VALUES ('pPrecedencia - Etiqueta');
+INSERT INTO s_protocolo (nombreProtocolo) VALUES ('pPrecedencia - Estandartes');
+INSERT INTO s_protocolo (nombreProtocolo) VALUES ('pPrecedencia - Banners');
+INSERT INTO s_protocolo (nombreProtocolo) VALUES ('pPrecedencia - Invitados');
+
+INSERT INTO s_protocolo (nombreProtocolo) VALUES ('pContenido - Tarjetas');
+INSERT INTO s_protocolo (nombreProtocolo) VALUES ('pContenido - Certificados');
+INSERT INTO s_protocolo (nombreProtocolo) VALUES ('pContenido - Programas');
+INSERT INTO s_protocolo (nombreProtocolo) VALUES ('pContenido - Atencion de Invitados Especiales');
+
+INSERT INTO s_prensa (nombrePrensa) VALUES ('Cobertura Periodistica');
+INSERT INTO s_prensa (nombrePrensa) VALUES ('Fotografia');
+INSERT INTO s_prensa (nombrePrensa) VALUES ('Filmacion');
+INSERT INTO s_prensa (nombrePrensa) VALUES ('Divulgacion en la Web de la UTP');
+INSERT INTO s_prensa (nombrePrensa) VALUES ('Equipo de Sonido');
+INSERT INTO s_prensa (nombrePrensa) VALUES ('Entrevista en los medios de comunicacion');
+INSERT INTO s_prensa (nombrePrensa) VALUES ('Publicar en las redes sociales');
+INSERT INTO s_prensa (nombrePrensa) VALUES ('Apoyo en Videoconferencias');
+INSERT INTO s_prensa (nombrePrensa) VALUES ('Transmision por Streaming');

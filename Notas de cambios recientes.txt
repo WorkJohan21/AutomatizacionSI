@@ -146,15 +146,17 @@ No sé como relacionarlas bien con las demás tablas :( Es para el formulario de
 
 La facultad de Ingeniería Eléctrica no tiene departamentos según la página de la UTP
 
-CREATE TABLE 'departamento'(
-    'idDepartamento' int(11) NOT NULL,
-    'nombreDepartamento' varchar(50),
-    constraint 'nombreFacultad' foreign key (nombreDepartamento) references facultad(nombreFacultad) 
+CREATE TABLE departamento(
+    idDepartamento int(11) NOT NULL PRIMARY KEY,
+    nombreDepartamento varchar(50),
+    constraint nombreFacultad foreign key (nombreDepartamento) references facultad(nombreFacultad) 
 );
 
-CREATE TABLE 'facultad_departamento'(
-    'nombreDepartamento' varchar(50),
-    'nombreFacultad' varchar(100) 
+CREATE TABLE facultad_departamento(
+    idFacultadDepartamento int(11) NOT NULL PRIMARY KEY,
+    idFacultad int(11),
+    idDepartamento int(11),
+    constraint nombreDepartamento foreign key (nombreDepartamento) references departamento(nombreDepartamento)
 );
 
 INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Ciencias Exactas, Facultad de Ciencias y Tecnología (FCT));

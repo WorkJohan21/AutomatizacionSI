@@ -943,7 +943,7 @@
 						<br>
 						<br>
 						Correo Electrónico: 
-						<input type="email" name="correo" size="40" maxlength="80" autofocus placeholder="Ingrese su correo electrónico" title="Escriba su correo electrónico">
+						<input type="text" id="correo" class="txtbox" name="correo" size="40" value="<?php echo $datoUser->email; ?>"readonly>
 						<br>
 						<br>
 					</div>

@@ -126,7 +126,7 @@
                 <input type="text" id="telefono" class="txtbox" name="telefono" value="<?php echo $datoTel->telefono; ?>" readonly>       
                 <br><br>
                 <label class="textoCuerpoWhite labelEspacio">Correo Electrónico</label>
-                <input type="text" id="correo" class="txtbox" name="correo" value="<?php echo $datoUser->email; ?>"readonly>
+                <input type="text" id="correo" class="txtbox" name="correo" size="35" value="<?php echo $datoUser->email; ?>"readonly>
                 <br><br>
                 <label class="textoCuerpoWhite labelEspacio">Celular</label>
                 <input type="text" id="celular" class="txtbox" name="celular" value="<?php echo $datoCel->celular; ?>" readonly>

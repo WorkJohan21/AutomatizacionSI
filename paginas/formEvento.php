@@ -350,7 +350,7 @@
 				<div id="divTercero" hidden>		
 					<div class="cajamarron">
 						<h5 class="textoCuerpoWhite">SERVICIOS DE LA SECCIÓN DE DISEÑO GRÁFICO</h5>
-						<table width="85%" class="textoCuerpoWhite">
+						<table cellspacing="20" cellpadding="10" class="textoCuerpoWhite">
 						<tr>
 							<th>N°</th>
 							<th>Servicios Requeridos</th>

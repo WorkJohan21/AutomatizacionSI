@@ -2,6 +2,12 @@
 <?php
     include("../procesos/verificar.php");
     include("../procesos/consultaUser.php");
+
+    $sql=$conn->query("SELECT * FROM telefono WHERE idUsuario='$id_usuario'");
+    $datoTel=$sql->fetch(PDO::FETCH_OBJ);
+
+    $sql2=$conn->query("SELECT * FROM celular WHERE idUsuario='$id_usuario'");
+    $datoCel=$sql2->fetch(PDO::FETCH_OBJ);
 ?>
 
 <!DOCTYPE html>
@@ -111,19 +117,19 @@
           <label class="textoCuerpoWhite ">INFORMACIÓN DE LA PERSONA QUE SOLICITA EL EQUIPO</label>
           <br><br>
                 <label class="textoCuerpoWhite labelEspacio">Nombre del Solicitante</label>
-                <input type="text" id="nomSolicitante" class="txtbox" placeholder="" name="nomSolicitante">
+                <input type="text" id="nomSolicitante" class="txtbox" name="nomSolicitante" value="<?php echo $datoUser->nombre." ".$datoUser->apellido; ?>"readonly>
                 <br><br>
                 <label class="textoCuerpoWhite labelEspacio"> Unidad donde labora</label>
                 <input type="text" id="unidadLabor" class="txtbox" placeholder="" name="unidadLabor">     
                 <br><br>
                 <label class="textoCuerpoWhite labelEspacio">Teléfono</label>
-                <input type="text" id="telefono" class="txtbox" placeholder="" name="telefono">       
+                <input type="text" id="telefono" class="txtbox" name="telefono" value="<?php echo $datoTel->telefono; ?>" readonly>       
                 <br><br>
                 <label class="textoCuerpoWhite labelEspacio">Correo Electrónico</label>
-                <input type="text" id="correo" class="txtbox" placeholder="" name="correo">
+                <input type="text" id="correo" class="txtbox" name="correo" value="<?php echo $datoUser->email; ?>"readonly>
                 <br><br>
                 <label class="textoCuerpoWhite labelEspacio">Celular</label>
-                <input type="text" id="celular" class="txtbox" placeholder="" name="celular">
+                <input type="text" id="celular" class="txtbox" name="celular" value="<?php echo $datoCel->celular; ?>" readonly>
                 <br><br>
     </div> 
                 <a href="menuPrincipal.php"><button class="redondo espacioBoton6" type="button"><label class="textoCuerpo">REGRESAR</label></button></a>
@@ -245,7 +251,7 @@
             <input type="date" id="fechaRetiro" class="txtbox" placeholder="" name="fechaRetiro">
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Quién Retira</label>
-            <input type="text" id="personaRetira" class="txtbox" placeholder="" name="personaRetira">     
+            <input type="text" id="personaRetira" class="txtbox" name="personaRetira" value="<?php echo $datoUser->nombre." ".$datoUser->apellido; ?>"readonly>     
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Quién Entrega (DIPROCE)</label>
             <input type="text" id="personaEntrg" class="txtbox" placeholder="" name="personaEntrg">       
@@ -260,7 +266,7 @@
             <input type="date" id="fechaDevlucion" class="txtbox" placeholder="" name="fechaDevlucion">     
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Quién Devuelve</label>
-            <input type="text" id="personaDevlv" class="txtbox" placeholder="" name="personaDevlv">       
+            <input type="text" id="personaDevlv" class="txtbox" name="personaDevlv" value="<?php echo $datoUser->nombre." ".$datoUser->apellido; ?>"readonly>       
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Quién Recibe (DIPROCE)</label>
             <input type="text" id="personaRecv" class="txtbox" placeholder="" name="personaRecv" required>

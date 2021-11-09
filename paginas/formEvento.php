@@ -93,9 +93,9 @@
 										placeholder="" title="Facultad de la universidad"/>
 										<br><br>
 										<label class="textoCuerpoWhite">Periodo cubierto:</label><!--name hora1-->
-										<input type="time" id="horaActividad" class="txtbox" placeholder="" name="horaActividad">
+										<input type="time" id="horaInicioEvento" class="txtbox" placeholder="" name="horaActividad">
 										<label class="textoCuerpoWhite">a</label>
-										<input type="time" id="horaActividad" class="txtbox" placeholder="" name="horaActividad">
+										<input type="time" id="horaFinEvento" class="txtbox" placeholder="" name="horaActividad">
 										<br><br>
 										<label class="textoCuerpoWhite">Lugar donde se realizará:</label>  <select name="lugar"><!--name lugar-->
 										<?php while ($lugares=$sql2->fetch(PDO::FETCH_OBJ)) { ?>
@@ -123,7 +123,8 @@
 										<input class="checkbox" type= "radio" name="actividad1" value="Congresos">
 										<label for="actividad6" class="textoCuerpoWhite">Congresos</label>
 										<br>
-										<label class="textoCuerpoWhite">Otros. Especificique </label> <input type="txtbox" type="text" name="otraactividad" size="20" maxlength="20" autofocus placeholder="" title="Escriba otro tipo de actividad que vaya a realizar">
+										<input class="checkbox" type= "radio" name="actividad1" value="Otros">
+										<label for="actividad7"class="textoCuerpoWhite"> Otros. Especificique </label> <input type="txtbox" type="text" name="otraactividad" size="20" maxlength="20" autofocus placeholder="" title="Escriba otro tipo de actividad que vaya a realizar">
 										<br>
 										<br>
 						</div>

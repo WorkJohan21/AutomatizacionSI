@@ -4,8 +4,8 @@
     include("../procesos/consultaUser.php");
 	$sql=$conn->query("SELECT * FROM facultad");
 	$sql2=$conn->query("SELECT * FROM lugar");
-	$sql=$conn->query("SELECT * FROM telefono WHERE idUsuario='$id_usuario'");
-    $datoTel=$sql->fetch(PDO::FETCH_OBJ);
+	$sql3=$conn->query("SELECT * FROM telefono WHERE idUsuario='$id_usuario'");
+    $datoTel=$sql3->fetch(PDO::FETCH_OBJ);
 ?>
 
 <!DOCTYPE html>

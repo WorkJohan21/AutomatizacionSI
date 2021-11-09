@@ -142,7 +142,9 @@ UPDATE `facultad` SET `nombreFacultad` = 'Facultad de Ingeniería Sistemas Compu
 
 Noviembre 9
 
-No sé como relacionarlas bien :( Es para el formulario de eventos para que se desplieguen los departamentos
+No sé como relacionarlas bien con las demás tablas :( Es para el formulario de eventos para que se desplieguen los departamentos
+
+La facultad de Ingeniería Eléctrica no tiene departamentos según la página de la UTP
 
 CREATE TABLE 'departamento'(
     'idDepartamento' int(11) NOT NULL,
@@ -154,3 +156,34 @@ CREATE TABLE 'facultad_departamento'(
     'nombreDepartamento' varchar(50),
     'nombreFacultad' varchar(100) 
 );
+
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Ciencias Exactas, Facultad de Ciencias y Tecnología (FCT));
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Ciencias Naturales, Facultad de Ciencias y Tecnología (FCT));
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Ciencias Sociales y Humanísticas, Facultad de Ciencias y Tecnología (FCT));
+
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Geociencias Aplicadas y Transporte, Facultad de Ingeniería Civíl (FIC));
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Representaciones Gráficas, Facultad de Ingeniería Civíl (FIC));
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Ciencias Marítimas y Portuarias, Facultad de Ingeniería Civíl (FIC));
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Mecánica Estructural, Facultad de Ingeniería Civíl (FIC));
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Gestión de la Construcción, Facultad de Ingeniería Civíl (FIC));
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Hidráulica, Sanitaria y Ciencias Ambientales, Facultad de Ingeniería Civíl (FIC));
+
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento Académico de Estadística y Economía, Facultad de Ingeniería  Mecánica (FIM));
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento Académico de Contabilidad y Finanzas, Facultad de Ingeniería  Mecánica (FIM));
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Logística), Facultad de Ingeniería  Mecánica (FIM);
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento Académico de Mercadeo, Facultad de Ingeniería  Mecánica (FIM));
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento Académico de Producción, Facultad de Ingeniería  Mecánica (FIM));
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento Académico de Recursos Humanos, Facultad de Ingeniería  Mecánica (FIM));
+
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Ingeniería Aeronáutica y Aviación, Facultad de Ingeniería  Mecánica (FIM));
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Ingeniería Naval, Facultad de Ingeniería  Mecánica (FIM));
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Metal Mecánica), Facultad de Ingeniería  Mecánica (FIM);
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Energía y Ambiente, Facultad de Ingeniería  Mecánica (FIM));
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Ciencias e Ingeniería de Materiales, Facultad de Ingeniería  Mecánica (FIM));
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Diseño de Sistemas y Componentes Mecánicos, Facultad de Ingeniería  Mecánica (FIM));
+
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Arquitectura y Redes de Computadoras, Facultad de Ingeniería Sistemas Computacionales (FISC));
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Computación y Simulación de Sistemas, Facultad de Ingeniería Sistemas Computacionales (FISC));
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Ingeniería de Software, Facultad de Ingeniería Sistemas Computacionales (FISC));
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Programación de Computadoras, Facultad de Ingeniería Sistemas Computacionales (FISC));
+INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Sistemas de Información, Control y Evaluación de Recursos Informáticos);

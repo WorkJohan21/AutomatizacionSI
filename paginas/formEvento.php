@@ -4,6 +4,8 @@
     include("../procesos/consultaUser.php");
 	$sql=$conn->query("SELECT * FROM facultad");
 	$sql2=$conn->query("SELECT * FROM lugar");
+	$sql=$conn->query("SELECT * FROM telefono WHERE idUsuario='$id_usuario'");
+    $datoTel=$sql->fetch(PDO::FETCH_OBJ);
 ?>
 
 <!DOCTYPE html>
@@ -929,7 +931,7 @@
 
 						<h5>CONTACTO DIRECTO PARA COORDINACIÓN</h5>
 						Solicitado por: 
-						<input type="txtbox" name="Solicicitante" size="40" maxlength="80" autofocus placeholder="Ingrese el nombre del solicitante" title="Escriba el nombre del solictante"/>
+						<input type="text" id="personaDevlv" class="txtbox" name="personaDevlv" value="<?php echo $datoUser->nombre." ".$datoUser->apellido; ?>"readonly> 
 						<br>
 						<br>
 						Sección o departamento:
@@ -938,8 +940,7 @@
 						<br>
 						<br>
 						Teléfonos:
-						<input type="txtbox" name="Departamento"size="40" maxlength="40" autofocus 
-						requerided placeholder="Ingrese su número de teléfono" title="Escriba el nombre del departamento"/>
+						<input type="text" id="telefono" class="txtbox" name="telefono" value="<?php echo $datoTel->telefono; ?>" readonly>    
 						<br>
 						<br>
 						Correo Electrónico: 

@@ -138,3 +138,19 @@ UPDATE `facultad` SET `nombreFacultad` = 'Facultad de Ingeniería Industrial (FI
 UPDATE `facultad` SET `nombreFacultad` = 'Facultad de Ingeniería  Mecánica (FIM)' WHERE `facultad`.`idFacultad` = 5;
 
 UPDATE `facultad` SET `nombreFacultad` = 'Facultad de Ingeniería Sistemas Computacionales (FISC)' WHERE `facultad`.`idFacultad` = 6;
+
+
+Noviembre 9
+
+No sé como relacionarlas bien :( Es para el formulario de eventos para que se desplieguen los departamentos
+
+CREATE TABLE 'departamento'(
+    'idDepartamento' int(11) NOT NULL,
+    'nombreDepartamento' varchar(50),
+    constraint 'nombreFacultad' foreign key (nombreDepartamento) references facultad(nombreFacultad) 
+);
+
+CREATE TABLE 'facultad_departamento'(
+    'nombreDepartamento' varchar(50),
+    'nombreFacultad' varchar(100) 
+);

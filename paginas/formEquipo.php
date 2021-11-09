@@ -123,7 +123,6 @@
                 <input type="text" id="unidadLabor" class="txtbox" placeholder="Ingrese su unidad" name="unidadLabor">     
                 <br><br>
                 <label class="textoCuerpoWhite labelEspacio">Teléfono</label>
-<<<<<<< HEAD
                 <input type="text" id="telefono" class="txtbox" name="telefono" value="<?php echo $datoTel->telefono; ?>" readonly>       
                 <br><br>
                 <label class="textoCuerpoWhite labelEspacio">Correo Electrónico</label>
@@ -131,15 +130,6 @@
                 <br><br>
                 <label class="textoCuerpoWhite labelEspacio">Celular</label>
                 <input type="text" id="celular" class="txtbox" name="celular" value="<?php echo $datoCel->celular; ?>" readonly>
-=======
-                <input type="text" id="telefono" class="txtbox" placeholder="Ingrese su teléfono" name="telefono">       
-                <br><br>
-                <label class="textoCuerpoWhite labelEspacio">Correo Electrónico</label>
-                <input type="text" id="correo" class="txtbox" placeholder="Ingrese su correo" name="correo">
-                <br><br>
-                <label class="textoCuerpoWhite labelEspacio">Celular</label>
-                <input type="text" id="celular" class="txtbox" placeholder="Ingrese su celular" name="celular">
->>>>>>> c566a3e94080ef379f5cb6f40cf6d411f4d4afa4
                 <br><br>
     </div> 
                 <a href="menuPrincipal.php"><button class="redondo espacioBoton6" type="button"><label class="textoCuerpo">REGRESAR</label></button></a>

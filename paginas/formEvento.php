@@ -76,8 +76,8 @@
 					<div id="divPrimero">		
 							<div class="cajamarron"><!--name nombreActividad-->
 										<label class="textoCuerpoWhite">Nombre completo de la actividad:</label>
-										<input class="txtbox" type="text" name="nombreActividad" size="20" maxlength="40" autofocus 
-										placeholder="" title="Escriba el nombre de la actividad"/>
+										<input class="txtbox" type="text" name="nombreActividad" size="40" maxlength="40" autofocus 
+										placeholder="Ingrese el nombre de la actividad" title="Escriba el nombre de la actividad"/>
 										<br><br><!--name facultad-->
 										<label class="textoCuerpoWhite"> Facultad o unidad que organiza:</label>  <select name="facultad">
 										<?php while ($facultades=$sql->fetch(PDO::FETCH_OBJ)) { ?>

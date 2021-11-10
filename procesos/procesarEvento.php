@@ -16,5 +16,6 @@
         $protocoloContenido=$_REQUEST['protocoloContenido'];
         $prensa=$_REQUEST['prensa'];
         $departamento=$_REQUEST['departamento'];
+        $idFacultad=$_REQUEST['idFacultad'];
     }
 ?>

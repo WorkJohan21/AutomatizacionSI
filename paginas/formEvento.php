@@ -6,7 +6,8 @@
 	$sql2=$conn->query("SELECT * FROM lugar");
 	$sql3=$conn->query("SELECT * FROM telefono WHERE idUsuario='$id_usuario'");
     $datoTel=$sql3->fetch(PDO::FETCH_OBJ);
-	$sql4=$conn->query("SELECT * FROM departamento")
+	$sql4=$conn->query("SELECT * FROM departamento");
+	$depa=$sql4->fetch(PDO::FETCH_OBJ);
 ?>
 
 <!DOCTYPE html>
@@ -867,12 +868,11 @@
 						<br>
 						<br>
 						<label class="textoCuerpoWhite">Sección o departamento</label>
-							<select name="departamento">
-									<?php while ($departamento=$sql4->fetch(PDO::FETCH_OBJ)) {?>
-										<option value="<?php $departamento->idDepa ?>"><?php echo $departamento->nombreDepa ?></option>
-									<?php } ?>											
-							</select>
-
+							<select name="departamento">	
+								<?php while ($depa=$sql4->fetch(PDO::FETCH_OBJ)) { ?>											
+										<option value="<?php $depa->idDepa;?>"><?php echo $depa->nombreDepa;?></option>
+								<?php } ?>	
+							</select>	
 						<br>
 						<br>
 						Teléfonos:

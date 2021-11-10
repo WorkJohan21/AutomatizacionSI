@@ -240,4 +240,8 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Ingen
 INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Programación de Computadoras', 6);
 INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Sistemas de Información, Control y Evaluación de Recursos Informáticos', 6);
 
-- Ya logré que se imprimieran los departamentos en el formulario de eventos.
+- Ya logré que se imprimieran los departamentos en el formulario de eventos. 
+
+- Noviembre 10
+
+- Falta que se muestren según el departamento previamente seleccionado.

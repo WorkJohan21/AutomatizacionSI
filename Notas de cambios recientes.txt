@@ -190,4 +190,11 @@ INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamen
 INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Programación de Computadoras, Facultad de Ingeniería Sistemas Computacionales (FISC));
 INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Sistemas de Información, Control y Evaluación de Recursos Informáticos);
 
-Añadí un archivo php llamado formEquipo2 en la carpeta páginas, que es actualmente donde está ligado el menuPrincipal, ya que era una 
+
+- Añadí un archivo php llamado formEquipo2 en la carpeta páginas, que es actualmente donde está ligado el menuPrincipal, ya que era una prueba para que el 
+botón borrar, para que solo eliminará los campos del formulario que se está viendo actualmente ya que sino se eliminaban todos los campos porque era un solo formulario,
+ahora son 3 formularios que están dentro de otro formulario más grande que los abarca a todos y es el que los procesa.
+
+- Pienso que así es mejor ya que no se borran todos los campos, lo que no sé es si se enviará la Información a la base ya que es un formulario dentro de otro, aunque supongo que sí
+
+- Si funciona, después hay que implementarlo al de eventos

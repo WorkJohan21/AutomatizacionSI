@@ -189,3 +189,5 @@ INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamen
 INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Ingeniería de Software, Facultad de Ingeniería Sistemas Computacionales (FISC));
 INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Programación de Computadoras, Facultad de Ingeniería Sistemas Computacionales (FISC));
 INSERT INTO departamento (nombreDepartamento, nombreFacultad) VALUES (Departamento de Sistemas de Información, Control y Evaluación de Recursos Informáticos);
+
+Añadí un archivo php llamado formEquipo2 en la carpeta páginas, que es actualmente donde está ligado el menuPrincipal, ya que era una 

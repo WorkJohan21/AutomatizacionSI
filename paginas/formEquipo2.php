@@ -63,8 +63,9 @@
             </header>
             <br><br>
                 
-            <div class="centrar">
-                    <form method="POST" action="../procesos/procesarEquipo.php">
+        <div class="centrar">
+            <form method="POST" action="../procesos/procesarEquipo.php">
+                <form>
                         <p class="text-danger"> <?php if (isset ($_GET['msg'])) echo $_GET['msg'];?> </p>          
                         <h3 class="titulosHeaderBlack">FORMULARIO DE SOLICITUD Y PRÉSTAMO DE EQUIPO</h3>
                         <!--PRIMER DIV DE INFORMACION ACTIVIDAD-->
@@ -137,12 +138,12 @@
                                         <button class="redondo espacioBoton5" type="button" id="okButton" onclick="myFunction()"><label class="textoCuerpo">ENVIAR</label></button>
 
                         </div><!--FIN DEL DIVSEGUNDO EQUIPO SELECCIONADO ACTIVO-->
-                    </form>
-                </div>
+                </form>
+        </div>
                 
-                <div class="centrar">
+        <div class="centrar">
 
-                    <form method="POST" action="../procesos/procesarEquipo.php">
+                    <form>
                         
                         <!--TERCER DIV DE INFORMACION DE EQUIPO-->
                         <div id="divSegundo" hidden>
@@ -290,7 +291,7 @@
                                         <br><br>
                         </div><!--FIN DEL DIVTERCERO-->
                     </form>
-            </div>
+                </div>
             <br><br>
         
         </div>

@@ -19,7 +19,7 @@ if (isset ($_REQUEST['nomActividad'])&& isset($_REQUEST['lugarActividad']))
   //insercion de objetos directamente a la base de datos, asumiento que las propiedades coincidan
   $datos = new Orden ($actividad,$lugar,$unidad,$fecha,$hora,/*$observacion,*/$fechaRetiro,$fechaDevolucion);
 
-  $insercion = $conn->prepare("INSERT INTO `orden` (nomActividad,fechaActividad,horaActividad,fechaRetiro,fechaDevolucion,idLugar, idFacultad) value (:actividad,:fecha,:hora,:fechaRetiro,:fechaDevolucion,:lugar,:unidad/*:observacion,*/)");
+  $insercion = $conn->prepare("INSERT INTO `orden` (nomActividad2,fechaActividad,horaActividad,fechaRetiro,fechaDevolucion,idLugar, idFacultad) value (:actividad,:fecha,:hora,:fechaRetiro,:fechaDevolucion,:lugar,:unidad/*:observacion,*/)");
 
   //falta hacer la insercion a la tabla equipo
   

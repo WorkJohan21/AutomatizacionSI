@@ -244,4 +244,4 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Siste
 
 - Noviembre 10
 
-- Falta que se muestren según el departamento previamente seleccionado.
+- Falta que se muestren los departamentos según la facultad previamente seleccionada.

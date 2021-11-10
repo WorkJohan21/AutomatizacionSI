@@ -869,10 +869,13 @@
 						<br>
 						<label class="textoCuerpoWhite">Sección o departamento</label>
 							<select name="departamento">	
-								<?php while ($depa=$sql4->fetch(PDO::FETCH_OBJ)) { ?>											
-										<option value="<?php $depa->idDepa;?>"><?php echo $depa->nombreDepa;?></option>
-								<?php } ?>	
-							</select>	
+								<?php while ($depa=$sql4->fetch(PDO::FETCH_OBJ)) { 																				
+									if($facultades['idFacultad'] == $Depa['idFacultad']){?>
+									<option value="<?php $depa->idDepa;?>" select>
+										<?php echo $depa->nombreDepa?>
+									</option>									
+								<?php }} ?>	
+							</select>	<!--No funciona el select para que solo traiga los departamentos de la facultad seleccionada-->
 						<br>
 						<br>
 						Teléfonos:

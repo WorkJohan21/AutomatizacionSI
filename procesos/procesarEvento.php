@@ -15,6 +15,6 @@
         $protocoloPrecedencia=$_REQUEST['protocoloPrecedencia'];
         $protocoloContenido=$_REQUEST['protocoloContenido'];
         $prensa=$_REQUEST['prensa'];
-
+        $departamento=$_REQUEST['departamento'];
     }
 ?>

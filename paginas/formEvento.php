@@ -92,10 +92,10 @@
 										<input class="txtbox" type="date" name="fecha" size="20" maxlength="20" autofocus
 										placeholder="" title="Facultad de la universidad"/>
 										<br><br>
-										<label class="textoCuerpoWhite">Periodo cubierto:</label><!--name hora1-->
-										<input type="time" id="horaInicioEvento" class="txtbox" placeholder="" name="horaActividad">
+										<label class="textoCuerpoWhite">Periodo cubierto:</label><!--name horaInicio-->
+										<input type="time" id="horaInicioEvento" class="txtbox" placeholder="" name="horaInicio">
 										<label class="textoCuerpoWhite">a</label>
-										<input type="time" id="horaFinEvento" class="txtbox" placeholder="" name="horaActividad">
+										<input type="time" id="horaFinEvento" class="txtbox" placeholder="" name="horaFinal"><!--name horaFinal-->
 										<br><br>
 										<label class="textoCuerpoWhite">Lugar donde se realizará:</label>  <select name="lugar"><!--name lugar-->
 										<?php while ($lugares=$sql2->fetch(PDO::FETCH_OBJ)) { ?>
@@ -103,7 +103,7 @@
 											<?php } ?>	
 										</select>
 										<br><br>
-										<label class="textoCuerpoWhite">Tipo de actividad:</label><!--name actividad-->
+										<label class="textoCuerpoWhite">Tipo de actividad:</label><!--name actividad1-->
 										<br>
 										<input class="checkbox" type= "radio" name="actividad1" value="Conferencias">
 										<label for="actividad1" class="textoCuerpoWhite">Conferencias</label>
@@ -135,47 +135,47 @@
 										<br>
 										<label class="textoCuerpoWhite"><h5>ATENCIÓN PROTOCOLAR EN:</h5></label>
 										<br>
-										<label class="textoCuerpoWhite">Precedencia:</label><!--name precedencia1, es una parte de todo el protocolo-->
+										<label class="textoCuerpoWhite">Precedencia:</label><!--name precedencia[], es una parte de todo el protocolo-->
 										<br>
-										<input class="checkbox" type= "checkbox" name="precedencia1" value="1">
-										<label class="textoCuerpoWhite" for="precedencia1">Mesa Principal</label>
+										<input class="checkbox" type= "checkbox" name="precedencia[]" value="1">
+										<label class="textoCuerpoWhite" for="precedencia">Mesa Principal</label>
 										<br>
-										<input class="checkbox" type= "checkbox" name="precedencia1" value="2">
+										<input class="checkbox" type= "checkbox" name="precedencia[]" value="2">
 										<label class="textoCuerpoWhite" for="precedencia2">Estandartes</label>
 										<br>
-										<input class="checkbox" type= "checkbox" name="precedencia1" value="3">
+										<input class="checkbox" type= "checkbox" name="precedencia[]" value="3">
 										<label class="textoCuerpoWhite" for="precedencia3">Atención de invitados especiales</label>
 										<br>
-										<input class="checkbox" type= "checkbox" name="precedencia1" value="4">
+										<input class="checkbox" type= "checkbox" name="precedencia[]" value="4">
 										<label class="textoCuerpoWhite" for="precedencia4">Logos</label>
 										<br>
-										<input class="checkbox" type= "checkbox" name="precedencia1" value="5">
+										<input class="checkbox" type= "checkbox" name="precedencia[]" value="5">
 										<label class="textoCuerpoWhite" for="precedencia5">Invitados</label>
 										<br>
-										<input class="checkbox" type= "checkbox" name="precedencia1" value="6">
+										<input class="checkbox" type= "checkbox" name="precedencia[]" value="6">
 										<label class="textoCuerpoWhite" for="precedencia6">Lista de invitados internos y externos</label>
 										<br>
-										<input class="checkbox" type= "checkbox" name="precedencia1" value="7">
+										<input class="checkbox" type= "checkbox" name="precedencia[]" value="7">
 										<label class="textoCuerpoWhite" for="precedencia7">Banderas</label>
 										<br>
-										<input class="checkbox" type= "checkbox" name="precedencia1" value="8">
+										<input class="checkbox" type= "checkbox" name="precedencia[]" value="8">
 										<label class="textoCuerpoWhite" for="precedencia8">Maestro de Ceremonias</label>
 										<br>
-										<input class="checkbox" type= "checkbox" name="precedencia1" value="9">
+										<input class="checkbox" type= "checkbox" name="precedencia[]" value="9">
 										<label class="textoCuerpoWhite" for="precedencia9">Seminario de Protocolo y Etiqueta</label>
 										<br>
 										<br>
 										<label class="textoCuerpoWhite"><h5>ASESORÍAS EN:</h5></label>
 										<br>
 										<label class="textoCuerpoWhite"><h6>Planeación y organización del evento:</h6></label>
-										<br>
-										<input class="checkbox" type= "checkbox" name="planeacion1" value="10">
+										<br><!--name planeacion[], es una parte de todo el protocolo-->
+										<input class="checkbox" type= "checkbox" name="planeacion[]" value="10">
 										<label class="textoCuerpoWhite" for="planeacion1">Logística General</label>
 										<br>
-										<input class="checkbox" type= "checkbox" name="planeacion1" value="11">
+										<input class="checkbox" type= "checkbox" name="planeacion[]" value="11">
 										<label class="textoCuerpoWhite" for="planeacion2">Catering</label>
 										<br>
-										<input class="checkbox" type= "checkbox" name="planeacion1" value="12">
+										<input class="checkbox" type= "checkbox" name="planeacion[]" value="12">
 										<label class="textoCuerpoWhite" for="planeacion3">Escenografía</label>
 										<br><br><br>
 						</div>
@@ -193,72 +193,72 @@
 				<div id="divSegundo" hidden>		
 					<div class="cajamarron">
 								<h5 class="textoCuerpoWhite">Protocolo:</h5>
-								<h6 class="textoCuerpoWhite">Precedencia</h6>
-								<input class="checkbox" type= "checkbox" name="protocoloPrecedencia1" value="13">
+								<h6 class="textoCuerpoWhite">Precedencia</h6><!--name protocoloPrecedencia[], es una parte de todo el protocolo-->
+								<input class="checkbox" type= "checkbox" name="protocoloPrecedencia[]" value="13">
 								<label class="textoCuerpoWhite" for="protocolo-precedencia1">Mesa Principal</label>
 								<br>
-								<input class="checkbox" type= "checkbox" name="protocoloPrecedencia1" value="14">
+								<input class="checkbox" type= "checkbox" name="protocoloPrecedencia[]" value="14">
 								<label class="textoCuerpoWhite" for="protocolo-precedencia2">Logos</label>
 								<br>
-								<input class="checkbox" type= "checkbox" name="protocoloPrecedencia1" value="15">
+								<input class="checkbox" type= "checkbox" name="protocoloPrecedencia[]" value="15">
 								<label class="textoCuerpoWhite" for="protocolo-precedencia3">Banderas</label>
 								<br>
-								<input class="checkbox" type= "checkbox" name="protocoloPrecedencia1" value="16">
+								<input class="checkbox" type= "checkbox" name="protocoloPrecedencia[]" value="16">
 								<label class="textoCuerpoWhite" for="protocolo-precedencia4">Etiqueta</label>
 								<br>
-								<input class="checkbox" type= "checkbox" name="protocoloPrecedencia1" value="17">
+								<input class="checkbox" type= "checkbox" name="protocoloPrecedencia[]" value="17">
 								<label class="textoCuerpoWhite" for="protocolo-precedencia5">Estandartes</label>
 								<br>
-								<input class="checkbox" type= "checkbox" name="protocoloPrecedencia1" value="18">
+								<input class="checkbox" type= "checkbox" name="protocoloPrecedencia[]" value="18">
 								<label class="textoCuerpoWhite" for="protocolo-precedencia6">Banners</label>
 								<br>
-								<input class="checkbox" type= "checkbox" name="protocoloPrecedencia1" value="19">
+								<input class="checkbox" type= "checkbox" name="protocoloPrecedencia[]" value="19">
 								<label class="textoCuerpoWhite" for="protocolo-precedencia7">Invitados</label>
 								<br>
 								<br>
-								<h6 class="textoCuerpoWhite">Contenido de</h6>
-								<input class="checkbox" type= "checkbox" name="protocoloContenido1" value="20">
+								<h6 class="textoCuerpoWhite">Contenido de</h6><!--name protocoloContenido[], es una parte de todo el protocolo-->
+								<input class="checkbox" type= "checkbox" name="protocoloContenido[]" value="20">
 								<label class="textoCuerpoWhite" for="protocolo-precedencia1">Tarjetas</label>
 								<br>
-								<input class="checkbox" type= "checkbox" name="protocoloContenido1" value="21">
+								<input class="checkbox" type= "checkbox" name="protocoloContenido[]" value="21">
 								<label class="textoCuerpoWhite" for="protocolo-precedencia2">Certificados</label>
 								<br>
-								<input class="checkbox" type= "checkbox" name="protocoloContenido1" value="22">
+								<input class="checkbox" type= "checkbox" name="protocoloContenido[]" value="22">
 								<label class="textoCuerpoWhite" for="protocolo-precedencia3">Programas</label>
 								<br>
-								<input class="checkbox" type= "checkbox" name="protocoloContenido1" value="23">
+								<input class="checkbox" type= "checkbox" name="protocoloContenido[]" value="23">
 								<label class="textoCuerpoWhite" for="protocolo-precedencia4">Atención de invitados especiales</label>
 								<br>
 								<br>
 					</div>
 
 					<div class="cajamarron"><!--SECCION DE PRENSA-->
-						<h5 class="textoCuerpoWhite">SERVICIOS DE  PRENSA Y AUDIOVISUAL</h5>
-								<input class="checkbox" type= "checkbox" name="prensa" value="1">
+						<h5 class="textoCuerpoWhite">SERVICIOS DE  PRENSA Y AUDIOVISUAL</h5><!--name prensa[], es una parte de prensa-->
+								<input class="checkbox" type= "checkbox" name="prensa[]" value="1">
 								<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual1">Cobertura Periodística</label>
 								<br>
-								<input class="checkbox" type= "checkbox" name="prensa" value="2">
+								<input class="checkbox" type= "checkbox" name="prensa[]" value="2">
 								<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual2">Fotografía</label>
 								<br>
-								<input class="checkbox" type= "checkbox" name="prensa" value="3">
+								<input class="checkbox" type= "checkbox" name="prensa[]" value="3">
 								<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual3">Filmación</label>
 								<br>
-								<input class="checkbox" type= "checkbox" name="prensa" value="4">
+								<input class="checkbox" type= "checkbox" name="prensa[]" value="4">
 								<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual4">Divulgación en Web de la UTP</label>
 								<br>
-								<input class="checkbox" type= "checkbox" name="prensa" value="5">
+								<input class="checkbox" type= "checkbox" name="prensa[]" value="5">
 								<label class="textoCuerpoWhite" for="servicio-prensa-audiovisua5">Equipo de sonido</label>
 								<br>
-								<input class="checkbox" type= "checkbox" name="prensa" value="6">
+								<input class="checkbox" type= "checkbox" name="prensa[]" value="6">
 								<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual6">Entrevista en los medios de comunicación social</label>
 								<br>
-								<input class="checkbox" type= "checkbox" name="prensa" value="7">
+								<input class="checkbox" type= "checkbox" name="prensa[]" value="7">
 								<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual7">Publicar en Redes Sociales (Facebook , Twitter)</label>
 								<br>
-								<input class="checkbox" type= "checkbox" name="prensa" value="8">
+								<input class="checkbox" type= "checkbox" name="prensa[]" value="8">
 								<label class="textoCuerpoWhite" for="servicio-prensa-audiovisual8">Apoyo en Videoconferencias (Filmadora y equipo de audio)</label>
 								<br>
-								<input class="checkbox" type= "checkbox" name="prensa" value="9">
+								<input class="checkbox" type= "checkbox" name="prensa[]" value="9">
 								<label  class="textoCuerpoWhite" for="servicio-prensa-audiovisual9">Transmisión por Streaming</label>
 						<br>
 						<br>

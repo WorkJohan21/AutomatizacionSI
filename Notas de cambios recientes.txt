@@ -148,7 +148,7 @@ La facultad de Ingeniería Eléctrica no tiene departamentos según la página d
 
 CREATE TABLE departamento(
     idDepartamento int(11) NOT NULL PRIMARY KEY,
-    nombreDepartamento varchar(50),
+    nombreDepartamento varchar(300),
     constraint nombreFacultad foreign key (nombreDepartamento) references facultad(nombreFacultad) 
 );
 
@@ -198,3 +198,44 @@ ahora son 3 formularios que están dentro de otro formulario más grande que los
 - Pienso que así es mejor ya que no se borran todos los campos, lo que no sé es si se enviará la Información a la base ya que es un formulario dentro de otro, aunque supongo que sí
 
 - Si funciona, después hay que implementarlo al de eventos
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE departamento (
+idDepa int(11) PRIMARY KEY,
+nombreDepa varchar(300),
+idFacultad int(11), 
+FOREIGN KEY (idFacultad) REFERENCES Facultad (idFacultad));
+/*TIENEN QUE PONERLE EL AUTOINCREMENT DE idDepa MANUALMENTE, SE ME OLVIDO, LO SIENTO*/
+
+
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Ciencias Exactas', 1);
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Ciencias Naturales', 1);
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Ciencias Sociales y Humanísticas', 1);
+
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Geociencias Aplicadas y Transporte', 2);
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Representaciones Gráficas', 2);
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Ciencias Marítimas y Portuarias', 2);
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Mecánica Estructural', 2);
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Gestión de la Construcción', 2);
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Hidráulica, Sanitaria y Ciencias Ambientales', 2);
+
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento Académico de Estadística y Economía', 5);
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento Académico de Contabilidad y Finanzas', 5);
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Logística', 5);
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento Académico de Mercadeo', 5);
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento Académico de Producción', 5);
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento Académico de Recursos Humanos', 5);
+
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Ingeniería Aeronáutica y Aviación', 5);
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Ingeniería Naval', 5);
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Metal Mecánica', 5);
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Energía y Ambiente', 5);
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Ciencias e Ingeniería de Materiales', 5);
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Diseño de Sistemas y Componentes Mecánicos', 5);
+
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Arquitectura y Redes de Computadoras', 6);
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Computación y Simulación de Sistemas', 6);
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Ingeniería de Software', 6);
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Programación de Computadoras', 6);
+INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Sistemas de Información, Control y Evaluación de Recursos Informáticos', 6);

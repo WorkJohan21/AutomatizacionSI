@@ -56,6 +56,14 @@
           document.getElementById("divSegundo").hidden = true;
           document.getElementById("divTercero").hidden = true;
         }
+
+		function borrar1(){
+			document.getElementById("nombreActividad").value = "";
+			document.getElementById("fecha").value = "";
+			document.getElementById("horaInicio").value = "";
+			document.getElementById("horaFinal").value = "";
+			$('input:actividad1').removeAttr('checked');
+		}
         </script>
 
 </head>
@@ -78,10 +86,10 @@
 					<div id="divPrimero">		
 							<div class="cajamarron"><!--name nombreActividad-->
 										<label class="textoCuerpoWhite">Nombre completo de la actividad:</label>
-										<input class="txtbox" type="text" name="nombreActividad" size="40" maxlength="40" autofocus 
+										<input class="txtbox" type="text" id="nombreActividad" name="nombreActividad" size="40" maxlength="40" autofocus 
 										placeholder="Ingrese el nombre de la actividad" title="Escriba el nombre de la actividad"/>
 										<br><br><!--name facultad-->
-										<label class="textoCuerpoWhite"> Facultad o unidad que organiza:</label>  <select name="facultad">
+										<label class="textoCuerpoWhite"> Facultad o unidad que organiza:</label>  <select name="facultad" id="facultad">
 										<?php while ($facultades=$sql->fetch(PDO::FETCH_OBJ)) { ?>
 												<option value="<?php $facultades->idFacultad ?>"><?php echo $facultades->nombreFacultad ?></option>
 											<?php } ?>	
@@ -89,15 +97,15 @@
 										<br><br>
 										<!--name fecha-->
 										<label class="textoCuerpoWhite">Fecha del evento:</label>
-										<input class="txtbox" type="date" name="fecha" size="20" maxlength="20" autofocus
+										<input class="txtbox" type="date" name="fecha" id="fecha" size="20" maxlength="20" autofocus
 										placeholder="" title="Facultad de la universidad"/>
 										<br><br>
 										<label class="textoCuerpoWhite">Periodo cubierto:</label><!--name horaInicio-->
-										<input type="time" id="horaInicioEvento" class="txtbox" placeholder="" name="horaInicio">
+										<input type="time" id="horaInicioEvento" class="txtbox" placeholder="" name="horaInicio" id="horaInicio">
 										<label class="textoCuerpoWhite">a</label>
-										<input type="time" id="horaFinEvento" class="txtbox" placeholder="" name="horaFinal"><!--name horaFinal-->
+										<input type="time" id="horaFinEvento" class="txtbox" placeholder="" name="horaFinal" id="horaFinal"><!--name horaFinal-->
 										<br><br>
-										<label class="textoCuerpoWhite">Lugar donde se realizará:</label>  <select name="lugar"><!--name lugar-->
+										<label class="textoCuerpoWhite">Lugar donde se realizará:</label>  <select name="lugar" id="lugar"><!--name lugar-->
 										<?php while ($lugares=$sql2->fetch(PDO::FETCH_OBJ)) { ?>
 												<option value="<?php $lugares->idLugar ?>"><?php echo $lugares->nombreLugar ?></option>
 											<?php } ?>	
@@ -105,25 +113,25 @@
 										<br><br>
 										<label class="textoCuerpoWhite">Tipo de actividad:</label><!--name actividad1-->
 										<br>
-										<input class="checkbox" type= "radio" name="actividad1" value="Conferencias">
+										<input class="checkbox" type= "radio" name="actividad1" id="actividad1" value="Conferencias">
 										<label for="actividad1" class="textoCuerpoWhite">Conferencias</label>
 										<br>
-										<input class="checkbox" type= "radio" name="actividad1" value="Ferias">
+										<input class="checkbox" type= "radio" name="actividad1" id="actividad1" value="Ferias">
 										<label for="actividad2" class="textoCuerpoWhite">Ferias</label>
 										<br>
-										<input class="checkbox" type= "radio" name="actividad1" value="Seminarios">
+										<input class="checkbox" type= "radio" name="actividad1" id="actividad1" value="Seminarios">
 										<label for="actividad3" class="textoCuerpoWhite">Seminarios</label>
 										<br>
-										<input class="checkbox" type= "radio" name="actividad1" value="Actos Culturales">
+										<input class="checkbox" type= "radio" name="actividad1" id="actividad1" value="Actos Culturales">
 										<label for="actividad4" class="textoCuerpoWhite">Actos Culturales</label>
 										<br>
-										<input class="checkbox" type= "radio" name="actividad1" value="Inauguraciones">
+										<input class="checkbox" type= "radio" name="actividad1" id="actividad1" value="Inauguraciones">
 										<label for="actividad5" class="textoCuerpoWhite">Inauguraciones</label>
 										<br>
-										<input class="checkbox" type= "radio" name="actividad1" value="Congresos">
+										<input class="checkbox" type= "radio" name="actividad1" id="actividad1" value="Congresos">
 										<label for="actividad6" class="textoCuerpoWhite">Congresos</label>
 										<br>
-										<input class="checkbox" type= "radio" name="actividad1" value="Otros">
+										<input class="checkbox" type= "radio" name="actividad1" id="actividad1" value="Otros">
 										<label for="actividad7"class="textoCuerpoWhite"> Otros. Especificique </label> <input type="txtbox" type="text" name="otraactividad" size="20" maxlength="20" autofocus placeholder="" title="Escriba otro tipo de actividad que vaya a realizar">
 										<br>
 										<br>
@@ -181,7 +189,7 @@
 						</div>
 			
 								<a href="menuPrincipal.php"><button class="redondo espacioBoton6" type="button"><label class="textoCuerpo">REGRESAR</label></button></a>
-								<button class="redondo espacioBoton5" type="reset"><label class="textoCuerpo">BORRAR</label></button>
+								<button class="redondo espacioBoton5" type="button" onclick="borrar1()"><label class="textoCuerpo">BORRAR</label></button>
 								<button class="redondo espacioBoton5" type="button" id="okButton" onclick="myFunction()"><label class="textoCuerpo">ENVIAR</label></button>		
 
 								<br><br><br>

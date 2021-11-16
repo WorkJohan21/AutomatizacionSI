@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 01, 2021 at 06:09 PM
+-- Generation Time: Nov 16, 2021 at 04:17 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -44,6 +44,58 @@ CREATE TABLE `celular` (
   `idUsuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
+-- Dumping data for table `celular`
+--
+
+INSERT INTO `celular` (`idCelular`, `celular`, `idUsuario`) VALUES
+(2, '6214-7545', 3),
+(3, '6524-4485', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `departamento`
+--
+
+CREATE TABLE `departamento` (
+  `idDepa` int(11) NOT NULL,
+  `nombreDepa` varchar(300) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `idFacultad` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Dumping data for table `departamento`
+--
+
+INSERT INTO `departamento` (`idDepa`, `nombreDepa`, `idFacultad`) VALUES
+(1, 'Departamento de Ciencias Exactas', 1),
+(2, 'Departamento de Ciencias Naturales', 1),
+(3, 'Departamento de Ciencias Sociales y Humanísticas', 1),
+(4, 'Departamento de Geociencias Aplicadas y Transporte', 2),
+(5, 'Departamento de Representaciones Gráficas', 2),
+(6, 'Departamento de Ciencias Marítimas y Portuarias', 2),
+(7, 'Departamento de Mecánica Estructural', 2),
+(8, 'Departamento de Gestión de la Construcción', 2),
+(9, 'Departamento de Hidráulica, Sanitaria y Ciencias Ambientales', 2),
+(10, 'Departamento Académico de Estadística y Economía', 5),
+(11, 'Departamento Académico de Contabilidad y Finanzas', 5),
+(12, 'Departamento de Logística', 5),
+(13, 'Departamento Académico de Mercadeo', 5),
+(14, 'Departamento Académico de Producción', 5),
+(15, 'Departamento Académico de Recursos Humanos', 5),
+(16, 'Departamento de Ingeniería Aeronáutica y Aviación', 5),
+(17, 'Departamento de Ingeniería Naval', 5),
+(18, 'Departamento de Metal Mecánica', 5),
+(19, 'Departamento de Energía y Ambiente', 5),
+(20, 'Departamento de Ciencias e Ingeniería de Materiales', 5),
+(21, 'Departamento de Diseño de Sistemas y Componentes Mecánicos', 5),
+(22, 'Departamento de Arquitectura y Redes de Computadoras', 6),
+(23, 'Departamento de Computación y Simulación de Sistemas', 6),
+(24, 'Departamento de Ingeniería de Software', 6),
+(25, 'Departamento de Programación de Computadoras', 6),
+(26, 'Departamento de Sistemas de Información, Control y Evaluación de Recursos Informáticos', 6);
+
 -- --------------------------------------------------------
 
 --
@@ -57,6 +109,24 @@ CREATE TABLE `equipo` (
   `cantTotal` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
+-- Dumping data for table `equipo`
+--
+
+INSERT INTO `equipo` (`idEquipo`, `nombreEquipo`, `cantDispo`, `cantTotal`) VALUES
+(1, 'Pantalla de 86 Pulgadas', 10, 10),
+(2, 'Banderas de Diversos Países', 10, 10),
+(3, 'Estandarte UTP', 20, 20),
+(4, 'Astas y Bases', 30, 30),
+(5, 'Soporte para Banner (Arana)', 30, 30),
+(6, 'Flores Artificiales', 30, 30),
+(7, 'Habladores', 5, 5),
+(8, 'Bombas manuales para inflar globos', 4, 4),
+(9, 'Rotafolio con Tablero Blanco', 6, 6),
+(10, 'Karaoke', 2, 2),
+(11, 'Radiograbadora con lector de CD y USB', 1, 1),
+(12, 'Engrapadoras Semindustrial e Industrial', 15, 15);
+
 -- --------------------------------------------------------
 
 --
@@ -68,6 +138,18 @@ CREATE TABLE `facultad` (
   `nombreFacultad` varchar(100) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
+-- Dumping data for table `facultad`
+--
+
+INSERT INTO `facultad` (`idFacultad`, `nombreFacultad`) VALUES
+(1, 'Facultad de Ciencias y Tecnología (FCT)'),
+(2, 'Facultad de Ingeniería Civíl (FIC)'),
+(3, 'Facultad de Ingeniería Eléctrica (FIE)'),
+(4, 'Facultad de Ingeniería Industrial (FII)'),
+(5, 'Facultad de Ingeniería  Mecánica (FIM)'),
+(6, 'Facultad de Ingeniería Sistemas Computacionales (FISC)');
+
 -- --------------------------------------------------------
 
 --
@@ -78,6 +160,21 @@ CREATE TABLE `lugar` (
   `idLugar` int(11) NOT NULL,
   `nombreLugar` varchar(100) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Dumping data for table `lugar`
+--
+
+INSERT INTO `lugar` (`idLugar`, `nombreLugar`) VALUES
+(1, 'Auditorio'),
+(2, 'Lobby Edificio 3'),
+(3, 'Lobby Edificio 1'),
+(4, 'Piso FCT'),
+(5, 'Piso FIC'),
+(6, 'Piso FIE'),
+(7, 'Piso FII'),
+(8, 'Piso FIM'),
+(9, 'Piso FISC');
 
 -- --------------------------------------------------------
 
@@ -93,7 +190,8 @@ CREATE TABLE `orden` (
   `fechaDevolucion` date NOT NULL,
   `observacion` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
   `idLugar` int(11) NOT NULL,
-  `idFacultad` int(11) NOT NULL
+  `idFacultad` int(11) NOT NULL,
+  `nomActividad2` varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
@@ -227,6 +325,21 @@ CREATE TABLE `s_prensa` (
   `nombrePrensa` varchar(350) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
+-- Dumping data for table `s_prensa`
+--
+
+INSERT INTO `s_prensa` (`idPrensa`, `nombrePrensa`) VALUES
+(1, 'Cobertura Periodistica'),
+(2, 'Fotografia'),
+(3, 'Filmacion'),
+(4, 'Divulgacion en la Web de la UTP'),
+(5, 'Equipo de Sonido'),
+(6, 'Entrevista en los medios de comunicacion'),
+(7, 'Publicar en las redes sociales'),
+(8, 'Apoyo en Videoconferencias'),
+(9, 'Transmision por Streaming');
+
 -- --------------------------------------------------------
 
 --
@@ -237,6 +350,35 @@ CREATE TABLE `s_protocolo` (
   `idProtocolo` int(11) NOT NULL,
   `nombreProtocolo` varchar(350) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Dumping data for table `s_protocolo`
+--
+
+INSERT INTO `s_protocolo` (`idProtocolo`, `nombreProtocolo`) VALUES
+(1, 'Atencion Protocolar - Mesa Principal'),
+(2, 'Atencion Protocolar - Estandartes'),
+(3, 'Atencion Protocolar - Atencion de Invitados Especiales'),
+(4, 'Atencion Protocolar - Logos'),
+(5, 'Atencion Protocolar - Invitados'),
+(6, 'Atencion Protocolar - Lista de Invitados internos y externos'),
+(7, 'Atencion Protocolar - Banderas'),
+(8, 'Atencion Protocolar - Maestro de Ceremonia'),
+(9, 'Atencion Protocolar - Seminario de Protocolo y Etiqueta'),
+(10, 'Asesorias en - Logistica General'),
+(11, 'Asesorias en - Catering'),
+(12, 'Asesorias en - Escenografia'),
+(13, 'pPrecedencia - Mesa Principal'),
+(14, 'pPrecedencia - Logos'),
+(15, 'pPrecedencia - Banderas'),
+(16, 'pPrecedencia - Etiqueta'),
+(17, 'pPrecedencia - Estandartes'),
+(18, 'pPrecedencia - Banners'),
+(19, 'pPrecedencia - Invitados'),
+(20, 'pContenido - Tarjetas'),
+(21, 'pContenido - Certificados'),
+(22, 'pContenido - Programas'),
+(23, 'pContenido - Atencion de Invitados Especiales');
 
 -- --------------------------------------------------------
 
@@ -250,6 +392,14 @@ CREATE TABLE `telefono` (
   `idUsuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
+-- Dumping data for table `telefono`
+--
+
+INSERT INTO `telefono` (`idTelefono`, `telefono`, `idUsuario`) VALUES
+(1, '269-1384', 3),
+(2, '255-8899', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -257,13 +407,21 @@ CREATE TABLE `telefono` (
 --
 
 CREATE TABLE `usuario` (
-  `id` int(4) NOT NULL,
+  `id` int(11) NOT NULL,
   `nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `apellido` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `email` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
   `password` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
-  `tipoUsuario` varchar(2) COLLATE utf8_spanish_ci NOT NULL
+  `tipoUsuario` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Dumping data for table `usuario`
+--
+
+INSERT INTO `usuario` (`id`, `nombre`, `apellido`, `email`, `password`, `tipoUsuario`) VALUES
+(1, 'Samantha', 'Miranda', 'mirandasamy@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 2),
+(3, 'Edwin', 'Diaz', 'edwin.diaz5@utp.ac.pa', 'fcea920f7412b5da7be0cf42b8c93759', 2);
 
 --
 -- Indexes for dumped tables
@@ -281,6 +439,13 @@ ALTER TABLE `actividad`
 ALTER TABLE `celular`
   ADD PRIMARY KEY (`idCelular`),
   ADD KEY `idUsuario` (`idUsuario`);
+
+--
+-- Indexes for table `departamento`
+--
+ALTER TABLE `departamento`
+  ADD PRIMARY KEY (`idDepa`),
+  ADD KEY `idFacultad` (`idFacultad`);
 
 --
 -- Indexes for table `equipo`
@@ -418,25 +583,31 @@ ALTER TABLE `actividad`
 -- AUTO_INCREMENT for table `celular`
 --
 ALTER TABLE `celular`
-  MODIFY `idCelular` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idCelular` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `departamento`
+--
+ALTER TABLE `departamento`
+  MODIFY `idDepa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `equipo`
 --
 ALTER TABLE `equipo`
-  MODIFY `idEquipo` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idEquipo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `facultad`
 --
 ALTER TABLE `facultad`
-  MODIFY `idFacultad` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idFacultad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `lugar`
 --
 ALTER TABLE `lugar`
-  MODIFY `idLugar` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idLugar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `orden`
@@ -502,25 +673,25 @@ ALTER TABLE `s_imprenta`
 -- AUTO_INCREMENT for table `s_prensa`
 --
 ALTER TABLE `s_prensa`
-  MODIFY `idPrensa` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idPrensa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `s_protocolo`
 --
 ALTER TABLE `s_protocolo`
-  MODIFY `idProtocolo` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idProtocolo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `telefono`
 --
 ALTER TABLE `telefono`
-  MODIFY `idTelefono` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idTelefono` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
@@ -531,6 +702,12 @@ ALTER TABLE `usuario`
 --
 ALTER TABLE `celular`
   ADD CONSTRAINT `celular_ibfk_1` FOREIGN KEY (`idUsuario`) REFERENCES `usuario` (`id`);
+
+--
+-- Constraints for table `departamento`
+--
+ALTER TABLE `departamento`
+  ADD CONSTRAINT `departamento_ibfk_1` FOREIGN KEY (`idFacultad`) REFERENCES `facultad` (`idFacultad`);
 
 --
 -- Constraints for table `orden`

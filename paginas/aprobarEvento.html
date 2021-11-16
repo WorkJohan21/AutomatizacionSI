@@ -14,7 +14,7 @@
 	<link rel ="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
     <link href ="../CSS/bootstrap.min.css" rel ="stylesheet">
     <link href="../CSS/list-groups.css" rel="stylesheet">
-    <!--<link rel="stylesheet" href="../CSS/estiloModal.css">-->
+    <link rel="stylesheet" href="../CSS/estiloModal.css">
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 	</style>
@@ -32,22 +32,93 @@
 		<form method="POST" action="MenuPrincipal.php">
             <h3 class="titulosHeaderBlack">LISTA DE SOLICITUDES DE EVENTOS</h3>
 
-<!--PRIMER DIV -->
-<div class="cajapurpura">
-            <label class="textoBlack alinearleft">Feria de Sistemas</label>
-            <div class="inlinelado">
-                <a href="modalAceptar.html" class="textoCuerpoWhite rellenodellabel">Aceptar</a>  
-                <a href="modalRechazar.html" class="textoCuerpoWhite rellenodelabel">Rechazar</a>      
-                <a href="modalModificar.html"class="textoCuerpoWhite rellenodelabel">Modificar</a>
-                <a href="modalDetalles.html" class="textoCuerpoWhite rellenodelabel">Ver Detalles</a>               
-            </div>
-</div>
+        <!--PRIMER DIV -->
+        <div class="cajapurpura">
+                    <label class="textoBlack alinearleft">Feria de Sistemas</label>
+                    <div class="inlinelado">
+                        <a href="modalAceptar.html" class="textoCuerpoWhite rellenodellabel">Aceptar</a>  
+                        <a href="modalRechazar.html" class="textoCuerpoWhite rellenodelabel">Rechazar</a>      
+                        <a href="modalModificar.html"class="textoCuerpoWhite rellenodelabel">Modificar</a>
+                        <a href="modalDetalles.html" class="textoCuerpoWhite rellenodelabel">Ver Detalles</a>                               
+                    </div>
+                    
+        </div>
 
 
-<div class="cajablanca">
-            <label class="textoBlack alinearleft">Feria de Sistemas</label>
-            <div class="inlinelado">
-            </div>
+        <div class="cajapurpura">
+                    <label class="textoBlack alinearleft">Feria de Sistemas</label>
+                    <p></p>
+                    <div class="inlinelado">
+                        <input type="checkbox" id="btn-modal">
+                        <label for="btn-modal" class="lbl-modal">Aceptar</label>
+                        <div class="modal">
+                            <div class="contenedor">
+                                <header>¿Desea aceptar está solicitud?</header>
+                                <label for="btn-modal">X</label>
+                                <div class="contenido">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Ipsum, accusamus excepturi! Harum deserunt autem repellat 
+                                        reiciendis quaerat debitis. Excepturi qui ullam quam numquam 
+                                        facilis illo quibusdam eaque ad temporibus nihil?
+                                    </p>
+                                </div>   
+                            </div> 
+                        </div>
+
+                        <input type="checkbox" id="btn-modal">
+                        <label for="btn-modal" class="lbl-modal">Rechazar</label>
+                        <div class="modal">
+                            <div class="contenedor">
+                                <header>¿Desea rechazar está solicitud?</header>
+                                <label for="btn-modal">X</label>
+                                <div class="contenido">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Ipsum, accusamus excepturi! Harum deserunt autem repellat 
+                                        reiciendis quaerat debitis. Excepturi qui ullam quam numquam 
+                                        facilis illo quibusdam eaque ad temporibus nihil?
+                                    </p>
+                                </div>   
+                            </div> 
+                        </div>
+
+                        <input type="checkbox" id="btn-modal">
+                        <label for="btn-modal" class="lbl-modal">Modificar</label>
+                        <div class="modal">
+                            <div class="contenedor">
+                                <header>¿Desea modificar está solicitud?</header>
+                                <label for="btn-modal">X</label>
+                                <div class="contenido">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Ipsum, accusamus excepturi! Harum deserunt autem repellat 
+                                        reiciendis quaerat debitis. Excepturi qui ullam quam numquam 
+                                        facilis illo quibusdam eaque ad temporibus nihil?
+                                    </p>
+                                </div>   
+                            </div> 
+                        </div>
+
+                        <input type="checkbox" id="btn-modal">
+                        <label for="btn-modal" class="lbl-modal">Eliminar</label>
+                        <div class="modal">
+                            <div class="contenedor">
+                                <header>¿Desea eliminar está solicitud?</header>
+                                <label for="btn-modal">X</label>
+                                <div class="contenido">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Ipsum, accusamus excepturi! Harum deserunt autem repellat 
+                                        reiciendis quaerat debitis. Excepturi qui ullam quam numquam 
+                                        facilis illo quibusdam eaque ad temporibus nihil?
+                                    </p>
+                                </div>   
+                            </div> 
+                        </div>
+                    </div>
+        </div>
+    </div>
 </div>
 
 <div class="cajablanca">

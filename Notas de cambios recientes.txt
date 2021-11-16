@@ -239,3 +239,20 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Compu
 INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Ingeniería de Software', 6);
 INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Programación de Computadoras', 6);
 INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Sistemas de Información, Control y Evaluación de Recursos Informáticos', 6);
+
+- Ya logré que se imprimieran los departamentos en el formulario de eventos. 
+
+- Noviembre 10
+
+    - Christian
+
+        - Falta que se muestren los departamentos según la facultad previamente seleccionada.
+
+    4:20 p.m.    
+        - En la página de aprobarEvento, hice el botón de aceptar como una página modal guiandome de un tutorial de YouTube, 
+        entonces hay una página intermedia donde hay un botón que despliega la página modal, falta que se elimine ese botón y que directamente
+        se despliegue desde la página de aprobarEvento la pantalla modal.
+
+        Adjunto el link del video: https://www.youtube.com/watch?v=8mDEnaHaIDw
+
+        - También cree los archivos para las opciones de (Rechazar, Modificar y Detalles) pero no programe nada en esos archivos

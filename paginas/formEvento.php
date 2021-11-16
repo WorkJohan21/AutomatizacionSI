@@ -6,6 +6,8 @@
 	$sql2=$conn->query("SELECT * FROM lugar");
 	$sql3=$conn->query("SELECT * FROM telefono WHERE idUsuario='$id_usuario'");
     $datoTel=$sql3->fetch(PDO::FETCH_OBJ);
+	$sql4=$conn->query("SELECT * FROM departamento");
+	$depa=$sql4->fetch(PDO::FETCH_OBJ);
 ?>
 
 <!DOCTYPE html>
@@ -873,9 +875,15 @@
 						<input type="text" id="personaDevlv" class="txtbox" name="personaDevlv" value="<?php echo $datoUser->nombre." ".$datoUser->apellido; ?>"readonly> 
 						<br>
 						<br>
-						Sección o departamento:
-						<input type="txtbox" name="Departamento"size="50" maxlength="80" autofocus 
-						requerided placeholder="Ingrese el nombre del departamento o sección" title="Escriba el nombre del departamento"/>
+						<label class="textoCuerpoWhite">Sección o departamento</label>
+							<select name="departamento">	
+								<?php while ($depa=$sql4->fetch(PDO::FETCH_OBJ)) { 																				
+									if($facultades['idFacultad'] == $Depa['idFacultad']){?>
+									<option value="<?php $depa->idDepa;?>" select>
+										<?php echo $depa->nombreDepa?>
+									</option>									
+								<?php }} ?>	
+							</select>	<!--No funciona el select para que solo traiga los departamentos de la facultad seleccionada-->
 						<br>
 						<br>
 						Teléfonos:

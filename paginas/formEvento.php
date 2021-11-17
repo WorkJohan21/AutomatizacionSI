@@ -28,6 +28,12 @@
 		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 	</style>
 
+	<script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+    </script>
+
 	  <!-- Javascript -->
           <script>
           function myFunction() {
@@ -93,7 +99,7 @@
 										<br><br><!--name facultad-->
 										<label class="textoCuerpoWhite"> Facultad o unidad que organiza:</label>  <select name="facultad" id="facultad">
 										<?php while ($facultades=$sql->fetch(PDO::FETCH_OBJ)) { ?>
-												<option value="<?php $facultades->idFacultad ?>"><?php echo $facultades->nombreFacultad ?></option>
+												<option value="<?php echo $facultades->idFacultad; ?>"><?php echo $facultades->nombreFacultad; ?></option>
 											<?php } ?>	
 										</select>
 										<br><br>
@@ -109,7 +115,7 @@
 										<br><br>
 										<label class="textoCuerpoWhite">Lugar donde se realizará:</label>  <select name="lugar" id="lugar"><!--name lugar-->
 										<?php while ($lugares=$sql2->fetch(PDO::FETCH_OBJ)) { ?>
-												<option value="<?php $lugares->idLugar ?>"><?php echo $lugares->nombreLugar ?></option>
+												<option value="<?php echo $lugares->idLugar; ?>"><?php echo $lugares->nombreLugar; ?></option>
 											<?php } ?>	
 										</select>
 										<br><br>
@@ -875,15 +881,7 @@
 						<input type="text" id="personaDevlv" class="txtbox" name="personaDevlv" value="<?php echo $datoUser->nombre." ".$datoUser->apellido; ?>"readonly> 
 						<br>
 						<br>
-						<label class="textoCuerpoWhite">Sección o departamento</label>
-							<select name="departamento">	
-								<?php while ($depa=$sql4->fetch(PDO::FETCH_OBJ)) { 																				
-									if($facultades['idFacultad'] == $Depa['idFacultad']){?>
-									<option value="<?php $depa->idDepa;?>" select>
-										<?php echo $depa->nombreDepa?>
-									</option>									
-								<?php }} ?>	
-							</select>	<!--No funciona el select para que solo traiga los departamentos de la facultad seleccionada-->
+<!--Segunda Lista -->	<div id="departamento"></div>
 						<br>
 						<br>
 						Teléfonos:
@@ -924,3 +922,26 @@
 </body>
 
 </html>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#facultad').val(1);
+		recargarLista();
+
+		$('#facultad').change(function(){
+			recargarLista();
+		});
+	})
+</script>
+<script type="text/javascript">
+	function recargarLista(){
+		$.ajax({
+			type:"POST",
+			url:"../procesos/crearListaDepa.php",
+			data:"depa=" + $('#facultad').val(),
+			success:function(r){
+				$('#departamento').html(r);
+			}
+		});
+	}
+</script>

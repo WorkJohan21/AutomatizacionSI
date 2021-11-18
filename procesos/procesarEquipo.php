@@ -6,9 +6,15 @@ if (isset ($_REQUEST['nomActividad'])&& isset($_REQUEST['lugarActividad']))
 {
   $actividad =$_REQUEST['nomActividad'];
   $lugar =$_REQUEST['lugarActividad'];
-  $unidad =$_REQUEST['unidadOrg'];
   $fecha =$_REQUEST['fechaActividad'];
+  $unidad =$_REQUEST['unidadOrg'];
   $hora =$_REQUEST['horaActividad'];
+  $solicitante=$_REQUEST['nomSolicitante'];//Esta variable tiene triple funcion, abarca el espacio de la persona que retira y devuelve
+  $unidadLabor=$_REQUEST['unidadLabor'];
+  $telefono=$_REQUEST['telefono'];
+  $celular=$_REQUEST['celular'];
+  $email=$_REQUEST['correo'];
+  $equipo=$_REQUEST['equipo'];
   //$observacion =$_REQUEST['nombre'];
   $fechaRetiro =$_REQUEST['fechaRetiro'];
   $fechaDevolucion =$_REQUEST['fechaDevlucion'];

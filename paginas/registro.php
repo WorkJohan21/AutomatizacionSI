@@ -35,7 +35,7 @@
             <br>
             <div class="centrar marginAbajo">
                 <br><label for="inputApellido" class="textoCuerpoBlack spanEspaciado">Apellido</label>
-                <input type="text" id="inputApellido" class="txtbox" placeholder="Jonzales" name="apellido" size="25" required>
+                <input type="text" id="inputApellido" class="txtbox" placeholder="Peréz" name="apellido" size="25" required>
             </div>
             <br>
             <div class="centrar marginAbajo">

@@ -15,6 +15,7 @@
         $protocoloPrecedencia=$_REQUEST['protocoloPrecedencia'];
         $protocoloContenido=$_REQUEST['protocoloContenido'];
         $prensa=$_REQUEST['prensa'];
+        $afichefullcolor=$_REQUEST['afichefullcolor'];
         $departamento=$_REQUEST['departamento'];
     }
 ?>

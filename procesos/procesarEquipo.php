@@ -17,7 +17,7 @@ if (isset ($_REQUEST['nomActividad'])&& isset($_REQUEST['lugarActividad']))
   $equipo=$_REQUEST['equipo'];
   //$observacion =$_REQUEST['nombre'];
   $fechaRetiro =$_REQUEST['fechaRetiro'];
-  $fechaDevolucion =$_REQUEST['fechaDevlucion'];
+  $fechaDevolucion =$_REQUEST['fechaDevolucion'];
   
 
   //echo ($nombre."<br>".$apellido."<br>".$email."<br>".$pass."<br>".$foto."<br>".$nivel);

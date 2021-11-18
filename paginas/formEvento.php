@@ -315,7 +315,7 @@
 						<tr>
 							<td>1.</td>
 							<td>Afiche Full Color</td>
-							<td><input type="checkbox" name="Afiche Full Color" value="Afiche Full Color"></td>
+							<td><input type="checkbox" name="afichefullcolor[]" value="Afiche Full Color"></td>
 							<td>
 								<select name="tamaño-afichefullcolor">
 									<option value="1280 x 720">1280 x 720</option>

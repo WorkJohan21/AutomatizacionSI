@@ -1,24 +1,26 @@
 <?php 
   class Orden{
-    public $actividad;
-    public $lugar;
-    public $unidad;
-    public $fecha;
-    public $hora;
-    //public $observacion;
-    //En la tabla de bd no aparece el campo observacion asi q lo puse en comentarios
+    public $fechaActividad;
+    public $horaActividad;
     public $fechaRetiro;
     public $fechaDevolucion;
+    public $observacion;
+    public $idLugar;
+    public $idFacultad;
+    public $nomActividad2;
+    
+    //En la tabla de bd no aparece el campo observacion asi q lo puse en comentarios
+    
 
-    function __construct($a,$l,$u,$f,$h,/*$ob,*/$re,$de){
-      $this->actividad = $a;
-      $this->lugar = $l;
-      $this->unidad= $u;
-      $this->fecha= $f;
-      $this->hora= $h;
-      //$this->observacion= $ob;
-      $this->fechaRetiro= $re;
-      $this->fechaDevolucion= $de;
+    function __construct($fa,$ha,$fr,$fd,$o,$la,$u,$na){
+      $this->$fechaActividad=$fa;
+      $this->$horaActividad=$ha;
+      $this->$fechaRetiro=$fr;
+      $this->$fechaDevolucion=$fd;
+      $this->$observacion=$o;
+      $this->$idLugar=$la;
+      $this->$idFacultad=$u;
+      $this->$nomActividad2=$na;
     }
   }
 ?>

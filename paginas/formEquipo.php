@@ -269,6 +269,9 @@
             <label class="textoCuerpoWhite labelEspacio">Quién Entrega (DIPROCE)</label><!--name personaEntrga-->
             <input type="text" id="personaEntrg" class="txtbox" placeholder="" name="personaEntrga">       
             <br><br>
+            <label class="textoCuerpoWhite labelEspacio">Observación de la Solicitud</label>
+            <textarea id="observacion" name="observacion" rows="5" cols="40" placeholder="Observaciones"></textarea><!--name observacion-->
+            <br><br>
 </div> 
 
 <!--QUINTO DIV DE DÍA DE DEVOLUCIÓN-->
@@ -285,7 +288,6 @@
             <input type="text" id="personaRecv" class="txtbox" placeholder="" name="personaRec" required><!--name personaRec-->
             <br><br>
 </div> 
-            
             <button class="redondo espacioBoton6" type="button" onclick="myFunction()"><label class="textoCuerpo">REGRESAR</label></button>
 			      <button class="redondo espacioBoton5" type="reset"><label class="textoCuerpo">BORRAR</label></button>
             <button class="redondo espacioBoton5" type="submit"><label class="textoCuerpo">ENVIAR</label></button>

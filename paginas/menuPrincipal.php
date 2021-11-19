@@ -49,11 +49,11 @@
             </div>
             
             <div class="cajaopc">
-                <a href="Estado.html"><button class="opciones"><img src="../imagenes/reloj.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Estado de Solicitud</h5></button></a>
+                <a href="Estado.html"><button class="opciones"><img src="../imagenes/reloj2.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Estado de Solicitud</h5></button></a>
             </div>
 
             <div class="cajaopc">
-                <a href="Inventario.php"><button class="opciones"><img src="../imagenes/caja.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Inventario</h5></button></a>
+                <a href="Inventario.php"><button class="opciones"><img src="../imagenes/caja2.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Inventario</h5></button></a>
             </div>
 
             <div class="cajaopc">

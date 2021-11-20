@@ -3,7 +3,10 @@
     include("../procesos/verificar.php");
     include("../procesos/consultaUser.php");
 
-    $arrayCantDispo= [10,10,20,30,30,30,5,4,6,2,1,15];
+    //$arrayCantDispo= [10,10,20,30,30,30,5,4,6,2,1,15];
+
+    //$nombresEntrega= array("Juan", "María", "Ana", "Luis", "Abigail", "Pedro");
+    //$randomnombre= array_rand($nombresEntrega, 1);
 
     $sql=$conn->query("SELECT * FROM telefono WHERE idUsuario='$id_usuario'");
     $datoTel=$sql->fetch(PDO::FETCH_OBJ);
@@ -267,7 +270,7 @@
             <input type="text" id="personaRetira" class="txtbox" name="personaRetira" value="<?php echo $datoUser->nombre." ".$datoUser->apellido; ?>"readonly>     
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Quién Entrega (DIPROCE)</label><!--name personaEntrga-->
-            <input type="text" id="personaEntrg" class="txtbox" placeholder="" name="personaEntrga">       
+            <input type="text" id="personaEntrg" class="txtbox" name="personaEntrga" value="<?php echo $nombresEntrega[$randomnombre]; ?>" readonly>       
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Observación de la Solicitud</label>
             <textarea id="observacion" name="observacion" rows="5" cols="40" placeholder="Observaciones"></textarea><!--name observacion-->
@@ -285,7 +288,7 @@
             <input type="text" id="personaDevlv" class="txtbox" name="personaDevlv" value="<?php echo $datoUser->nombre." ".$datoUser->apellido; ?>"readonly>       
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Quién Recibe (DIPROCE)</label>
-            <input type="text" id="personaRecv" class="txtbox" placeholder="" name="personaRec" required><!--name personaRec-->
+            <input type="text" id="personaRecv" class="txtbox" placeholder="" name="personaRec" value="<?php echo $nombresEntrega[$randomnombre]; ?>" readonly> <!--name personaRec-->
             <br><br>
 </div> 
             <button class="redondo espacioBoton6" type="button" onclick="myFunction()"><label class="textoCuerpo">REGRESAR</label></button>

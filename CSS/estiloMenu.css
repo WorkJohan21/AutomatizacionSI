@@ -34,11 +34,12 @@ html {
 .cajaopc{ 
     margin-left: 100px;
     margin-bottom: 10px;
-
-
  }
 
-
+ .cajaopc2{ 
+    margin-left: 100px;
+    margin-bottom: 50px;
+}
 
 .centrar{
     text-align: center;

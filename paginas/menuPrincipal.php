@@ -43,7 +43,7 @@
 
         <?php if ($datoUser->tipoUsuario==2) { ?>  
 
-            <div class="cajaopc">
+            <div class="cajaopc"> <!--cajaopc2 es el estilo que le quería aplicar pero no funciona, viene de estiloMenu.css-->
                 <a href="formEvento.php"><button class="opciones"><img src="../imagenes/formulario.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Formulario de Solicitud de Eventos</h5></button></a>
             </div>
 

@@ -3,10 +3,10 @@
     include("../procesos/verificar.php");
     include("../procesos/consultaUser.php");
 
-    //$arrayCantDispo= [10,10,20,30,30,30,5,4,6,2,1,15];
+    $arrayCantDispo= [10,10,20,30,30,30,5,4,6,2,1,15];
 
-    //$nombresEntrega= array("Juan", "María", "Ana", "Luis", "Abigail", "Pedro");
-    //$randomnombre= array_rand($nombresEntrega, 1);
+    $nombresEntrega= array("Juan", "María", "Ana", "Luis", "Abigail", "Pedro");
+    $randomnombre= array_rand($nombresEntrega, 1);
 
     $sql=$conn->query("SELECT * FROM telefono WHERE idUsuario='$id_usuario'");
     $datoTel=$sql->fetch(PDO::FETCH_OBJ);

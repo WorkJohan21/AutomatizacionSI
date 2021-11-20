@@ -1,6 +1,7 @@
 <?php
     include("../procesos/verificar.php");
     include("../procesos/consultaUser.php");
+    include("../clases/usuario.php");
 ?>
 
 <!DOCTYPE html>
@@ -40,6 +41,8 @@
     <h3 class="titulosHeaderBlack">Formulario de Servicios Internos</h3>
     <br>
 
+        <?php if ($datoUser->tipoUsuario==2) { ?>  
+
             <div class="cajaopc">
                 <a href="formEvento.php"><button class="opciones"><img src="../imagenes/formulario.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Formulario de Solicitud de Eventos</h5></button></a>
             </div>
@@ -51,7 +54,10 @@
             <div class="cajaopc">
                 <a href="Estado.html"><button class="opciones"><img src="../imagenes/reloj2.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Estado de Solicitud</h5></button></a>
             </div>
+        <?php }?>
 
+        <?php if ($datoUser->tipoUsuario==1) { ?>                    
+            
             <div class="cajaopc">
                 <a href="Inventario.php"><button class="opciones"><img src="../imagenes/caja2.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Inventario</h5></button></a>
             </div>
@@ -60,6 +66,8 @@
                 <a href="aprobarEvento.html"><button class="opciones"><img src="../imagenes/formulario.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Lista de Solicitudes de Eventos</h5></button></a>
             </div>
             <br><br><br>
+
+        <?php } ?>
   
 <!--Calendario-->
 

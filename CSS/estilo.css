@@ -158,6 +158,16 @@ body {
     margin-left: 10px;
 }
 
+.usuario{
+    position: absolute;
+    top: 35px;
+    right: 250px;
+    border: 0;
+    background-color:transparent;
+    color: white;
+    font-size: large;
+}
+
 .salir{
     position: absolute;
     top: 35px;

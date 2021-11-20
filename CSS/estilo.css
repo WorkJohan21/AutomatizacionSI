@@ -13,7 +13,7 @@ html {
 .titulosHeaderBlack {
     font-family: 'Poppins', sans-serif;
     padding-top: 5px;
-    padding-left:40px;
+    padding-left:60px;
     text-align: left;
     font-weight: bold;
     color:#2f2f2f ;
@@ -245,3 +245,4 @@ body {
 .marginAbajo{
     margin-bottom: 5px;
 }
+

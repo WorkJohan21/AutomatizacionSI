@@ -27,8 +27,11 @@
 	</header>
 	<br><br>
 	<div class="centrar">
+
+        <img src="imagenes/undraw_events_re_98ue.svg" width="500" height="400">
+
 		<form method="POST" action="procesos/procesarLogin.php">
-            <h3 class="titulosHeaderBlack ">Acceder al Sistema</h3>
+            <h3 class="titulosHeaderBlack">Acceder al Sistema</h3>
 
             <div class="mt-4">
 
@@ -44,10 +47,10 @@
                     </label>
                 </div>
 
+                <button class="redondo" type="submit"><label class="textoCuerpo">Iniciar Sesion</label></button>
+
             </div>
-
-            <button class="redondo" type="submit"><label class="textoCuerpo">Iniciar Sesion</label></button>
-
+           
             <div class="mt-4">
                 <div class="d-flex justify-content-center links">
                     <label class="textoCuerpoBlack">Aun no tiene cuenta?</label><a href="paginas/registro.php" class="ml-2"><label class="textoCuerpoBlack"></label>Registrese aqui</label></a>

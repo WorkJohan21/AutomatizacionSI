@@ -273,7 +273,7 @@
             <input type="text" id="personaEntrg" class="txtbox" name="personaEntrga" value="<?php echo $nombresEntrega[$randomnombre]; ?>" readonly>       
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Observación de la Solicitud</label>
-            <textarea id="observacion" name="observacion" rows="5" cols="40" placeholder="Observaciones"></textarea><!--name observacion-->
+            <textarea id="observacion" class="txtbox" name="observacion" rows="5" cols="40" placeholder="Observaciones"></textarea><!--name observacion-->
             <br><br>
 </div> 
 

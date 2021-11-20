@@ -38,7 +38,9 @@
         <div class="salir"><a href="../procesos/salir.php"><button class="butonLogout">SALIR</button></a></div>
     </header>
 	<br>
+    <br>
     <h3 class="titulosHeaderBlack">Formulario de Servicios Internos</h3>
+    <br>
     <br>
 
         <?php if ($datoUser->tipoUsuario==2) { ?>  
@@ -47,9 +49,15 @@
                 <a href="formEvento.php"><button class="opciones"><img src="../imagenes/formulario.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Formulario de Solicitud de Eventos</h5></button></a>
             </div>
 
+            <br>
+            <br>
+
             <div class="cajaopc">
                 <a href="formEquipo.php"><button class="opciones"><img src="../imagenes/formulario.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Formulario de Solicitud de Equipo</h5></button></a>
             </div>
+
+            <br>
+            <br>
             
             <div class="cajaopc">
                 <a href="Estado.html"><button class="opciones"><img src="../imagenes/reloj2.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Estado de Solicitud</h5></button></a>
@@ -58,9 +66,15 @@
 
         <?php if ($datoUser->tipoUsuario==1) { ?>                    
             
+            <br>
+            <br>
+
             <div class="cajaopc">
                 <a href="Inventario.php"><button class="opciones"><img src="../imagenes/caja2.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Inventario</h5></button></a>
             </div>
+
+            <br>
+            <br>
 
             <div class="cajaopc">
                 <a href="aprobarEvento.html"><button class="opciones"><img src="../imagenes/formulario.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Lista de Solicitudes de Eventos</h5></button></a>

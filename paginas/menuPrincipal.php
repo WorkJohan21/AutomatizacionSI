@@ -63,7 +63,7 @@
             <br>
             
             <div class="cajaopc">
-                <a href="Estado.html"><button class="opciones"><img src="../imagenes/reloj2.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Estado de Solicitud</h5></button></a>
+                <a href="Estado.html"><button class="opciones"><img src="../imagenes/clock-fill.svg" width="30px" height="30px"><h5 class="textocuerpoBlack">Estado de Solicitud</h5></button></a>
             </div>
         <?php }?>
 

@@ -28,7 +28,7 @@
 	<br><br>
 	<div class="centrar">
 
-        <img src="imagenes/undraw_events_re_98ue.svg" width="500" height="400">
+        <img src="imagenes/undraw_events_re_98ue.svg" width="500" height="500">
 
 		<form method="POST" action="procesos/procesarLogin.php">
             <h3 class="titulosHeaderBlack">Acceder al Sistema</h3>

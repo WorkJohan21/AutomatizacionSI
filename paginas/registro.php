@@ -25,6 +25,9 @@
 	</header>
 	<br><br>
 	<div class="centrar">
+
+        <img src="../imagenes/undraw_sign_in_re_o58h.svg" width="500" height="400">
+
 		<form method="POST" action="../procesos/crearUsuario.php">
             <h3 class="titulosHeaderBlack">Registrar un Nuevo Usuario</h3>
             <br>
@@ -60,8 +63,8 @@
 
             <br><br>
                 <div class="centrar">
-                <button class="redondo" type="submit"><label class="textoCuerpo">Crear Usuario</label></button>
-            </div>
+                    <button class="redondo" type="submit"><label class="textoCuerpo">Crear Usuario</label></button>
+                </div>
             <div class="mt-4">
                 <div class="d-flex justify-content-center links">
                     <label class="textoCuerpoBlack">Ya tienes una cuenta?</label><a href="../index.php" class="ml-2"><label class="textoCuerpoBlack"></label>Iniciar Sesion</label></a>

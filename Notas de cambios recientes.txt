@@ -269,3 +269,9 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Siste
     Imprimo con una función random los nombres del equipo de DIPROCE, quien entrega y quien recibe. 
 
     Las opciones del menú principal ya se manejan según el nivel de usuario
+
+    Nivel de usuario
+
+    1 = Admin
+
+    2 = Usuario general

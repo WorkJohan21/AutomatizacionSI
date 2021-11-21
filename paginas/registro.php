@@ -33,7 +33,7 @@
             <br>
             <div class="centrar marginAbajo">
                 <label for="inputNombre" class="textoCuerpoBlack spanEspaciado">Nombre</label>
-                <input type="text" id="inputNombre" class="txtbox" placeholder="Juan" name="nombre" size="25" required>
+                <input type="text" id="inputNombre" class="txtbox input-field" placeholder="" name="nombre" size="25" required>
             </div>
             <br>
             <div class="centrar marginAbajo">

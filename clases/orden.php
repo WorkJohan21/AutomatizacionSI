@@ -13,14 +13,28 @@
     
 
     function __construct($fa,$ha,$fr,$fd,$o,$la,$u,$na){
-      $this->$fechaActividad=$fa;
-      $this->$horaActividad=$ha;
-      $this->$fechaRetiro=$fr;
-      $this->$fechaDevolucion=$fd;
-      $this->$observacion=$o;
-      $this->$idLugar=$la;
-      $this->$idFacultad=$u;
-      $this->$nomActividad2=$na;
+      $this->fechaActividad=$fa;
+      $this->horaActividad=$ha;
+      $this->fechaRetiro=$fr;
+      $this->fechaDevolucion=$fd;
+      $this->observacion=$o;
+      $this->idLugar=$la;
+      $this->idFacultad=$u;
+      $this->nomActividad2=$na;
     }
+  }
+
+  class Orden_Usuario{
+    public $idOrden;
+    public $idUsuario;
+    public $tipoUsuario;
+
+
+    function __construct($idO, $idU, $tU){
+      $this->idOrden=$idO;
+      $this->idUsuario=$idU;
+      $this->tipoUsuario=$tU;
+    }
+
   }
 ?>

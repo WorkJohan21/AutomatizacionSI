@@ -16,6 +16,11 @@
 
     $sql3=$conn->query("SELECT * FROM equipo");
     $i=0;
+
+    $sql4=$conn->query("SELECT * FROM usuario WHERE tipoUsuario=1");
+
+    $sql5=$conn->query("SELECT * FROM usuario WHERE tipoUsuario=1");
+
     while($datoEquipo=$sql3->fetch(PDO::FETCH_OBJ))
     {
       $arrayCantDispo[$i]=$datoEquipo->cantDispo;
@@ -131,7 +136,7 @@
           <label class="textoCuerpoWhite ">INFORMACIÓN DE LA PERSONA QUE SOLICITA EL EQUIPO</label>
           <br><br>
                 <label class="textoCuerpoWhite labelEspacio">Nombre del Solicitante</label><!--name nomSolicitante-->
-                <input type="text" id="nomSolicitante" class="txtbox" name="nomSolicitante" value="<?php echo $datoUser->nombre." ".$datoUser->apellido; ?>"readonly>
+                <input type="text" id="nomSolicitante" class="txtbox" name="nomSolicitante" value="<?php echo $datoUser->id; ?>" placeholder="<?php echo $datoUser->nombre." ".$datoUser->apellido; ?>" readonly>
                 <br><br>
                 <label class="textoCuerpoWhite labelEspacio"> Unidad donde labora</label>
                 <select name="unidadLabor" id="unidadLabor" class="txtbox"><!--name unidadLabor-->
@@ -178,75 +183,75 @@
     <label class="list-group-item d-flex gap-2"><!--name equipo[]-->
       <span class="spanEspacio">Pantalla de 86"</span>
         <input class="boxderecha" type="checkbox" name="equipo[]" value="1">
-            <input type="number" id="pantalla_cant" class="boxderecha" placeholder="" name="pantalla_cant" min="0" max="<?php echo $arrayCantDispo[0]; ?>">
+            <input type="number" id="pantalla_cant" class="boxderecha" placeholder="" name="cantidad[]" min="0" max="<?php echo $arrayCantDispo[0]; ?>">
     </label>
 
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Banderas de Diversos Países</span>
         <input class="boxderecha" type="checkbox" name="equipo[]" value="2">     
-            <input type="number" id="" class="boxderecha" placeholder="" name="bandera_cant" min="0" max="<?php echo $arrayCantDispo[1]; ?>">
+            <input type="number" id="" class="boxderecha" placeholder="" name="cantidad[]" min="0" max="<?php echo $arrayCantDispo[1]; ?>">
     </label>
 
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Estandarte UTP</span>  
         <input class="boxderecha" type="checkbox" value="3" name="equipo[]">  
-            <input type="number" id="" class="boxderecha" placeholder="" name="estandarte_cant" min="0" max="<?php echo $arrayCantDispo[2]; ?>">
+            <input type="number" id="" class="boxderecha" placeholder="" name="cantidad[]" min="0" max="<?php echo $arrayCantDispo[2]; ?>">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Astas y Bases</span>  
         <input class="boxderecha" type="checkbox" value="4" name="equipo[]">  
-            <input type="number" id="" class="boxderecha" placeholder="" name="astas_cant" min="0" max="<?php echo $arrayCantDispo[3]; ?>">
+            <input type="number" id="" class="boxderecha" placeholder="" name="cantidad[]" min="0" max="<?php echo $arrayCantDispo[3]; ?>">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio"> Soporte para Banner (Araña)</span>
         <input class="boxderecha" type="checkbox" value="5" name="equipo[]">    
-            <input type="number" id="" class="boxderecha" placeholder="" name="soporte_cant" min="0" max="<?php echo $arrayCantDispo[4]; ?>">
+            <input type="number" id="" class="boxderecha" placeholder="" name="cantidad[]" min="0" max="<?php echo $arrayCantDispo[4]; ?>">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Flores Artificiales para Centro de Mesa </span>
         <input class="boxderecha" type="checkbox" value="6" name="equipo[]">     
-            <input type="number" id="" class="boxderecha" placeholder="" name="flores_cant" min="0" max="<?php echo $arrayCantDispo[5]; ?>">
+            <input type="number" id="" class="boxderecha" placeholder="" name="cantidad[]" min="0" max="<?php echo $arrayCantDispo[5]; ?>">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Habladores (1)</span>  
         <input class="boxderecha" type="checkbox" value="7" name="equipo[]">  
-            <input type="number" id="" class="boxderecha" placeholder="" name="habladores_cant" min="0" max="<?php echo $arrayCantDispo[6]; ?>">
+            <input type="number" id="" class="boxderecha" placeholder="" name="cantidad[]" min="0" max="<?php echo $arrayCantDispo[6]; ?>">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Bombas Manuales para Inflar Globos</span>
         <input class="boxderecha" type="checkbox" value="8" name="equipo[]">    
-            <input type="number" id="" class="boxderecha" placeholder="" name="bombas_cant" min="0" max="<?php echo $arrayCantDispo[7]; ?>">
+            <input type="number" id="" class="boxderecha" placeholder="" name="cantidad[]" min="0" max="<?php echo $arrayCantDispo[7]; ?>">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Rotafolio con Tablero Blanco</span>
         <input class="boxderecha" type="checkbox" value="9" name="equipo[]">    
-            <input type="number" id="" class="boxderecha" placeholder="" name="rotafolio_cant" min="0" max="<?php echo $arrayCantDispo[8]; ?>">
+            <input type="number" id="" class="boxderecha" placeholder="" name="cantidad[]" min="0" max="<?php echo $arrayCantDispo[8]; ?>">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Karaoke</span>  
         <input class="boxderecha" type="checkbox" value="10" name="equipo[]">  
-            <input type="number" id="" class="boxderecha" placeholder="" name="karaoke_cant" min="0" max="<?php echo $arrayCantDispo[9]; ?>">
+            <input type="number" id="" class="boxderecha" placeholder="" name="cantidad[]" min="0" max="<?php echo $arrayCantDispo[9]; ?>">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Radiograbadora con Lector USB y CD</span>
         <input class="boxderecha" type="checkbox" value="11" name="equipo[]">    
-            <input type="number" id="" class="boxderecha" placeholder="" name="radio_cant" min="0" max="<?php echo $arrayCantDispo[10]; ?>">
+            <input type="number" id="" class="boxderecha" placeholder="" name="cantidad[]" min="0" max="<?php echo $arrayCantDispo[10]; ?>">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Engrapadoras semi Industrial e Industrial</span>
         <input class="boxderecha" type="checkbox" value="12" name="equipo[]">    
-            <input type="number" id="" class="boxderecha" placeholder="" name="engrapadora_cant" min="0" max="<?php echo $arrayCantDispo[11]; ?>">
+            <input type="number" id="" class="boxderecha" placeholder="" name="cantidad[]" min="0" max="<?php echo $arrayCantDispo[11]; ?>">
     </label>
 </div>
 </div>
@@ -269,8 +274,12 @@
             <label class="textoCuerpoWhite labelEspacio">Quién Retira</label><!--name personaRetira-->
             <input type="text" id="personaRetira" class="txtbox" name="personaRetira" value="<?php echo $datoUser->nombre." ".$datoUser->apellido; ?>"readonly>     
             <br><br>
-            <label class="textoCuerpoWhite labelEspacio">Quién Entrega (DIPROCE)</label><!--name personaEntrga-->
-            <input type="text" id="personaEntrg" class="txtbox" name="personaEntrga" value="<?php echo $nombresEntrega[$randomnombre]; ?>" readonly>       
+            <label class="textoCuerpoWhite labelEspacio">Quién Entrega (DIPROCE)</label><!--name personaEntrega-->
+            <select name="personaEntrega" id="personaEntrega" class="txtbox">
+										<?php while ($datoAdmin=$sql4->fetch(PDO::FETCH_OBJ)) { ?>
+												<option value="<?php echo $datoAdmin->id; ?>"><?php echo $datoAdmin->nombre."  ".$datoAdmin->apellido; ?></option>
+											<?php } ?>	
+						</select>       
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Observación de la Solicitud</label>
             <textarea id="observacion" class="txtbox" name="observacion" rows="5" cols="40" placeholder="Observaciones"></textarea><!--name observacion-->
@@ -288,7 +297,11 @@
             <input type="text" id="personaDevlv" class="txtbox" name="personaDevlv" value="<?php echo $datoUser->nombre." ".$datoUser->apellido; ?>"readonly>       
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Quién Recibe (DIPROCE)</label>
-            <input type="text" id="personaRecv" class="txtbox" placeholder="" name="personaRec" value="<?php echo $nombresEntrega[$randomnombre]; ?>" readonly> <!--name personaRec-->
+            <select name="personaRec" id="personaRec" class="txtbox">
+										<?php while ($datoAdmin2=$sql5->fetch(PDO::FETCH_OBJ)) { ?>
+												<option value="<?php echo $datoAdmin2->id; ?>"><?php echo $datoAdmin2->nombre."  ".$datoAdmin2->apellido; ?></option>
+											<?php } ?>	
+						</select> <!--name personaRec-->
             <br><br>
 </div> 
             <button class="redondo espacioBoton6" type="button" onclick="myFunction()"><label class="textoCuerpo">REGRESAR</label></button>

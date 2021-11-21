@@ -18,7 +18,10 @@ if (isset ($_REQUEST['nomActividad'])&& isset($_REQUEST['lugarActividad']))
   $celular=$_REQUEST['celular'];
   $email=$_REQUEST['correo'];
   $equipo=$_REQUEST['equipo'];
- 
+  $cant=$_REQUEST['cantidad'];
+  $personaEntrega=$_REQUEST['personaEntrega'];
+  $personaRec=$_REQUEST['personaRec'];
+
   
   echo ($fechaActividad."<br>".$horaActividad."<br>".$fechaRetiro."<br>".$fechaDevolucion."<br>".$observacion."<br>".$lugarActividad."<br>".$unidad."<br>".$nomActividad."<br>");
 
@@ -27,23 +30,58 @@ if (isset ($_REQUEST['nomActividad'])&& isset($_REQUEST['lugarActividad']))
     echo "<br>".$seleccionados."<br>";
   }
 
+  echo "Cantidad de objetos";
+  foreach ($cant as $s)
+  {
+    echo "<br>".$s."<br>";
+  }
+
   $datos = new Orden ($fechaActividad, $horaActividad, $fechaRetiro, $fechaDevolucion, $observacion, $lugarActividad, $unidad, $nomActividad);
   $insercionOrden = $conn->prepare("INSERT INTO orden (fechaActividad, horaActividad, fechaRetiro, fechaDevolucion, observacion, idLugar, idFacultad, nomActividad2) VALUES (:fechaActividad, :horaActividad, :fechaRetiro, :fechaDevolucion, :observacion, :idLugar, :idFacultad, :nomActividad2)");
 
   try{
     $insercionOrden->execute((array)$datos); // la insercion se efectuo con exito
-    
 
+    $result=$conn->query("SELECT * FROM orden WHERE nomActividad2='$nomActividad'");
+    $datosOrden=$result->fetch(PDO::FETCH_OBJ);
+    $idOrden=$datosOrden->idOrden;
+
+    //Insercion para la tabla orden_equipo
+    $j=0;
+    $insercion2=$conn->prepare("INSERT INTO orden_equipo (idOrden, idEquipo, cantSolicitada) VALUES (:idOrden, :idEquipo, :cantSolicitada)");
+
+    foreach ($equipo as $seleccionados)
+    {
+      //Los BindParam
+      $insercion2->bindParam(':idOrden',$idOrden,PDO::PARAM_INT);
+      $insercion2->bindParam(':idEquipo',$seleccionados,PDO::PARAM_INT);
+      $insercion2->bindParam(':cantSolicitada',$cant[$j],PDO::PARAM_INT);
+
+      $j=$j+1;
+      $insercion2->execute();
+    }
+
+    $insercion3=$conn->prepare("INSERT INTO orden_usuario (idOrden, idUsuario, tipoUsuario) VALUES (:idOrden, :idUsuario, :tipoUsuario)");
+
+    $datosOU = new Orden_Usuario($idOrden,$personaEntrega,1);
+    $insercion3->execute((array)$datosOU);
+
+    $datosOU = new Orden_Usuario($idOrden,$personaRec,1);
+    $insercion3->execute((array)$datosOU);
+
+    $datosOU = new Orden_Usuario($idOrden,$solicitante,2);
+    $insercion3->execute((array)$datosOU);
+    
   }catch (PDOException $e){
     if ($e->errorInfo[1]==1062){ //error de duplicacion de datos
     $msg="Correo electronico ya esta registrado en el sistema";
     }else{
       echo ("Otro error ");
       echo $e;
-      $msg="Error al guardar los datos";
     }
   }
-  echo '<meta http-equiv="refresh" content="3; url=../paginas/registro.php?msg='.$msg.'">';
+  $msg="Error de Conexion a la BD";
+  echo '<meta http-equiv="refresh" content="3; url=../paginas/formEquipo.php?msg='.$msg.'">';
  
 }
 else

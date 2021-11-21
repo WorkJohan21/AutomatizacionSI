@@ -36,6 +36,7 @@
 		<img src="../imagenes/logo.png" class="logo">
 	    <h3 class="titulosHeader">Universidad Tecnológica de Panamá<br>Departamento de Protocolo, Ceremonial y Eventos<br><i>"Camino a la excelencia a través del mejoramiento continuo"</i></h3>
         <div>
+        <h1><label class="bienvenido">BIENVENIDO!</label><h1>
         <h1><input type="text" id="nomSolicitante" class="usuario" name="nomSolicitante" value="<?php echo $datoUser->nombre." ".$datoUser->apellido; ?>"readonly></h1>
         </div>
         <div class="salir"><a href="../procesos/salir.php"><button class="butonLogout">SALIR</button></a></div>

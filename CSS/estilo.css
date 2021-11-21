@@ -169,13 +169,26 @@ body {
 
 .usuario{
     position: absolute;
-    top: 35px;
-    right: 250px;
-    border: 0;
+    top: 40px;
+    right: 170px;
+    border: none;
     background-color:transparent;
     color: white;
-    font-size: large;
+    font-size: 30px;
 }
+
+.bienvenido{
+    position: absolute;
+    top: 40px;
+    right: 550px;
+    border: none;
+    background-color:transparent;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
 
 .salir{
     position: absolute;

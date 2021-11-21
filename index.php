@@ -34,7 +34,7 @@
             <h3 class="titulosHeaderBlack2">Acceder al Sistema</h3>
 
             <div class="mt-4">
-
+                <img src="imagenes/email.svg" width="30" height="30">
                 <label for="inputEmail" class="textoCuerpoBlack espaciadoaltura labelpos"></label>
                 <input type="email" id="inputEmail" class="txtbox input-field" placeholder="Correo"  name="email" size=25 required>
 
@@ -42,6 +42,7 @@
             </div>
             
             <div>
+                <img src="imagenes/lock.svg" width="30" height="30">
                 <label for="inputPassword" class="textoCuerpoBlack espaciadoaltura labelpos"></label>
                 <input type="password" id="inputPassword" class="txtbox input-field" placeholder="Contraseña" name="password" size="25" required>
 

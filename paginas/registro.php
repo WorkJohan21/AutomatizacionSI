@@ -62,11 +62,11 @@
             </div>
 
             <br><br>
-                <div class="centrar">
+                <div class="botoncrearusuario"> 
                     <button class="redondo" type="submit"><label class="textoCuerpo">Crear Usuario</label></button>
                 </div>
             <div class="mt-4">
-                <div class="d-flex justify-content-center links">
+                <div class="linksusuario links">  <!--d-flex justify-content-center-->
                     <label class="textoCuerpoBlack">Ya tienes una cuenta?</label><a href="../index.php" class="ml-2"><label class="textoCuerpoBlack"></label>Iniciar Sesion</label></a>
                 </div>
 		    </div>

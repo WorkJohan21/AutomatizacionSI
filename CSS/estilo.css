@@ -83,6 +83,7 @@ body {
     background-color: #68086c;
 
 }
+
 #page-container {
   position: relative;
   min-height: 100vh;
@@ -104,14 +105,13 @@ body {
   padding-top: 5px;
   font-size: 12px;
 }
+
 .logo{
      position:absolute;
-     left:0px;
-     
+     left:0px;     
      width: 125px;
      height: 125px;
      padding: 10px;
-
 }
 
 .redondo {
@@ -255,4 +255,47 @@ body {
 .marginAbajo{
     margin-bottom: 5px;
 }
+
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border:none;
+    border-bottom: 2px solid #68086c;
+    font-size: 14px;
+    display: block;
+    background: transparent;
+    /*transition: 0.5s ease-in-out all;*/
+}
+
+.input-field:focus{
+    outline: none;
+    color: #2f2f2f;
+    font-size: 16px;
+    position: relative;
+    left: 5px;
+    top: 10px;
+    /*transition: 0.5 ease-in-out all;*/
+    pointer-events: none;
+}
+
+.labelpos{
+    font-size: 16px;
+    color: #2f2f2f;
+    position: relative;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease-in-out all;
+}
+
+.input-field:focus~.labelpos,
+.input-field:valid~.labelpos{
+    top: -14px;
+    font-size: 12px;
+    color: #68086c; 
+    transition: 0.5 ease-in-out all;
+    pointer-events: none;
+}
+
+
 

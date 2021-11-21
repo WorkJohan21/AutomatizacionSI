@@ -279,3 +279,11 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Siste
     Estaba tratando de agrandar el espacio entre cada botón en el menú principal para que se vea mejor pero no sé si es que estoy editando el css equivocado o que pero no cambia
 
     Por si les interesa descargar alguna imagen svg, este es un buen repositorio: https://undraw.co/
+
+    ------------
+
+    Estuve mejorando el login pero la parte de los textbox se me complico porque me perdí en la explicación.
+
+    Por si pueden terminar de arreglarlo
+
+    https://www.youtube.com/watch?v=85_MoUvTJZE&t=720s

@@ -265,22 +265,22 @@ body {
     font-size: 14px;
     display: block;
     background: transparent;
-    /*transition: 0.5s ease-in-out all;*/
+    transition: 0.5s ease-in-out all;
 }
 
 .input-field:focus{
     outline: none;
     color: #2f2f2f;
-    font-size: 16px;
+    font-size: 14px;
     position: relative;
     left: 5px;
     top: 10px;
-    /*transition: 0.5 ease-in-out all;*/
+    transition: 0.5 ease-in-out all;
     pointer-events: none;
 }
 
 .labelpos{
-    font-size: 16px;
+    font-size: 14px;
     color: #2f2f2f;
     position: relative;
     left: 5px;
@@ -291,7 +291,7 @@ body {
 .input-field:focus~.labelpos,
 .input-field:valid~.labelpos{
     top: -14px;
-    font-size: 12px;
+    font-size: 18px;
     color: #68086c; 
     transition: 0.5 ease-in-out all;
     pointer-events: none;

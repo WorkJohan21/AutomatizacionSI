@@ -19,6 +19,15 @@ html {
     color:#2f2f2f ;
 }
 
+.titulosHeaderBlack2 {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 5px;
+    text-align: left;
+    font-weight: bold;
+    color:#2f2f2f ;
+}
+
+
 .textoCuerpo{
     font-family: 'Poppins', sans-serif;
     color:#e6e6e7 ;

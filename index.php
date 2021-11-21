@@ -35,15 +35,15 @@
 
             <div class="mt-4">
 
-                <label for="inputEmail" class="textoCuerpoBlack espaciadoaltura labelpos">Correo</label>
-                <input type="email" id="inputEmail" class="txtbox input-field" placeholder=""  name="email" size=25 required>
+                <label for="inputEmail" class="textoCuerpoBlack espaciadoaltura labelpos"></label>
+                <input type="email" id="inputEmail" class="txtbox input-field" placeholder="Correo"  name="email" size=25 required>
 
                 <br><br>
             </div>
             
             <div>
-                <label for="inputPassword" class="textoCuerpoBlack espaciadoaltura labelpos">Contraseña</label>
-                <input type="password" id="inputPassword" class="txtbox input-field" placeholder="" name="password" size="25" required>
+                <label for="inputPassword" class="textoCuerpoBlack espaciadoaltura labelpos"></label>
+                <input type="password" id="inputPassword" class="txtbox input-field" placeholder="Contraseña" name="password" size="25" required>
 
                 <div class="checkbox mb-3">
                     <br><label>

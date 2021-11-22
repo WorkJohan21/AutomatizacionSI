@@ -324,3 +324,15 @@ body {
     margin-left: 1090px;
 }
 
+.tablas {
+    width: 100%;
+    border: 1px solid #000;
+ }
+
+.celda {
+    width: 25%;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #000;
+    border-spacing: 0;
+ }

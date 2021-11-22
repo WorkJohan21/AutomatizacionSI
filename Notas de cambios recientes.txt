@@ -292,7 +292,7 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Siste
 - Noviembre 21
 
     - Leo
-      - Recuperar Contraseña
+      + Recuperar Contraseña
         Le agregué el campo hash a la tabla 'usuario' de la base de datos 'automatizacion'. Para más facilidad, 
         agregenle el siguiente alter en la sección SQL de la tabla 'usuario':
 
@@ -313,3 +313,15 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Siste
         ADD COLUMN nomActividad2 VARCHAR(100) AFTER idFacultad;
 
         -Por ultimo, mas o menos estoy viendo la lista de eventos del admin
+
+    -Leo
+      + Recuperar Contraseña
+        1. Se reemplazó el archivo recuperar.html por el archivo recuperar.php
+        2. En la carpeta 'procesos' se agregó el archivo 'procesarEmail.php', el cual verifica si existe el correo en el sistema para poder enviarle el mensaje.
+        3. En la carpeta 'procesos' se agregó el archivo 'enviarEmail.php', el cual tiene toda información sobre el mensaje a enviar.
+        4. Se actualizó usuario.php. Agrendole el hash (Revisar archivo).
+        5. En la carpeta 'paginas' se agregó el archivo 'cambiarContraseña.php', en el cual se verifica la solicitud de cambio de contraseña y se ingresa la nueva contraseña.
+        6. En la carpeta 'procesos' se agregó el archivo 'procesarCambioContraseña.php', el cual hace el cambio de contraseña y redirecciona al index.
+
+        psdt.: El correo usado para enviar los mensajes es eventosfiscutp1@gmail.com contraseña: eventosfisc99 (Igual no es necesario iniciar sesión para el envío)
+        psdt2.: Para que se envíen los correo, tendrán que hacer los cambios en el php.ini y el sendmail.ini con las instrucciones en ecampus.

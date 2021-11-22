@@ -412,7 +412,8 @@ CREATE TABLE `usuario` (
   `apellido` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `email` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
   `password` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
-  `tipoUsuario` int(2) NOT NULL
+  `tipoUsuario` int(2) NOT NULL,
+  `hash` varchar(50) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --

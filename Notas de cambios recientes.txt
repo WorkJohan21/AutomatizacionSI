@@ -287,3 +287,14 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Siste
     Por si pueden terminar de arreglarlo
 
     https://www.youtube.com/watch?v=85_MoUvTJZE&t=720s
+
+
+- Noviembre 21
+
+    - Leo
+      - Recuperar Contraseña
+        Le agregué el campo hash a la tabla 'usuario' de la base de datos 'automatizacion'. Para más facilidad, 
+        agregenle el siguiente alter en la sección SQL de la tabla 'usuario':
+
+        ALTER TABLE usuario
+            ADD `hash` varchar(50) COLLATE utf8_spanish_ci NOT NULL;

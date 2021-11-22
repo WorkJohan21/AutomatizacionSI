@@ -21,6 +21,7 @@ if (isset ($_REQUEST['nomActividad'])&& isset($_REQUEST['lugarActividad']))
   $cant=$_REQUEST['cantidad'];
   $personaEntrega=$_REQUEST['personaEntrega'];
   $personaRec=$_REQUEST['personaRec'];
+  $estado="Pendiente";
 
   
   echo ($fechaActividad."<br>".$horaActividad."<br>".$fechaRetiro."<br>".$fechaDevolucion."<br>".$observacion."<br>".$lugarActividad."<br>".$unidad."<br>".$nomActividad."<br>");
@@ -36,8 +37,8 @@ if (isset ($_REQUEST['nomActividad'])&& isset($_REQUEST['lugarActividad']))
     echo "<br>".$s."<br>";
   }
 
-  $datos = new Orden ($fechaActividad, $horaActividad, $fechaRetiro, $fechaDevolucion, $observacion, $lugarActividad, $unidad, $nomActividad);
-  $insercionOrden = $conn->prepare("INSERT INTO orden (fechaActividad, horaActividad, fechaRetiro, fechaDevolucion, observacion, idLugar, idFacultad, nomActividad2) VALUES (:fechaActividad, :horaActividad, :fechaRetiro, :fechaDevolucion, :observacion, :idLugar, :idFacultad, :nomActividad2)");
+  $datos = new Orden ($fechaActividad, $horaActividad, $fechaRetiro, $fechaDevolucion, $observacion, $lugarActividad, $unidad, $nomActividad, $estado);
+  $insercionOrden = $conn->prepare("INSERT INTO orden (fechaActividad, horaActividad, fechaRetiro, fechaDevolucion, observacion, idLugar, idFacultad, nomActividad2, estado) VALUES (:fechaActividad, :horaActividad, :fechaRetiro, :fechaDevolucion, :observacion, :idLugar, :idFacultad, :nomActividad2, :estado)");
 
   try{
     $insercionOrden->execute((array)$datos); // la insercion se efectuo con exito
@@ -80,8 +81,8 @@ if (isset ($_REQUEST['nomActividad'])&& isset($_REQUEST['lugarActividad']))
       echo $e;
     }
   }
-  $msg="Error de Conexion a la BD";
-  echo '<meta http-equiv="refresh" content="3; url=../paginas/formEquipo.php?msg='.$msg.'">';
+  //$msg="Error de Conexion a la BD";
+  header ('Location: ../paginas/formEquipo.php');
  
 }
 else

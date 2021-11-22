@@ -298,3 +298,18 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Siste
 
         ALTER TABLE usuario
             ADD `hash` varchar(50) COLLATE utf8_spanish_ci NOT NULL;
+
+- Noviembre 22
+
+    - Edwin
+        - Realice ciertos cambios a la base de datos: La tabla orden_equipo tiene un nuevo campo, se llama cantSolicitada y tiene un valor entero de 11 caracteres,
+        agreguen el campo de manera automatica con el phpMyAdmin, no es necesario escribir el codigo, lo mismo con el campo observacion en la tabla orden. El segundo cambio es que le agregue la propieda unique al campo
+        nomActividad2 en la tabla orden, de nuevo, no es necesario el codigo, en la pestana de structure del phpMyAdmin se pueden ver los campos de la tabla, y permite 
+        agregarle el atributo unique a cualquier campo, en este caso, al campo nomActividad2.
+
+        -El formulario equipo ya funciona, pero el apartado de cantidad esta bugeado.
+        -Tambien agregue un campo de estado en la tabla orden, para verificar si la propuesta fue aceptada por los administradores de DIPROCE:
+        ALTER TABLE orden
+        ADD COLUMN nomActividad2 VARCHAR(100) AFTER idFacultad;
+
+        -Por ultimo, mas o menos estoy viendo la lista de eventos del admin

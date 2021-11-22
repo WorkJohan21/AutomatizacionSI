@@ -34,13 +34,14 @@
         
 	<header class="tope">
 		<img src="../imagenes/logo.png" class="logo">
-	    <h3 class="titulosHeader">Universidad Tecnológica de Panamá<br>Departamento de Protocolo, Ceremonial y Eventos<br><i>"Camino a la excelencia a través del mejoramiento continuo"</i><label padding-left="50px"><?php echo "Bienvenido: ".$datoUser->nombre." ".$datoUser->apellido."!"; ?></h3>
+	    <h3 class="titulosHeader">Universidad Tecnológica de Panamá<br>Departamento de Protocolo, Ceremonial y Eventos<br><i>"Camino a la excelencia a través del mejoramiento continuo"</i></h3>
         <div class="salir"><a href="../procesos/salir.php"><button class="butonLogout">SALIR</button></a></div>
     </header>
-	<br>
     <br>
-    <h3 class="titulosHeaderBlack">Formulario de Servicios Internos</h3>
-    <br>
+    <div class="centrar">
+        <h3 class="titulosHeaderBlack">Formulario de Servicios Internos</h3>
+    </div>
+    <h4 class="titulosHeaderBlack"><?php echo "Bienvenid@: ".$datoUser->nombre." ".$datoUser->apellido."!"; ?></h4>
     <br>
 
         <?php if ($datoUser->tipoUsuario==2) { ?>  
@@ -77,7 +78,7 @@
             <br>
 
             <div class="cajaopc">
-                <a href="aprobarEvento.html"><button class="opciones"><img src="../imagenes/formulario.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Lista de Solicitudes de Eventos</h5></button></a>
+                <a href="aprobarEvento.php"><button class="opciones"><img src="../imagenes/formulario.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Lista de Solicitudes de Eventos</h5></button></a>
             </div>
             <br><br><br>
 

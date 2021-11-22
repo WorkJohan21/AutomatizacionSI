@@ -38,7 +38,7 @@
         <div class="centrar">
             <br>
             <h2 class="titulosHeaderBlack"><label class="bienvenido">Bienvenido:</label><h2>
-            <h3 class="titulosHeaderBlack"><?php echo $datoUser->nombre." ".$datoUser->apellido."!"; ?></h3>
+            <h3 class="titulosHeaderBlack usuario"><?php echo $datoUser->nombre." ".$datoUser->apellido."!"; ?></h3>
         </div>
         <div class="salir"><a href="../procesos/salir.php"><button class="butonLogout">SALIR</button></a></div>
     </header>

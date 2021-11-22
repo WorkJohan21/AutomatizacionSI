@@ -34,7 +34,7 @@
         
 	<header class="tope">
 		<img src="../imagenes/logo.png" class="logo">
-	    <h3 class="titulosHeader">Universidad Tecnológica de Panamá<br>Departamento de Protocolo, Ceremonial y Eventos<br><i>"Camino a la excelencia a través del mejoramiento continuo"</i><?php echo "Bienvenido: ".$datoUser->nombre." ".$datoUser->apellido."!"; ?> </h3>
+	    <h3 class="titulosHeader">Universidad Tecnológica de Panamá<br>Departamento de Protocolo, Ceremonial y Eventos<br><i>"Camino a la excelencia a través del mejoramiento continuo"</i><label padding-left="50px"><?php echo "Bienvenido: ".$datoUser->nombre." ".$datoUser->apellido."!"; ?></h3>
         <div class="salir"><a href="../procesos/salir.php"><button class="butonLogout">SALIR</button></a></div>
     </header>
 	<br>

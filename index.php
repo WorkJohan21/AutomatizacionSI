@@ -62,7 +62,7 @@
                 </div>
                 
                 <div class="d-flex justify-content-center links">
-                    <a href="paginas/recuperar.html" class="ml-2">Olvido su contrasena</a>
+                    <a href="paginas/recuperar.php" class="ml-2">Olvido su contrasena</a>
                     
                 </div>
             </div>

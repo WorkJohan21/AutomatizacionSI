@@ -312,7 +312,8 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Siste
         ALTER TABLE orden
         ADD COLUMN nomActividad2 VARCHAR(100) AFTER idFacultad;
 
-        -Por ultimo, mas o menos estoy viendo la lista de eventos del admin
+        -Por ultimo, mas o menos estoy viendo la lista de eventos del admin. La pagina estado.html y aprobarEvento.html se transformaron en php. Se agregó el Programación
+        aceptar.php en la carpeta procesos, el cual se encarga de cambiar el nuevo campo 'estado' en la tabla 'orden'.
 
     -Leo
       + Recuperar Contraseña

@@ -24,7 +24,7 @@
 				<title>Cambiar Contraseña</title>
 				<link rel="stylesheet" type="text/css" href="../CSS/estilo.css">
 				<!--<link rel="stylesheet" type="text/css" href="../CSS/style.css">-->
-
+				<link rel="icon" type="image/x-icon" href="../imagenes/logo.png">
 				<meta name ="viewport" content ="width=device-width, initial-scale=1, shrink-to-fill=no">
 			   <meta name ="description" content ="">
 			   <meta name ="author" content ="Mark Otto, Jacob Thornton, and Bootstrap contributors">

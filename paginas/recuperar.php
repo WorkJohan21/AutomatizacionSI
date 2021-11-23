@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<title>Recuperar</title>
 	<link rel="stylesheet" type="text/css" href="../CSS/estilo.css">
+   <link rel="icon" type="image/x-icon" href="../imagenes/logo.png">
 	<!--<link rel="stylesheet" type="text/css" href="../CSS/style.css">-->
 
 	<meta name ="viewport" content ="width=device-width, initial-scale=1, shrink-to-fill=no">

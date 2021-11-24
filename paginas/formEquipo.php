@@ -133,7 +133,7 @@
           <label class="textoCuerpoWhite ">INFORMACIÓN DE LA PERSONA QUE SOLICITA EL EQUIPO</label>
           <br><br>
                 <label class="textoCuerpoWhite labelEspacio">Nombre del Solicitante</label><!--name nomSolicitante-->
-                <input type="text" id="nomSolicitante" class="txtbox" name="nomSolicitante" value="<?php echo $datoUser->id; ?>" placeholder="<?php echo $datoUser->nombre." ".$datoUser->apellido; ?>" readonly>
+                <input type="text" id="nomSolicitante" class="txtbox" name="nomSolicitante" value="<?php echo $datoUser->nombre." ".$datoUser->apellido; ?>" readonly>
                 <br><br>
                 <label class="textoCuerpoWhite labelEspacio"> Unidad donde labora</label>
                 <select name="unidadLabor" id="unidadLabor" class="txtbox"><!--name unidadLabor-->

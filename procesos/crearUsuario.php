@@ -11,14 +11,15 @@ if (isset ($_REQUEST['email'])&& isset($_REQUEST['password']))
   $tipo = 2;
   $celular = $_REQUEST['celular'];
   $telefono = $_REQUEST['telefono'];
+  $hash = "";
 
-  echo ($nombre."<br>".$apellido."<br>".$email."<br>".$pass."<br>".$tipo."<br>".$celular."<br>".$telefono);
+  echo ($nombre."<br>".$apellido."<br>".$email."<br>".$pass."<br>".$tipo."<br>".$celular."<br>".$telefono. "<br>" .$hash);
 
   //insercion de objetos directamente a la base de datos, asumiento que las propiedades coincidan
 
-  $datos = new Usuario ($nombre,$apellido,$email,$pass,$tipo);
+  $datos = new Usuario ($nombre,$apellido,$email,$pass,$tipo,$hash);
 
-  $insercion = $conn->prepare("INSERT INTO usuario(nombre,apellido,email,password,tipoUsuario) value (:nombre,:apellido,:email,:password,:tipoUsuario)");
+  $insercion = $conn->prepare("INSERT INTO usuario(nombre,apellido,email,password,tipoUsuario,hash) value (:nombre,:apellido,:email,:password,:tipoUsuario,:hash)");
       //Control de excepciones  
 
   try{

@@ -35,7 +35,7 @@
 	<br><br>
 	<div clas="centrar">
 		<form class="form-signin" method="POST" action="menuPrincipal.php">
-            <h3 class="titulosHeaderBlack">Inventario de Equipo</h3>
+            <h3 class="titulosHeaderBlack centrar">Inventario de Equipo</h3>
             <br>
             <table align="center" cellspacing="20" cellpadding="10">
                 <thead>
@@ -57,7 +57,7 @@
             </table>
             <br>
             <div class="mt-4">
-                <a href="menuPrincipal.php"><button class="redondo" type="submit"><label class="textoCuerpo">REGRESAR</label></button></a>
+                <a href="menuPrincipal.php"><button class="redondo espacioBoton4" type="submit"><label class="textoCuerpo">REGRESAR</label></button></a>
             </div>
 		
 	</form>

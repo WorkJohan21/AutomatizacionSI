@@ -79,7 +79,7 @@
                     </table>
                 </div>
                 <div>
-                    <a href="menuPrincipal.php"><button class="redondo" type="submit"><label class="textoCuerpo">REGRESAR</label></button></a>
+                    <a href="menuPrincipal.php"><button class="redondo espacioBoton5" type="submit"><label class="textoCuerpo">REGRESAR</label></button></a>
                 <div>
                 <br><br>
 	    </div>

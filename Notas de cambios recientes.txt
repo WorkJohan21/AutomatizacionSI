@@ -303,17 +303,16 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Siste
 
     - Edwin
         - Realice ciertos cambios a la base de datos: La tabla orden_equipo tiene un nuevo campo, se llama cantSolicitada y tiene un valor entero de 11 caracteres,
-        agreguen el campo de manera automatica con el phpMyAdmin, no es necesario escribir el codigo, lo mismo con el campo observacion en la tabla orden. El segundo 
-        cambio es que le agregue la propieda unique al campo nomActividad2 en la tabla orden, de nuevo, no es necesario el codigo, en la pestana de structure 
-        del phpMyAdmin se pueden ver los campos de la tabla, y permite agregarle el atributo unique a cualquier campo, en este caso, al campo nomActividad2.
+        agreguen el campo de manera automatica con el phpMyAdmin, no es necesario escribir el codigo, lo mismo con el campo observacion en la tabla orden. El segundo cambio es que le agregue la propieda unique al campo
+        nomActividad2 en la tabla orden, de nuevo, no es necesario el codigo, en la pestana de structure del phpMyAdmin se pueden ver los campos de la tabla, y permite 
+        agregarle el atributo unique a cualquier campo, en este caso, al campo nomActividad2.
 
         -El formulario equipo ya funciona, pero el apartado de cantidad esta bugeado.
         -Tambien agregue un campo de estado en la tabla orden, para verificar si la propuesta fue aceptada por los administradores de DIPROCE:
         ALTER TABLE orden
         ADD COLUMN nomActividad2 VARCHAR(100) AFTER idFacultad;
 
-        -Por ultimo, mas o menos estoy viendo la lista de eventos del admin. La pagina estado.html y aprobarEvento.html se transformaron en php. Se agregó el Programación
-        aceptar.php en la carpeta procesos, el cual se encarga de cambiar el nuevo campo 'estado' en la tabla 'orden'.
+        -Por ultimo, mas o menos estoy viendo la lista de eventos del admin
 
     -Leo
       + Recuperar Contraseña
@@ -324,5 +323,5 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Siste
         5. En la carpeta 'paginas' se agregó el archivo 'cambiarContraseña.php', en el cual se verifica la solicitud de cambio de contraseña y se ingresa la nueva contraseña.
         6. En la carpeta 'procesos' se agregó el archivo 'procesarCambioContraseña.php', el cual hace el cambio de contraseña y redirecciona al index.
 
-        psdt.: El correo usado para enviar los mensajes es eventosfiscutp1@gmail.com contraseña: eventosfisc99 (Igual no es necesario iniciar sesión para el envío)
+        psdt.: El correo usado para enviar los mensajes es eventosfiscutp1@gmail.com, contraseña: eventosfisc99 (No es necesario iniciar sesión para el envío)
         psdt2.: Para que se envíen los correo, tendrán que hacer los cambios en el php.ini y el sendmail.ini con las instrucciones en ecampus.

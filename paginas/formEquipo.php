@@ -180,6 +180,18 @@
     <label class="list-group-item d-flex gap-2"><!--name equipo[]-->
       <span class="spanEspacio">Pantalla de 86"</span>
         <input class="boxderecha" type="checkbox" name="equipo[]" value="1">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
             <input type="number" id="pantalla_cant" class="boxderecha" placeholder="" name="cantidad[]" min="0" max="<?php echo $arrayCantDispo[0]; ?>">
     </label>
 
@@ -187,6 +199,18 @@
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Banderas de Diversos Países</span>
         <input class="boxderecha" type="checkbox" name="equipo[]" value="2">     
+        <p></p> 
+        <p></p> 
+        <p></p> 
+        <p></p> 
+        <p></p> 
+        <p></p> 
+        <p></p>
+        <p></p> 
+        <p></p> 
+        <p></p> 
+        <p></p>
+        <p></p>
             <input type="number" id="" class="boxderecha" placeholder="" name="cantidad[]" min="0" max="<?php echo $arrayCantDispo[1]; ?>">
     </label>
 
@@ -194,60 +218,180 @@
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Estandarte UTP</span>  
         <input class="boxderecha" type="checkbox" value="3" name="equipo[]">  
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
             <input type="number" id="" class="boxderecha" placeholder="" name="cantidad[]" min="0" max="<?php echo $arrayCantDispo[2]; ?>">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Astas y Bases</span>  
         <input class="boxderecha" type="checkbox" value="4" name="equipo[]">  
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
             <input type="number" id="" class="boxderecha" placeholder="" name="cantidad[]" min="0" max="<?php echo $arrayCantDispo[3]; ?>">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio"> Soporte para Banner (Araña)</span>
         <input class="boxderecha" type="checkbox" value="5" name="equipo[]">    
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
             <input type="number" id="" class="boxderecha" placeholder="" name="cantidad[]" min="0" max="<?php echo $arrayCantDispo[4]; ?>">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Flores Artificiales para Centro de Mesa </span>
         <input class="boxderecha" type="checkbox" value="6" name="equipo[]">     
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
             <input type="number" id="" class="boxderecha" placeholder="" name="cantidad[]" min="0" max="<?php echo $arrayCantDispo[5]; ?>">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Habladores (1)</span>  
         <input class="boxderecha" type="checkbox" value="7" name="equipo[]">  
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
             <input type="number" id="" class="boxderecha" placeholder="" name="cantidad[]" min="0" max="<?php echo $arrayCantDispo[6]; ?>">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Bombas Manuales para Inflar Globos</span>
-        <input class="boxderecha" type="checkbox" value="8" name="equipo[]">    
+        <input class="boxderecha" type="checkbox" value="8" name="equipo[]">   
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p> 
             <input type="number" id="" class="boxderecha" placeholder="" name="cantidad[]" min="0" max="<?php echo $arrayCantDispo[7]; ?>">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Rotafolio con Tablero Blanco</span>
         <input class="boxderecha" type="checkbox" value="9" name="equipo[]">    
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
             <input type="number" id="" class="boxderecha" placeholder="" name="cantidad[]" min="0" max="<?php echo $arrayCantDispo[8]; ?>">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Karaoke</span>  
         <input class="boxderecha" type="checkbox" value="10" name="equipo[]">  
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
             <input type="number" id="" class="boxderecha" placeholder="" name="cantidad[]" min="0" max="<?php echo $arrayCantDispo[9]; ?>">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Radiograbadora con Lector USB y CD</span>
         <input class="boxderecha" type="checkbox" value="11" name="equipo[]">    
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
             <input type="number" id="" class="boxderecha" placeholder="" name="cantidad[]" min="0" max="<?php echo $arrayCantDispo[10]; ?>">
     </label>
 
     <label class="list-group-item d-flex gap-2">
       <span class="spanEspacio">Engrapadoras semi Industrial e Industrial</span>
-        <input class="boxderecha" type="checkbox" value="12" name="equipo[]">    
+        <input class="boxderecha" type="checkbox" value="12" name="equipo[]">  
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>  
             <input type="number" id="" class="boxderecha" placeholder="" name="cantidad[]" min="0" max="<?php echo $arrayCantDispo[11]; ?>">
     </label>
 </div>

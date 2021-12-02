@@ -28,7 +28,7 @@
                 alert( "<?php echo $a; ?>" );
                 </script>
             <?php
-            header("Location: ../index.php?msg=Datos incorrectos para ingresar, intente nuevamente");
+            header("Location: ../index.php?msg=Datos incorrectos, intente nuevamente");
             exit;
         }
 

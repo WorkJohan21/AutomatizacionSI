@@ -90,10 +90,10 @@
           <label class="textoCuerpoWhite">INFORMACIÓN DE LA ACTIVIDAD EN LA CUAL SE UTILIZARÁ EL EQUIPO</label>
           <br><br>
                 <label class="textoCuerpoWhite labelEspacio">Nombre de la Actividad</label><!--name nomActividad-->
-                <input type="text" id="nomActividad" class="txtbox" placeholder="Ingrese el nombre de la actividad" name="nomActividad" size="30">
+                <input type="text" id="nomActividad" class="txtbox" placeholder="Ingrese el nombre de la actividad" name="nomActividad" size="30" required>
                 <br><br>
                 <label class="textoCuerpoWhite labelEspacio">Lugar donde se desarrollará</label>
-                <select name="lugarActividad" id="lugarActividad" class="txtbox"><!--name lugarActividad-->
+                <select name="lugarActividad" id="lugarActividad" class="txtbox" required><!--name lugarActividad-->
                   <option value="1">Auditorio</option>
                   <option value="2">Lobby Edificio 3</option>
                   <option value="3">Lobby Edificio 1</option>
@@ -108,7 +108,7 @@
                 
                 <br><br>
                 <label class="textoCuerpoWhite labelEspacio">Fecha de la Actividad</label><!--name fechaActividad-->
-                <input type="date" id="fechaActividad" class="txtbox" placeholder="" name="fechaActividad">       
+                <input type="date" id="fechaActividad" class="txtbox" placeholder="" name="fechaActividad" required>       
                 <br><br>
                 <label class="textoCuerpoWhite labelEspacio">Unidad que lo Organiza</label>
                 
@@ -266,7 +266,7 @@
             <label class="textoCuerpoWhite ">INFORMACIÓN DEL DÍA DE RETIRO</label>
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Retiro del Equipo (Fecha)</label>
-            <input type="date" id="fechaRetiro" class="txtbox" placeholder="" name="fechaRetiro"><!--name fechaRetiro-->
+            <input type="date" id="fechaRetiro" class="txtbox" placeholder="" name="fechaRetiro" required><!--name fechaRetiro-->
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Quién Retira</label><!--name personaRetira-->
             <input type="text" id="personaRetira" class="txtbox" name="personaRetira" value="<?php echo $datoUser->nombre." ".$datoUser->apellido; ?>"readonly>     
@@ -281,7 +281,7 @@
             <label class="textoCuerpoWhite labelEspacio">Observación de la Solicitud</label>
             <textarea id="observacion" class="txtbox" name="observacion" rows="5" cols="40" placeholder="Observaciones"></textarea><!--name observacion-->
             <br><br>
-</div> 
+</div>
 
 <!--QUINTO DIV DE DÍA DE DEVOLUCIÓN-->
 <div class="cajamarron">

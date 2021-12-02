@@ -31,7 +31,10 @@
         <img src="imagenes/undraw_events_re_98ue.svg" width="500" height="500">
 
 		<form method="POST" action="procesos/procesarLogin.php">
+
             <h3 class="titulosHeaderBlack2">Acceder al Sistema</h3>
+
+            <p class="text-danger"> <?php if (isset ($_GET['msg'])) echo $_GET['msg'];?> </p>
 
             <div class="mt-4">
                 <img src="imagenes/email.svg" width="30" height="30">

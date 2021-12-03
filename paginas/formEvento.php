@@ -441,7 +441,7 @@
 
 						<h5>CONTACTO DIRECTO PARA COORDINACIÓN</h5>
 						Solicitado por: 
-						<input type="text" id="personaDevlv" class="txtbox" name="personaDevlv" value="<?php echo $datoUser->nombre." ".$datoUser->apellido. " ".$datoUser->id; ?>"readonly> 
+						<input type="text" id="personaDevlv" class="txtbox" name="personaDevlv" value="<?php echo $datoUser->nombre." ".$datoUser->apellido; ?>"readonly> 
 						<br>
 						<br>
 <!--Segunda Lista -->	<div id="departamento"></div>

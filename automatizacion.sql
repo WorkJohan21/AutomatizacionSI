@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2021 at 04:17 PM
+-- Generation Time: Dec 03, 2021 at 04:49 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -114,7 +114,7 @@ CREATE TABLE `equipo` (
 --
 
 INSERT INTO `equipo` (`idEquipo`, `nombreEquipo`, `cantDispo`, `cantTotal`) VALUES
-(1, 'Pantalla de 86 Pulgadas', 10, 10),
+(1, 'Pantalla de 86 Pulgadas', 5, 5),
 (2, 'Banderas de Diversos Países', 10, 10),
 (3, 'Estandarte UTP', 20, 20),
 (4, 'Astas y Bases', 30, 30),
@@ -191,8 +191,20 @@ CREATE TABLE `orden` (
   `observacion` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
   `idLugar` int(11) NOT NULL,
   `idFacultad` int(11) NOT NULL,
-  `nomActividad2` varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL
+  `nomActividad2` varchar(300) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `estado` varchar(100) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Dumping data for table `orden`
+--
+
+INSERT INTO `orden` (`idOrden`, `fechaActividad`, `horaActividad`, `fechaRetiro`, `fechaDevolucion`, `observacion`, `idLugar`, `idFacultad`, `nomActividad2`, `estado`) VALUES
+(4, '2021-11-22', '12:00:00', '2021-11-20', '2021-11-24', 'aa', 1, 2, 'Prueba', 'Aprobado'),
+(5, '2021-11-21', '21:49:00', '2021-11-22', '2021-11-24', 'Maneje con Cuidado', 7, 5, 'Prueba2', 'Aprobado'),
+(6, '2021-11-22', '08:00:00', '2021-11-24', '2021-11-27', 'aaa', 2, 6, 'Prueba 3', 'Modificar'),
+(7, '2021-11-23', '07:30:00', '2021-11-24', '2021-11-26', 'Ayuda', 1, 1, 'Prueba 4', 'Pendiente'),
+(8, '0000-00-00', '13:19:00', '2021-12-22', '2021-12-23', 'kdsvnjkdfv joefv', 5, 5, 'Prueba 6', 'Pendiente');
 
 -- --------------------------------------------------------
 
@@ -203,8 +215,23 @@ CREATE TABLE `orden` (
 CREATE TABLE `orden_equipo` (
   `idOrdenEquipo` int(11) NOT NULL,
   `idOrden` int(11) NOT NULL,
-  `idEquipo` int(11) NOT NULL
+  `idEquipo` int(11) NOT NULL,
+  `cantSolicitada` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Dumping data for table `orden_equipo`
+--
+
+INSERT INTO `orden_equipo` (`idOrdenEquipo`, `idOrden`, `idEquipo`, `cantSolicitada`) VALUES
+(1, 4, 1, 5),
+(2, 4, 2, 10),
+(3, 4, 12, 0),
+(4, 5, 5, 0),
+(5, 5, 6, 0),
+(6, 6, 12, 0),
+(7, 7, 1, 5),
+(8, 8, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -218,6 +245,22 @@ CREATE TABLE `orden_usuario` (
   `idUsuario` int(11) NOT NULL,
   `tipoUsuario` varchar(2) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Dumping data for table `orden_usuario`
+--
+
+INSERT INTO `orden_usuario` (`idOrdenUsuario`, `idOrden`, `idUsuario`, `tipoUsuario`) VALUES
+(1, 5, 3, '1'),
+(2, 5, 3, '1'),
+(3, 6, 3, '1'),
+(4, 6, 3, '1'),
+(5, 6, 1, '2'),
+(6, 7, 3, '1'),
+(7, 7, 3, '1'),
+(8, 7, 1, '2'),
+(9, 8, 3, '1'),
+(10, 8, 3, '1');
 
 -- --------------------------------------------------------
 
@@ -248,7 +291,8 @@ CREATE TABLE `solicitud_diseno` (
   `idSolicitudDiseno` int(11) NOT NULL,
   `idSolicitud` int(11) NOT NULL,
   `idDiseno` int(11) NOT NULL,
-  `tamano` varchar(50) COLLATE utf8_spanish_ci NOT NULL
+  `tamano` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `orientacion` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
@@ -303,6 +347,32 @@ CREATE TABLE `s_diseno` (
   `nombreDiseno` varchar(350) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
+-- Dumping data for table `s_diseno`
+--
+
+INSERT INTO `s_diseno` (`idDiseno`, `nombreDiseno`) VALUES
+(1, 'Afiche Full Color'),
+(2, 'Afiche Via Web'),
+(3, 'Brochure'),
+(4, 'Volantes'),
+(5, 'Pagina de Prensa'),
+(6, 'Separadores'),
+(7, 'Logos'),
+(8, 'Tarjetas'),
+(9, 'Certificados'),
+(10, 'Boletines'),
+(11, 'Papeleria'),
+(12, 'Diagramacion (Libros/Revistas)'),
+(13, 'Portadas de Carpetas'),
+(14, 'Escenografias'),
+(15, 'Stand'),
+(16, 'Banners'),
+(17, 'Letreros'),
+(18, 'Material P.O.P'),
+(19, 'Disenos de CD'),
+(20, 'Otros');
+
 -- --------------------------------------------------------
 
 --
@@ -313,6 +383,16 @@ CREATE TABLE `s_imprenta` (
   `idImprenta` int(11) NOT NULL,
   `nombreImprenta` varchar(350) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Dumping data for table `s_imprenta`
+--
+
+INSERT INTO `s_imprenta` (`idImprenta`, `nombreImprenta`) VALUES
+(1, 'Programa'),
+(2, 'Folleto'),
+(3, 'Certificado'),
+(4, 'Brochure');
 
 -- --------------------------------------------------------
 
@@ -412,8 +492,7 @@ CREATE TABLE `usuario` (
   `apellido` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `email` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
   `password` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
-  `tipoUsuario` int(2) NOT NULL,
-  `hash` varchar(50) COLLATE utf8_spanish_ci NOT NULL
+  `tipoUsuario` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
@@ -422,7 +501,7 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`id`, `nombre`, `apellido`, `email`, `password`, `tipoUsuario`) VALUES
 (1, 'Samantha', 'Miranda', 'mirandasamy@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 2),
-(3, 'Edwin', 'Diaz', 'edwin.diaz5@utp.ac.pa', 'fcea920f7412b5da7be0cf42b8c93759', 2);
+(3, 'Edwin', 'Diaz', 'edwin.diaz5@utp.ac.pa', 'fcea920f7412b5da7be0cf42b8c93759', 1);
 
 --
 -- Indexes for dumped tables
@@ -471,6 +550,7 @@ ALTER TABLE `lugar`
 --
 ALTER TABLE `orden`
   ADD PRIMARY KEY (`idOrden`),
+  ADD UNIQUE KEY `nomActividad2` (`nomActividad2`),
   ADD KEY `idLugar` (`idLugar`),
   ADD KEY `idFacultad` (`idFacultad`);
 
@@ -614,19 +694,19 @@ ALTER TABLE `lugar`
 -- AUTO_INCREMENT for table `orden`
 --
 ALTER TABLE `orden`
-  MODIFY `idOrden` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idOrden` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `orden_equipo`
 --
 ALTER TABLE `orden_equipo`
-  MODIFY `idOrdenEquipo` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idOrdenEquipo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `orden_usuario`
 --
 ALTER TABLE `orden_usuario`
-  MODIFY `idOrdenUsuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idOrdenUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `solicitud`
@@ -662,13 +742,13 @@ ALTER TABLE `solicitud_protocolo`
 -- AUTO_INCREMENT for table `s_diseno`
 --
 ALTER TABLE `s_diseno`
-  MODIFY `idDiseno` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idDiseno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `s_imprenta`
 --
 ALTER TABLE `s_imprenta`
-  MODIFY `idImprenta` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idImprenta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `s_prensa`

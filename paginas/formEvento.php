@@ -124,25 +124,25 @@
 										<br><br>
 										<label class="textoCuerpoWhite">Tipo de actividad:</label><!--name actividad1-->
 										<br>
-										<input class="checkbox" type= "radio" name="actividad1" id="actividad1" value="Conferencias">
+										<input class="checkbox" type= "radio" name="actividad1" id="actividad1" value="1">
 										<label for="actividad1" class="textoCuerpoWhite">Conferencias</label>
 										<br>
-										<input class="checkbox" type= "radio" name="actividad1" id="actividad1" value="Ferias">
+										<input class="checkbox" type= "radio" name="actividad1" id="actividad1" value="2">
 										<label for="actividad2" class="textoCuerpoWhite">Ferias</label>
 										<br>
-										<input class="checkbox" type= "radio" name="actividad1" id="actividad1" value="Seminarios">
+										<input class="checkbox" type= "radio" name="actividad1" id="actividad1" value="3">
 										<label for="actividad3" class="textoCuerpoWhite">Seminarios</label>
 										<br>
-										<input class="checkbox" type= "radio" name="actividad1" id="actividad1" value="Actos Culturales">
+										<input class="checkbox" type= "radio" name="actividad1" id="actividad1" value="4">
 										<label for="actividad4" class="textoCuerpoWhite">Actos Culturales</label>
 										<br>
-										<input class="checkbox" type= "radio" name="actividad1" id="actividad1" value="Inauguraciones">
+										<input class="checkbox" type= "radio" name="actividad1" id="actividad1" value="5">
 										<label for="actividad5" class="textoCuerpoWhite">Inauguraciones</label>
 										<br>
-										<input class="checkbox" type= "radio" name="actividad1" id="actividad1" value="Congresos">
+										<input class="checkbox" type= "radio" name="actividad1" id="actividad1" value="6">
 										<label for="actividad6" class="textoCuerpoWhite">Congresos</label>
 										<br>
-										<input class="checkbox" type= "radio" name="actividad1" id="actividad1" value="Otros">
+										<input class="checkbox" type= "radio" name="actividad1" id="actividad1" value="7">
 										<label for="actividad7"class="textoCuerpoWhite"> Otros. Especificique </label> <input type="txtbox" type="text" name="otraactividad" size="20" maxlength="20" autofocus placeholder="" title="Escriba otro tipo de actividad que vaya a realizar">
 										<br>
 										<br>
@@ -283,7 +283,7 @@
 						<br>
 
 						<h5 class="textoCuerpoWhite">INFORMACIÓN PARA NOTA DE PRENSA:</h5>
-						<textarea name="" rows="8" cols="120" size="20" maxlength="1000" requerided placeholder="" title="Escriba el nombre de la actividad"></textarea>
+						<textarea name="observacion" rows="8" cols="120" size="20" maxlength="1000" requerided placeholder="" title="Escriba el nombre de la actividad"></textarea>
 						<br>
 						<br>
 						<br>
@@ -300,7 +300,7 @@
 
 				<!--INICIO DEL DIVTERCERO-->
 				<div id="divTercero" hidden>		
-					<div class="cajamarron">
+					<div class="cajamarron"><!--SECCION DE DISENO-->
 						<h5 class="textoCuerpoWhite">SERVICIOS DE LA SECCIÓN DE DISEÑO GRÁFICO</h5>
 					<table align="center" cellspacing="20" cellpadding="10" class="textoCuerpoWhite">
 						<thead>
@@ -374,7 +374,7 @@
 				<div id="divCuarto" hidden>
 					<div class="cajamarron textoCuerpoWhite">
 
-						<h5>SERVICIOS DE LA SECCIÓN DE IMPRENTA REQUERIDOS</h5>	
+						<h5>SERVICIOS DE LA SECCIÓN DE IMPRENTA REQUERIDOS</h5>	<!--SECCION DE IMPRENTA-->
 
 						<table align="center" cellspacing="20" cellpadding="10" class="textoCuerpoWhite">
 						<thead>
@@ -441,7 +441,7 @@
 
 						<h5>CONTACTO DIRECTO PARA COORDINACIÓN</h5>
 						Solicitado por: 
-						<input type="text" id="personaDevlv" class="txtbox" name="personaDevlv" value="<?php echo $datoUser->nombre." ".$datoUser->apellido; ?>"readonly> 
+						<input type="text" id="personaDevlv" class="txtbox" name="personaDevlv" value="<?php echo $datoUser->id; ?>"readonly> 
 						<br>
 						<br>
 <!--Segunda Lista -->	<div id="departamento"></div>

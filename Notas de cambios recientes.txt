@@ -383,3 +383,17 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Siste
     P.D: Creo que faltan mas de imprenta, pero de igual manera, el codigo es escalable, asi que solo seria agregarlos a la base de datos
 
     P.D 2 : Ya ahora sí están todos los servicios de imprenta :)
+
+
+
+----------------------------------------------------------------------------------------
+3/12/21
+    -Edwin
+    Faltaba agregar las actividades de la tabla Actividad
+    INSERT INTO actividad (nombreActividad) VALUE ('Conferencias');
+    INSERT INTO actividad (nombreActividad) VALUE ('Ferias');
+    INSERT INTO actividad (nombreActividad) VALUE ('Seminarios');
+    INSERT INTO actividad (nombreActividad) VALUE ('Actos Culturales');
+    INSERT INTO actividad (nombreActividad) VALUE ('Inauguraciones');
+    INSERT INTO actividad (nombreActividad) VALUE ('Congresos');
+    INSERT INTO actividad (nombreActividad) VALUE ('Otros');

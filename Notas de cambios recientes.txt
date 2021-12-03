@@ -362,8 +362,7 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Siste
     INSERT INTO s_imprenta (nombreImprenta) VALUE ('Programa');
     INSERT INTO s_imprenta (nombreImprenta) VALUE ('Folleto');
     INSERT INTO s_imprenta (nombreImprenta) VALUE ('Certificado');
-    INSERT INTO s_imprenta (nombreImprenta) VALUE ('Brochure');
-    
+    INSERT INTO s_imprenta (nombreImprenta) VALUE ('Brochure');    
     INSERT INTO s_imprenta (nombreImprenta) VALUE ('Afiche');
     INSERT INTO s_imprenta (nombreImprenta) VALUE ('Adhesivo');
     INSERT INTO s_imprenta (nombreImprenta) VALUE ('Volantes');

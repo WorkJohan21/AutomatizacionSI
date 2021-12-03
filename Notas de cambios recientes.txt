@@ -363,5 +363,24 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Siste
     INSERT INTO s_imprenta (nombreImprenta) VALUE ('Folleto');
     INSERT INTO s_imprenta (nombreImprenta) VALUE ('Certificado');
     INSERT INTO s_imprenta (nombreImprenta) VALUE ('Brochure');
+    
+    INSERT INTO s_imprenta (nombreImprenta) VALUE ('Afiche');
+    INSERT INTO s_imprenta (nombreImprenta) VALUE ('Adhesivo');
+    INSERT INTO s_imprenta (nombreImprenta) VALUE ('Volantes');
+    INSERT INTO s_imprenta (nombreImprenta) VALUE ('Tarjetas de Invitación');
+    INSERT INTO s_imprenta (nombreImprenta) VALUE ('Tarjetas de Presentación');
+    INSERT INTO s_imprenta (nombreImprenta) VALUE ('Portada');
+    INSERT INTO s_imprenta (nombreImprenta) VALUE ('Libro');
+    INSERT INTO s_imprenta (nombreImprenta) VALUE ('Revistas');
+    INSERT INTO s_imprenta (nombreImprenta) VALUE ('Boletines Informátivos');
+    INSERT INTO s_imprenta (nombreImprenta) VALUE ('Papel membrete UTP');
+    INSERT INTO s_imprenta (nombreImprenta) VALUE ('Sobres UTP');
+    INSERT INTO s_imprenta (nombreImprenta) VALUE ('Formularios UTP');
+    INSERT INTO s_imprenta (nombreImprenta) VALUE ('Empastado');
+    INSERT INTO s_imprenta (nombreImprenta) VALUE ('Encuadernación');
+    INSERT INTO s_imprenta (nombreImprenta) VALUE ('Refinado');
+    INSERT INTO s_imprenta (nombreImprenta) VALUE ('Otros');
 
     P.D: Creo que faltan mas de imprenta, pero de igual manera, el codigo es escalable, asi que solo seria agregarlos a la base de datos
+
+    P.D 2 : Ya ahora sí están todos los servicios de imprenta :)

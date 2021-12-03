@@ -8,6 +8,9 @@
     $datoTel=$sql3->fetch(PDO::FETCH_OBJ);
 	$sql4=$conn->query("SELECT * FROM departamento");
 	$depa=$sql4->fetch(PDO::FETCH_OBJ);
+	$sql5=$conn->query("SELECT * FROM s_diseno");
+	$sql6=$conn->query("SELECT * FROM s_imprenta");
+
 ?>
 
 <!DOCTYPE html>
@@ -85,7 +88,7 @@
 	</header>
 
 		<div class="centrar">
-			<form class="" action="menuPrincipal.php" method="post" accept-charset="utf-8">
+			<form class="" action="../procesos/procesarEvento.php" method="post" accept-charset="utf-8">
 						<h3 class="centrar">FORMULARIO DE SOLICITUD DE EVENTOS</h3>					    
 						<br><br>
 
@@ -299,399 +302,34 @@
 				<div id="divTercero" hidden>		
 					<div class="cajamarron">
 						<h5 class="textoCuerpoWhite">SERVICIOS DE LA SECCIÓN DE DISEÑO GRÁFICO</h5>
-						<table cellspacing="20" cellpadding="10" class="textoCuerpoWhite">
+					<table align="center" cellspacing="20" cellpadding="10" class="textoCuerpoWhite">
+						<thead>
+							<th class="textoCuerpoWhite">Servicios Requeridos</th>
+							<th class="textoCuerpoWhite">Marcar si requiere el servicio</th>
+							<th class="textoCuerpoWhite">Tamaño del Material</th>
+							<th class="textoCuerpoWhite">Orientación</th>
+						</thead>
+						<tbody>
+						<?php while ($diseno=$sql5->fetch(PDO::FETCH_OBJ)) { ?>	
 						<tr>
-							<th>N°</th>
-							<th>Servicios Requeridos</th>
-							<th>Marcar si requiere el servicio</th>
-							<th>Tamaño del Material</th>
-							<th>Orientación</th>
-							<th>N°</th>
-							<th>Servicios Requeridos</th>
-							<th>Marcar si requiere el servicio</th>
-							<th>Tamaño del Material</th>
-							<th>Orientación</th>
-						</tr>
-						<tr>
-							<td>1.</td>
-							<td>Afiche Full Color</td>
-							<td><input type="checkbox" name="afichefullcolor[]" value="Afiche Full Color"></td>
-							<td>
-								<select name="tamaño-afichefullcolor">
+							<!--opcion 1 de Diseno-->
+							<td class="textoCuerpoWhite"><?php echo $diseno->nombreDiseno; ?></td>
+							<td align="center" ><input type="checkbox" name="diseno[]" value="<?php echo $diseno->idDiseno; ?>"></td>
+							<td align="center">
+								<select name="tamanoDiseno[]">
 									<option value="1280 x 720">1280 x 720</option>
 									<option value="1920 x 1080">1920 x 1080</option>
 								</select>
 							</td>
-							<td>
-								<br>
-								<select name="Orientación-afichefullcolor">
+							<td align="center">
+								<select name="orientacionDiseno[]">
 									<option value="Horizontal">Horizontal</option>
 									<option value="Vertical">Vertical</option>
 								</select>
-								<br>
-								<br>
-							</td>
-
-							<td>11.</td>
-							<td>Papelería</td>
-							<td><input type="checkbox" name="Papelería" value="Papelería"></td>
-							<td>
-								<select name="tamaño-papelería">
-									<option value="1280 x 720">1280 x 720</option>
-									<option value="1920 x 1080">1920 x 1080</option>
-								</select>
-							</td>
-							<td>
-								<br>
-								<select name="Orientación-afichefullcolor">
-									<option value="Horizontal">Horizontal</option>
-									<option value="Vertical">Vertical</option>
-								</select>
-								<br>
-								<br>
-						</tr>
-						<tr>
-							<td>2.</td>
-							<td>Afiche vía web</td>
-							<td><input type="checkbox" name="Afiche vía web" value="Afiche vía web"></td>
-							<td>
-								<select name="tamaño-afiche-vía-web">
-									<option value="1280 x 720">1280 x 720</option>
-									<option value="1920 x 1080">1920 x 1080</option>
-								</select>
-								<br>
-							</td>
-							<td>
-								<br>
-								<select name="Orientación-afiche-vía-web">
-									<option value="Horizontal">Horizontal</option>
-									<option value="Vertical">Vertical</option>
-								</select>
-								<br>
-								<br>
-							</td>
-							<td>12.</td>
-							<td>Diagramación (libros/revistas)</td>
-							<td><input type="checkbox" name="Diagramación" value="Diagramación (libros/revistas)"></td>
-							<td>
-								<select name="tamaño-afiche-vía-web">
-									<option value="1280 x 720">1280 x 720</option>
-									<option value="1920 x 1080">1920 x 1080</option>
-								</select>
-							</td>
-							<td>
-								<br>
-								<select name="Orientación-afiche-vía-web">
-									<option value="Horizontal">Horizontal</option>
-									<option value="Vertical">Vertical</option>
-								</select>
-								<br>
-								<br>
 							</td>
 						</tr>
-						<tr>
-							<td>3.</td>
-							<td>Brochure</td>
-							<td><input type="checkbox" name="Brochure" value="Brochure"></td>
-							<td>
-								<select name="tamaño-brochure">
-									<option value="1280 x 720">1280 x 720</option>
-									<option value="1920 x 1080">1920 x 1080</option>
-								</select>
-							</td>
-							<td>
-								<br>
-								<select name="Orientación-brochure">
-									<option value="Horizontal">Horizontal</option>
-									<option value="Vertical">Vertical</option>
-								</select>
-								<br>
-								<br>
-							</td>
-							<td>13.</td>
-							<td>Portadas de Carpetas</td>
-							<td><input type="checkbox" name="Portada-carpetas" value="Portada-carpetas"></td>
-							<td>
-								<select name="tamaño-portada-carpetas">
-									<option value="1280 x 720">1280 x 720</option>
-									<option value="1920 x 1080">1920 x 1080</option>
-								</select>
-							</td>
-							<td>
-								<br>
-								<select name="Orientación-portada-carpetas">
-									<option value="Horizontal">Horizontal</option>
-									<option value="Vertical">Vertical</option>
-								</select>
-								<br>
-								<br>
-							</td>
-						</tr>
-						<tr>
-							<td>4.</td>
-							<td>Volantes</td>
-							<td><input type="checkbox" name="Volantes" value="Volantes"></td>
-							<td>
-								<select name="tamaño-volantes">
-									<option value="1280 x 720">1280 x 720</option>
-									<option value="1920 x 1080">1920 x 1080</option>
-								</select>					    	
-							</td>
-							<td>
-								<br>
-								<select name="Orientación-volantes">
-									<option value="Horizontal">Horizontal</option>
-									<option value="Vertical">Vertical</option>
-								</select>
-								<br>
-								<br>
-							</td>
-							<td>14.</td>
-							<td>Escenografías</td>
-							<td><input type="checkbox" name="Escenografías" value="Escenografías"></td>
-							<td>
-								<select name="tamaño-Escenografías">
-									<option value="1280 x 720">1280 x 720</option>
-									<option value="1920 x 1080">1920 x 1080</option>
-								</select>
-							</td>
-							<td>
-								<br>
-								<select name="Orientación-Escenografías">
-									<option value="Horizontal">Horizontal</option>
-									<option value="Vertical">Vertical</option>
-								</select>
-								<br>
-								<br>
-							</td>
-						</tr>
-						<tr>
-							<td>5.</td>
-							<td>Página de Prensa</td>
-							<td><input type="checkbox" name="Página de Prensa" value="Página-de-Prensa"></td>
-							<td>
-								<select name="tamaño-Página-de-Prensa">
-									<option value="1280 x 720">1280 x 720</option>
-									<option value="1920 x 1080">1920 x 1080</option>
-								</select>
-							</td>
-							<td>
-								<br>
-									<select name="Orientación-Página-de-Prensa">
-									<option value="Horizontal">Horizontal</option>
-									<option value="Vertical">Vertical</option>
-								</select>
-								<br>
-								<br>
-							</td>
-							<td>15.</td>
-							<td>Stand</td>
-							<td><input type="checkbox" name="Stand" value="Stand"></td>
-							<td>
-								<select name="tamaño-Página-de-Stand">
-									<option value="1280 x 720">1280 x 720</option>
-									<option value="1920 x 1080">1920 x 1080</option>
-								</select>
-							</td>
-							<td>
-								<br>
-								<select name="Orientación-Página-de-Stand">
-									<option value="Horizontal">Horizontal</option>
-									<option value="Vertical">Vertical</option>
-								</select>
-								<br>
-								<br>
-							</td>
-						</tr>
-						<tr>
-							<td>6.</td>
-							<td>Separadores</td>
-							<td><input type="checkbox" name="Separadores" value="Separadores"></td>
-							<td>
-								<select name="tamaño-Página-de-Separadores">
-									<option value="1280 x 720">1280 x 720</option>
-									<option value="1920 x 1080">1920 x 1080</option>
-								</select>
-							</td>
-							<td>
-								<br>
-								<select name="Orientación-Página-de-Separadores">
-									<option value="Horizontal">Horizontal</option>
-									<option value="Vertical">Vertical</option>
-								</select>
-								<br>
-								<br>
-							</td>
-							<td>16.</td>
-							<td>Banners</td>
-							<td><input type="checkbox" name="Banners" value="Banners"></td>
-							<td>
-								<select name="tamaño-Página-de-Banners">
-									<option value="1280 x 720">1280 x 720</option>
-									<option value="1920 x 1080">1920 x 1080</option>
-								</select>
-							</td>
-							<td>
-								<br>
-								<select name="Orientación-Página-de-Banners">
-									<option value="Horizontal">Horizontal</option>
-									<option value="Vertical">Vertical</option>
-								</select>
-								<br>
-								<br>
-							</td>
-						</tr>
-						<tr>
-							<td>7.</td>
-							<td>Logos</td>
-							<td><input type="checkbox" name="Logos" value="Logos"></td>
-							<td>
-								<select name="tamaño-Página-de-Logos">
-									<option value="1280 x 720">1280 x 720</option>
-									<option value="1920 x 1080">1920 x 1080</option>
-								</select>
-							</td>
-							<td>
-								<br>
-								<select name="Orientación-Página-de-Logos">
-									<option value="Horizontal">Horizontal</option>
-									<option value="Vertical">Vertical</option>
-								</select>
-								<br>
-								<br>
-							</td>
-							<td>17.</td>
-							<td>Letreros</td>
-							<td><input type="checkbox" name="Letreros" value="Letreros"></td>
-							<td>
-								<select name="tamaño-Página-de-Letreros">
-									<option value="1280 x 720">1280 x 720</option>
-									<option value="1920 x 1080">1920 x 1080</option>
-								</select>
-							</td>
-							<td>
-								<br>
-								<select name="Orientación-Página-de-Letreros">
-									<option value="Horizontal">Horizontal</option>
-									<option value="Vertical">Vertical</option>
-								</select>
-								<br>
-								<br>
-							</td>
-						</tr>
-						<tr>
-							<td>8.</td>
-							<td>Tarjetas</td>
-							<td><input type="checkbox" name="Tarjetas" value="Tarjetas"></td>
-							<td>
-								<select name="tamaño-Página-de-Tarjetas">
-									<option value="1280 x 720">1280 x 720</option>
-									<option value="1920 x 1080">1920 x 1080</option>
-								</select>
-							</td>
-							<td>
-								<br>
-								<select name="Orientación-Página-de-Tarjetas">
-									<option value="Horizontal">Horizontal</option>
-									<option value="Vertical">Vertical</option>
-								</select>
-								<br>
-							</td>
-							<td>18.</td>
-							<td>Material P.O.P.</td>
-							<td><input type="checkbox" name="Material P.O.P." value="Material-P.O.P."></td>
-							<td>
-								<select name="tamaño-Página-de-Material-P.O.P.">
-									<option value="1280 x 720">1280 x 720</option>
-									<option value="1920 x 1080">1920 x 1080</option>
-								</select>
-							</td>
-							<td>
-								<br>
-								<select name="Orientación-Página-de-Material-P.O.P.">
-									<option value="Horizontal">Horizontal</option>
-									<option value="Vertical">Vertical</option>
-								</select>
-								<br>
-								<br>
-							</td>
-						</tr>
-						<tr>
-							<td>9.</td>
-							<td>Certificados</td>
-							<td><input type="checkbox" name="Certificados" value="Certificados"></td>
-							<td>
-								<select name="tamaño-Página-de-Certificados">
-									<option value="1280 x 720">1280 x 720</option>
-									<option value="1920 x 1080">1920 x 1080</option>
-								</select>
-							</td>
-							<td>
-								<br>
-								<select name="Orientación-Página-de-Certificados">
-									<option value="Horizontal">Horizontal</option>
-									<option value="Vertical">Vertical</option>
-								</select>
-								<br>
-								<br>
-							</td>
-							<td>19.</td>
-							<td>Diseños de CD</td>
-								<td><input type="checkbox" name="Diseños de CD" value="Diseños-de-CD"></td>
-							<td>
-								<select name="Diseños-de-CD">
-									<option value="1280 x 720">1280 x 720</option>
-									<option value="1920 x 1080">1920 x 1080</option>
-								</select>
-							</td>
-							<td>
-								<br>
-								<select name="Orientación-Diseños-de-CD">
-									<option value="Horizontal">Horizontal</option>
-									<option value="Vertical">Vertical</option>
-								</select>
-								<br>
-								<br>
-							</td>
-						</tr>
-						<tr>
-							<td>10.</td>
-							<td>Boletines</td>
-								<td><input type="checkbox" name="Boletines" value="Boletines"></td>
-							<td>
-								<select name="tamaño-de-Boletines">
-									<option value="1280 x 720">1280 x 720</option>
-									<option value="1920 x 1080">1920 x 1080</option>
-								</select>
-							</td>
-							<td>
-								<br>
-								<select name="Orientación-de-Boletines">
-									<option value="Horizontal">Horizontal</option>
-									<option value="Vertical">Vertical</option>
-								</select>
-								<br>
-								<br>
-							</td>
-							<td>20.</td>
-							<td>Otros:</td>
-								<td><input type="checkbox" name="Otros" value="Otros"></td>
-							<td>
-								<select name="tamaño-Página-de-Otros">
-									<option value="1280 x 720">1280 x 720</option>
-									<option value="1920 x 1080">1920 x 1080</option>
-								</select>
-							</td>
-							<td>
-								<br>
-								<select name="Orientación-Página-de-Otros">
-									<option value="Horizontal">Horizontal</option>
-									<option value="Vertical">Vertical</option>
-								</select>
-								<br>
-								<br>
-							</td>
-						</tr>
+						<?php } ?>
+						</tbody>
 						</table>
 
 						<br><br><br>
@@ -738,128 +376,53 @@
 
 						<h5>SERVICIOS DE LA SECCIÓN DE IMPRENTA REQUERIDOS</h5>	
 
-						<h5>Programa</h5>
-						N° de copias: <input type="number" min="0" max="100" value="0" name="numero-de-programas">
-						N° de originales: <input type="number" min="0" max="100" value="0" name="numero-de-programas-originales">
-						Tamaño del material:
-						<select name="Tamaño-Material-Programa">
-							<option value="1280 x 720">1280 x 720</option>
-							<option value="1920 x 1080">1920 x 1080</option>
-						</select>
-						<br>
-						<br>
-						Tipo de material: 
-						<select name="Material-del-Programa">
-							<option value="Papel poster Gloss">Papel poster Gloss</option>
-							<option value="Papel Photo Glass">Papel Photo Glass</option>
-							<option value="Papel Sintético">Papel Sintético</option>
-						</select>
-						<br>
-						<br>
-						Color:
-						<p></p>
-						<input type="checkbox" name="Full" value="Full">
-						<label for="fullColor">Full</label> 
-						<p></p>
-						<input type="checkbox" name="Uno" value="Uno">
-						<label for="uno">Uno</label> 
-						<p></p>
-						Otro: 
-						<input class="txtbox" type="text" name="Otro-color" name="color-brochure" size="40" maxlength="20" placeholder="Ingrese el color de su preferencia" size="40" max="20">
+						<table align="center" cellspacing="20" cellpadding="10" class="textoCuerpoWhite">
+						<thead>
+							<!--<th class="titulosHeader">Servicio</th>
+							<th class="titulosHeader">Marcar si requiere el servicio</th>
+							<th class="titulosHeader">Nº de Copias</th>
+							<th class="titulosHeader">Nº de Originales</th>
+							<th class="titulosHeader">Tamaño</th>
+							<th class="titulosHeader">Tipo de Material</th>
+							<th class="titulosHeader">Color</th>-->
+						</thead>
+						<tbody>
+						<?php while ($imprenta=$sql6->fetch(PDO::FETCH_OBJ)) { ?>	
+						<tr>
+							<td class="textoCuerpoWhite"><h5><strong><?php echo $imprenta->idImprenta.". ".$imprenta->nombreImprenta; ?></strong></h5></td>
+							<td><input type="checkbox" name="imprenta[]" value="<?php echo $imprenta->idImprenta; ?>"></td>
+						</tr>
 
-						<p></p>
+						<tr>
+							<td>Nº de Copias<p></p><input type="number" min="0" max="100" value="0" name="copias[]"></td>
+							<td>Nº de Originales<p></p><input type="number" min="0" max="100" value="0" name="originales[]"></td>
+						</tr>
 
-						<h5>Folleto</h5>
-						N° de copias: <input type="number" min="0" max="100" value="0" name="numero-de-programas">
-						N° de originales: <input type="number" min="0" max="100" value="0" name="numero-de-programas-originales">
-						Tamaño del material:
-						<select name="Tamaño-Material-Folleto">
-							<option value="1280 x 720">1280 x 720</option>
-							<option value="1920 x 1080">1920 x 1080</option>
-						</select>
-						<br>
-						<br>
-						Tipo de material: 
-						<select name="Material-del-Folleto">
-							<option value="Papel poster Gloss">Papel poster Gloss</option>
-							<option value="Papel Photo Glass">Papel Photo Glass</option>
-							<option value="Papel Sintético">Papel Sintético</option>
-						</select>
-						<br>
-						<br>
-						Color:
-						<p></p>
-						<input type="checkbox" name="Full" value="Full">
-						<label for="fullColor">Full</label> 
-						<p></p>
-						<input type="checkbox" name="Uno" value="Uno">
-						<label for="uno">Uno</label> 
-						<p></p>
-						Otro: 
-						<input class="txtbox" type="text" name="Otro-color" name="color-brochure" size="40" maxlength="20" placeholder="Ingrese el color de su preferencia" size="40" max="20">
-
-						<p></p>
-
-						<h5>Certificado</h5>
-						N° de copias: <input type="number" min="0" max="100" value="0" name="numero-de-programas">
-						N° de originales: <input type="number" min="0" max="100" value="0" name="numero-de-programas-originales">
-						Tamaño del material:
-						<select name="Tamaño-Material-Certificado">
-							<option value="1280 x 720">1280 x 720</option>
-							<option value="1920 x 1080">1920 x 1080</option>
-						</select>
-						<br>
-						<br>
-						Tipo de material: 
-						<select name="Material-del-Certificado">
-							<option value="Papel poster Gloss">Papel poster Gloss</option>
-							<option value="Papel Photo Glass">Papel Photo Glass</option>
-							<option value="Papel Sintético">Papel Sintético</option>
-						</select>
-						<br>
-						<br>
-						Color:
-						<p></p>
-						<input type="checkbox" name="Full" value="Full">
-						<label for="fullColor">Full</label> 
-						<p></p>
-						<input type="checkbox" name="Uno" value="Uno">
-						<label for="uno">Uno</label> 
-						<p></p>
-						Otro: 
-						<input class="txtbox" type="text" name="Otro-color" name="color-brochure" size="40" maxlength="20" placeholder="Ingrese el color de su preferencia" size="40" max="20">
-
-						<p></p>
-
-						<h5>Brochure</h5>
-						N° de copias: <input type="number" min="0" max="100" value="0" name="numero-de-programas">
-						N° de originales: <input type="number" min="0" max="100" value="0" name="numero-de-programas-originales">
-						Tamaño del material:
-						<select name="Tamaño-Material-Brochure">
-							<option value="1280 x 720">1280 x 720</option>
-							<option value="1920 x 1080">1920 x 1080</option>
-						</select>
-						<br>
-						<br>
-						Tipo de material: 
-						<select name="Material-del-Brochure">
-							<option value="Papel poster Gloss">Papel poster Gloss</option>
-							<option value="Papel Photo Glass">Papel Photo Glass</option>
-							<option value="Papel Sintético">Papel Sintético</option>
-						</select>
-						<br>
-						<br>
-						Color:
-						<p></p>
-						<input type="checkbox" name="Full" value="Full">
-						<label for="fullColor">Full</label> 
-						<p></p>
-						<input type="checkbox" name="Uno" value="Uno">
-						<label for="uno">Uno</label> 
-						<p></p>
-						Otro: 
-						<input class="txtbox" type="text" name="Otro-color" name="color-brochure" size="40" maxlength="20" placeholder="Ingrese el color de su preferencia" size="40" max="20">
-
+						<tr>
+							<td>Tamaño<p></p>
+								<select name="tamanoImprenta[]">
+									<option value="1280 x 720">1280 x 720</option>
+									<option value="1920 x 1080">1920 x 1080</option>
+								</select>
+							</td>
+							<td>Tipo de Material<p></p>
+								<select name="materialImprenta[]">
+									<option value="Papel Poster Gloss">Papel Poster Gloss</option>
+									<option value="Papel Photo Glass">Papel Photo Glass</option>
+									<option value="Papel Sintetico">Papel Sintetico</option>
+								</select>
+							</td>
+							<td>Color<p></p>
+								<select name="colorImprenta[]">
+									<option value="Full Color">Full Color</option>
+									<option value="Blanco y Negro">Blanco y Negro</option>
+								</select>
+							</td>
+						</tr>
+						<?php } ?>
+						</tbody>
+						</table>
+						
 						<p></p>
 
 						Nota: 

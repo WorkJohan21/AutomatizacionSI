@@ -325,3 +325,43 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Siste
 
         psdt.: El correo usado para enviar los mensajes es eventosfiscutp1@gmail.com, contraseña: eventosfisc99 (No es necesario iniciar sesión para el envío)
         psdt2.: Para que se envíen los correo, tendrán que hacer los cambios en el php.ini y el sendmail.ini con las instrucciones en ecampus.
+
+
+----------------------------------------------------------------------
+2/12/21
+    -Edwin
+    Agregue campos a la tabla s_diseno, esto es para que la parte de servicios de diseno en el formulario de eventos pueda funcionar
+    
+
+    INSERT INTO s_diseno (nombreDiseno) VALUE ('Afiche Full Color');
+    INSERT INTO s_diseno (nombreDiseno) VALUE ('Afiche Via Web');
+    INSERT INTO s_diseno (nombreDiseno) VALUE ('Brochure');
+    INSERT INTO s_diseno (nombreDiseno) VALUE ('Volantes');
+    INSERT INTO s_diseno (nombreDiseno) VALUE ('Pagina de Prensa');
+    INSERT INTO s_diseno (nombreDiseno) VALUE ('Separadores');
+    INSERT INTO s_diseno (nombreDiseno) VALUE ('Logos');
+    INSERT INTO s_diseno (nombreDiseno) VALUE ('Tarjetas');
+    INSERT INTO s_diseno (nombreDiseno) VALUE ('Certificados');
+    INSERT INTO s_diseno (nombreDiseno) VALUE ('Boletines');
+    INSERT INTO s_diseno (nombreDiseno) VALUE ('Papeleria');
+    INSERT INTO s_diseno (nombreDiseno) VALUE ('Diagramacion (Libros/Revistas)');
+    INSERT INTO s_diseno (nombreDiseno) VALUE ('Portadas de Carpetas');
+    INSERT INTO s_diseno (nombreDiseno) VALUE ('Escenografias');
+    INSERT INTO s_diseno (nombreDiseno) VALUE ('Stand');
+    INSERT INTO s_diseno (nombreDiseno) VALUE ('Banners');
+    INSERT INTO s_diseno (nombreDiseno) VALUE ('Letreros');
+    INSERT INTO s_diseno (nombreDiseno) VALUE ('Material P.O.P');
+    INSERT INTO s_diseno (nombreDiseno) VALUE ('Disenos de CD');
+    INSERT INTO s_diseno (nombreDiseno) VALUE ('Otros');
+
+    Ademas, agregue un campo que se nos habia olvidado en la tabla solicitud_diseno, el cual es el campo de orientacion, adjunto el query para agregar dicho campo.
+    ALTER TABLE solicitud_diseno
+    ADD orientacion varchar(50);
+
+    Por ultimo, tambien agregue los campos de la tabla s_imprenta: 
+    INSERT INTO s_imprenta (nombreImprenta) VALUE ('Programa');
+    INSERT INTO s_imprenta (nombreImprenta) VALUE ('Folleto');
+    INSERT INTO s_imprenta (nombreImprenta) VALUE ('Certificado');
+    INSERT INTO s_imprenta (nombreImprenta) VALUE ('Brochure');
+
+    P.D: Creo que faltan mas de imprenta, pero de igual manera, el codigo es escalable, asi que solo seria agregarlos a la base de datos

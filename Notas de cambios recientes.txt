@@ -397,3 +397,20 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Siste
     INSERT INTO actividad (nombreActividad) VALUE ('Inauguraciones');
     INSERT INTO actividad (nombreActividad) VALUE ('Congresos');
     INSERT INTO actividad (nombreActividad) VALUE ('Otros');
+
+--------------------------------------------------------------------------------------------
+4/12/21
+    -Edwin
+    Se soluciono el problema de las cantidades solicitadas de un equipo en la tabla orden_equipo, ademas, ya se implemento la funcionalidad de restar la cantidad solicitada
+    de la cantidad disponible en la bd, solo faltarian los triggers para reestablecerlos una vez pase la fecha de devolucion.
+    Adicional a esto, se han agregado 3 campos: 2 a la tabla solicitud, y 1 a la tabla orden.
+    Los campos que se agregaron a la tabla solicitud fueron "estado" (para determinar si fue aprobada o no) y un campo que guarda la hora y fecha de cuando el resgistro
+    fue creado, osea, un CURRENT_TIMESTAMP (por buenas practicas y orden).
+    El codigo para crear el campo estado en la tabla solicitud:
+    ALTER TABLE solicitud
+    ADD estado varchar(100)
+    
+    En la tabla orden tambien se creo un campo de tipo CURRENT_TIMESTAMP, no tengo el codigo para esto, es mejor que lo creen en el mismo motor de la bd
+    Les adjuntare ss de como cree los campos por Wha.
+
+    Por ultimo, en el procesarEvento, se le agrego el campo de "estado" en el proceso de insercion, por lo que puede que les mande error si no han agregado ese campo en la BD.

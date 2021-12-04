@@ -10,8 +10,9 @@
         public $idFacultad;
         public $idActividad;
         public $idUsuario;
+        public $estado;
 
-        function __construct($ne, $fe, $hi, $hf, $ob, $idL, $idF, $idA, $idU)
+        function __construct($ne, $fe, $hi, $hf, $ob, $idL, $idF, $idA, $idU,$e)
         {
             $this->nombreEvento=$ne;
             $this->fechaEvento=$fe;
@@ -22,6 +23,7 @@
             $this->idFacultad=$idF;
             $this->idActividad=$idA;
             $this->idUsuario=$idU;
+            $this->estado=$e;
         }
 
     }

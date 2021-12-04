@@ -1,4 +1,5 @@
 <?php 
+include("verificar.php");
 include("../config/conexion.php");
 include("../clases/orden.php");
 
@@ -13,6 +14,7 @@ if (isset ($_REQUEST['nomActividad'])&& isset($_REQUEST['lugarActividad']))
   $unidad =$_REQUEST['unidadOrg'];
   $nomActividad =$_REQUEST['nomActividad'];
   $solicitante=$_REQUEST['nomSolicitante'];//Esta variable tiene triple funcion, abarca el espacio de la persona que retira y devuelve
+  $idUsuario=$_SESSION['id'];
   $unidadLabor=$_REQUEST['unidadLabor'];
   $telefono=$_REQUEST['telefono'];
   $celular=$_REQUEST['celular'];
@@ -48,17 +50,31 @@ if (isset ($_REQUEST['nomActividad'])&& isset($_REQUEST['lugarActividad']))
     $idOrden=$datosOrden->idOrden;
 
     //Insercion para la tabla orden_equipo
-    $j=0;
+    $especificoCantidad;
     $insercion2=$conn->prepare("INSERT INTO orden_equipo (idOrden, idEquipo, cantSolicitada) VALUES (:idOrden, :idEquipo, :cantSolicitada)");
 
     foreach ($equipo as $seleccionados)
     {
+      //Esta variable va a seleccionar el valor correspondiente del arreglo de cantidad de equipos solicitados($cant) en base al equipo que se selecciono
+      $especificoCantidad=$seleccionados-1;
+
+      //Query para buscar la cantidad disponible del equipo
+      $queryCantidad=$conn->query("SELECT * FROM equipo WHERE idEquipo='$seleccionados'");
+      $datosEquipo=$queryCantidad->fetch(PDO::FETCH_OBJ);
+      $cantActual=$datosEquipo->cantDispo;//Esta variable trae la cantidad disponible de un equipo de la BD
+
+      //Ahora realizamos una resta para determinar la nueva cantidad disponible del equipo, basandonos en la cantidad que solicito el usuario en el formulario
+      $cantNueva=$cantActual-$cant[$especificoCantidad];
+
+      //Ahora que se tiene el nuevo valor de cantidad de equipos disponibles, vamos a actualizar el campo cantDispo en la tabla equipo de la BD
+      $cantUpdate=$conn->exec("UPDATE equipo SET cantDispo='$cantNueva' WHERE idEquipo='$seleccionados'");
+
+
       //Los BindParam
       $insercion2->bindParam(':idOrden',$idOrden,PDO::PARAM_INT);
       $insercion2->bindParam(':idEquipo',$seleccionados,PDO::PARAM_INT);
-      $insercion2->bindParam(':cantSolicitada',$cant[$j],PDO::PARAM_INT);
+      $insercion2->bindParam(':cantSolicitada',$cant[$especificoCantidad],PDO::PARAM_INT);
 
-      $j=$j+1;
       $insercion2->execute();
     }
 
@@ -70,7 +86,7 @@ if (isset ($_REQUEST['nomActividad'])&& isset($_REQUEST['lugarActividad']))
     $datosOU = new Orden_Usuario($idOrden,$personaRec,1);
     $insercion3->execute((array)$datosOU);
 
-    $datosOU = new Orden_Usuario($idOrden,$solicitante,2);
+    $datosOU = new Orden_Usuario($idOrden,$idUsuario,2);
     $insercion3->execute((array)$datosOU);
     
   }catch (PDOException $e){

@@ -1,4 +1,5 @@
 <?php 
+    include("verificar.php");
     include("../config/conexion.php");
     include("../clases/solicitud.php");
 
@@ -14,6 +15,8 @@
         $lugar=$_REQUEST['lugar'];
         $actividad=$_REQUEST['actividad1'];
         $personaDevlv=$_REQUEST['personaDevlv'];
+        $idUsuario=$_SESSION['id'];
+        $estado="Pendiente";
 
         //Las variables del servicio de protocolo
         $precedencia=$_REQUEST['precedencia'];
@@ -86,7 +89,7 @@
             echo "<br>".$im." n de copias ".$copias[$especificoImprenta]." n de originales ".$originales[$especificoImprenta]." tamano ".$tamanoImprenta[$especificoImprenta]." tipo".$materialImprenta[$especificoImprenta]." color".$colorImprenta[$especificoImprenta]."<br>";
         }*/
 
-        $datos = new Solicitud($nombreEvento,$fecha,$horaInicio,$horaFinal,$observacion,$lugar,$facultad,$actividad,$personaDevlv);
+        $datos = new Solicitud($nombreEvento,$fecha,$horaInicio,$horaFinal,$observacion,$lugar,$facultad,$actividad,$idUsuario,$estado);
         $insercionSolicitud=$conn->prepare("INSERT INTO solicitud (nombreEvento,fechaEvento,horaInicio,horaFinal,observacion,idLugar,idFacultad,idActividad,idUsuario) VALUES (:nombreEvento,:fechaEvento,:horaInicio,:horaFinal,:observacion,:idLugar,:idFacultad,:idActividad,:idUsuario)");
        
         try

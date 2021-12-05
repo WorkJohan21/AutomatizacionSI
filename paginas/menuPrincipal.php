@@ -89,7 +89,7 @@
 <!--Calendario-->
 
 <div class="col2" >
-<iframe src="calendar2/calendario.php" frameBorder="0" height="710" width="600"  title="Iframe Example"></iframe>
+<iframe src="calendario.php" frameBorder="0" height="710" width="600"  title="Iframe Example"></iframe>
 </div>
 
 

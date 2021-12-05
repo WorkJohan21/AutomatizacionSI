@@ -1,168 +1,168 @@
 html {
-    background-color: #FFFFFF;}
+  background-color: #FFFFFF;}
 
 .titulosHeader {
-    font-family: 'Poppins', sans-serif;
-    padding-left: 200px;
-    padding-top: 5px;
-    text-align: left;
-    font-weight: bold;
-    color:#e6e6e7 ;
+  font-family: 'Poppins', sans-serif;
+  padding-left: 200px;
+  padding-top: 5px;
+  text-align: left;
+  font-weight: bold;
+  color:#e6e6e7 ;
 }
 
 .titulosHeaderBlack {
-    font-family: 'Poppins', sans-serif;
-    padding-top: 5px;
-    padding-left:40px;
-    text-align: left;
-    font-weight: bold;
-    color:#2f2f2f ;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 5px;
+  padding-left:40px;
+  text-align: left;
+  font-weight: bold;
+  color:#2f2f2f ;
 }
 
 .textoCuerpo{
-    font-family: 'Poppins', sans-serif;
-    color:#e6e6e7 ;
+  font-family: 'Poppins', sans-serif;
+  color:#e6e6e7 ;
 }
 
 .textoCuerpoBlack{
-    font-family: 'Poppins', sans-serif;
-    color:#2f2f2f ;
+  font-family: 'Poppins', sans-serif;
+  color:#2f2f2f ;
 }
 
 /*font-family: 'Poppins', sans-serif;*/
 
 .cajaopc{ 
-    margin-left: 100px;
-    margin-bottom: 10px;
- }
+  margin-left: 100px;
+  margin-bottom: 10px;
+}
 
- .cajaopc2{ 
-    margin-left: 100px;
-    margin-bottom: 50px;
+.cajaopc2{ 
+  margin-left: 100px;
+  margin-bottom: 50px;
 }
 
 .centrar{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .izquierda{
-    text-align: left;
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    margin-left: 40px;
-    margin-bottom: 40px;
+  text-align: left;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  margin-left: 40px;
+  margin-bottom: 40px;
 }
 
 .izquierdaEquipo{
-    position: fixed;
-    left: 40px;
-    top: 350px;
+  position: fixed;
+  left: 40px;
+  top: 350px;
 }
 
 .izquierdaEstado{
-    position: fixed;
-    left: 40px;
-    top: 470px;
+  position: fixed;
+  left: 40px;
+  top: 470px;
 }
 
 .izquierdaAprobar{
-    position: fixed;
-    left: 40px;
-    top: 700px;
+  position: fixed;
+  left: 40px;
+  top: 700px;
 }
 
 body {
-    width:100%; 
-    background-color:#FFFFFF;
-    margin:auto;
+  width:100%; 
+  background-color:#FFFFFF;
+  margin:auto;
 }
 
 .tope {
 
-    width:100%; 
-    height:125px;    
-    padding-top: 0px;
-    background-color: #68086c;
-    text-align: center;
+  width:100%; 
+  height:125px;    
+  padding-top: 0px;
+  background-color: #68086c;
+  text-align: center;
 }
 
 .cuerpo{
-    background-color: #FFFFFF;
+  background-color: #FFFFFF;
 }
 
 .footer2{
-    font-family: 'Poppins', sans-serif;
-    bottom: 0px;
-    position: absolute;
-    text-align: center;
-    width:100%;
-    height:10%; 
-    color:#FFFFFF;
-    background-color: #68086c;
+  font-family: 'Poppins', sans-serif;
+  bottom: 0px;
+  position: absolute;
+  text-align: center;
+  width:100%;
+  height:10%; 
+  color:#FFFFFF;
+  background-color: #68086c;
 
 }
 
 .logo{
-     position:absolute;
-     left:0px;
-     
-     width: 125px;
-     height: 125px;
+   position:absolute;
+   left:0px;
+   
+   width: 125px;
+   height: 125px;
 
 }
 
 .redondo {
+border-radius: 15px;
+border-color: #d3c0d3;
+border: 2px solid;
+padding: 5px;
+width: 150px;
+height: 50px;
+background-color: #68086c;
+}
+
+.redondo:hover{
+  background-color: #d3c0d3;
+  border-color: #68086c;
+  color:#2f2f2f;
+}
+
+.butonLogout{
   border-radius: 15px;
   border-color: #d3c0d3;
   border: 2px solid;
   padding: 5px;
   width: 150px;
   height: 50px;
-  background-color: #68086c;
-}
-
-.redondo:hover{
-    background-color: #d3c0d3;
-    border-color: #68086c;
-    color:#2f2f2f;
-}
-
-.butonLogout{
-    border-radius: 15px;
-    border-color: #d3c0d3;
-    border: 2px solid;
-    padding: 5px;
-    width: 150px;
-    height: 50px;
-    background-color: #e6e6e7;
+  background-color: #e6e6e7;
 }
 
 .butonLogout:hover{
-    background-color: #f5f5f5;
-    border-color: #e6e6e7;
-    color:#2f2f2f;
+  background-color: #f5f5f5;
+  border-color: #e6e6e7;
+  color:#2f2f2f;
 }
 
 .opciones{
-    border-radius: 15px;
-    border-color: #d3c0d3;
-    border: 2px solid;
-    padding: 5px;
-    width: 500px;
-    height: 75px;
-    background-color: #e6e6e7; 
+  border-radius: 15px;
+  border-color: #d3c0d3;
+  border: 2px solid;
+  padding: 5px;
+  width: 500px;
+  height: 75px;
+  background-color: #e6e6e7; 
 }
 
 .opciones:hover{
-    background-color: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
 .txtbox{
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .salir{
@@ -170,62 +170,97 @@ margin-right: auto;
 }
 
 * {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box; 
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
 .row {
-  display: flex;
+display: flex;
 }
 
 /* Create two equal columns that sits next to each other */
 .column {
-  flex: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+flex: 50%;
+padding: 10px;
+height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.col1{
+      width: 50%;
+      display: inline-block;
+      margin-top: 100px;
+      float: left;
+}
+.col2{
+      width: 50%;
+      display: inline-block;
+}
+
+
+.calendar1{
+  position: absolute;
+  top: 200px;
+  right: 70px;
+  width: 80%;
+  max-width: 600px;
+  margin: 1em auto;
+  padding: .5em 0; 
+
 }
 
 .calendar {
-    position: absolute;
-    top: 250px;
-    right: 70px;
-    background: #e6e6e7;
-    width: 80%;
-    max-width: 600px;
-    margin: 1em auto;
-    padding: .5em 0; }
-    .calendar__info {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      padding: 0 2em;
-      font-size: 1.2em;
-      text-transform: uppercase; }
-    .calendar__prev, .calendar__next {
-      color: #C7F464;
-      cursor: pointer;
-      font-size: 1.3em; }
-    .calendar__prev {
-      margin-right: auto; }
-    .calendar__next {
-      margin-left: auto; }
-    .calendar__week, .calendar__dates {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      grid-gap: 10px; }
-    .calendar__month, .calendar__year {
-      padding: .5em 1em; }
-    .calendar__item {
-      text-align: center;
-      line-height: 2; }
-    .calendar__today {
-      background: #68086c;
-      color: white;
-      width: 50%;
-      border-radius: 50%;
-      margin: auto; }
-    .calendar__last-days {
-      opacity: .3; }
+  position: absolute;
+  top: 250px;
+  right: 70px;
+  background: #e6e6e7;
+  width: 80%;
+  max-width: 600px;
+  margin: 1em auto;
+  padding: .5em 0; }
+  .calendar__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 2em;
+    font-size: 1.2em;
+    text-transform: uppercase; }
+  .calendar__prev, .calendar__next {
+    color: #C7F464;
+    cursor: pointer;
+    font-size: 1.3em; }
+  .calendar__prev {
+    margin-right: auto; }
+  .calendar__next {
+    margin-left: auto; }
+  .calendar__week, .calendar__dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px; }
+  .calendar__month, .calendar__year {
+    padding: .5em 1em; }
+  .calendar__item {
+    text-align: center;
+    line-height: 2; }
+  .calendar__today {
+    background: #68086c;
+    color: white;
+    width: 50%;
+    border-radius: 50%;
+    margin: auto; }
+  .calendar__last-days {
+    opacity: .3; }
+
+
+.extCalendar{
+  border: 2px solid; 
+  border-radius: 15px; 
+  padding:5px; 
+  background-color: #e6e6e7;
+}
+.intCalendar{
+  background-color: #FFFFFF; 
+  border-radius: 15px; 
+  margin: 10px;}

@@ -414,3 +414,16 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Siste
     Les adjuntare ss de como cree los campos por Wha.
 
     Por ultimo, en el procesarEvento, se le agrego el campo de "estado" en el proceso de insercion, por lo que puede que les mande error si no han agregado ese campo en la BD.
+
+-----------------------------------------------------------------------------------------------------
+5/12/21
+    -Alex
+    (Cree otro branch porque de alguna manera no puedo llenar datos en la tabla solicitud
+    y no keria dañarlo. Utilicen Edge para ejecutar, Chrome no me permit poner el calendar a la derecha)
+    1. Agregue  los estilos de calendario en un subfolder calendar_css
+    2. Agregue 2 subcarpetas: (js_calendar, locales) con los Javascript en JS
+    3. Agregue  un  calendario.php en carpeta Paginas
+    4. Agregue mas css en el estilomenu.css ya existente
+    5. Modifique la pagina MenuPrincipal para mostrar el nuevo calendario, poniendole un iFrame 
+    (no pude externalizarle los css x problemas de referencias child/parent) 
+

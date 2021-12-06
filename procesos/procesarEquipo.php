@@ -96,7 +96,7 @@ if (isset ($_REQUEST['nomActividad'])&& isset($_REQUEST['lugarActividad']))
       echo ("Otro error ");
       echo $e;
     }
-    echo'<script type="text/javascript">alert("Error, intente de nuevo");window.location.href="../paginas/formEvento.php";</script>';
+    echo'<script type="text/javascript">alert("Error, intente de nuevo");window.location.href="../paginas/formEquipo.php";</script>';
   }
   echo'<script type="text/javascript">alert("Se ha registrado su orden de equipo con éxito");window.location.href="../paginas/menuPrincipal.php";</script>';
   //$msg="Error de Conexion a la BD";

@@ -177,14 +177,16 @@
               echo $e;
             }
             echo $e;
-            
+            echo'<script type="text/javascript">alert("Error, intente de nuevo");window.location.href="../paginas/formEvento.php";</script>';
           }
-          header ('Location: ../paginas/menuPrincipal.php');
+          //header ('Location: ../paginas/menuPrincipal.php');
+          echo'<script type="text/javascript">alert("Solicitud creada exitosamente");window.location.href="../paginas/menuPrincipal.php";</script>';
     }
     else
     {
         echo "NO ESTA DEFINIDO";
-        echo '<meta http-equiv="refresh" content="5; url=../paginas/formEvento.php">';
+        //echo '<meta http-equiv="refresh" content="5; url=../paginas/formEvento.php">';
+        echo'<script type="text/javascript">alert("Error, intente de nuevo");window.location.href="../paginas/formEvento.php";</script>';
     }
             
 ?>

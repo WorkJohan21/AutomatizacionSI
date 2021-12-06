@@ -29,7 +29,7 @@
 
         //Las variables del servicio de diseno
         $nombreDiseno=$_REQUEST['diseno'];
-        $departamento=$_REQUEST['departamento'];
+        $departamento=$_REQUEST['listaDe'];
         $tamanoDiseno=$_REQUEST['tamanoDiseno'];
         $orientacionDiseno=$_REQUEST['orientacionDiseno'];
 
@@ -90,7 +90,7 @@
         }*/
 
         $datos = new Solicitud($nombreEvento,$fecha,$horaInicio,$horaFinal,$observacion,$lugar,$facultad,$actividad,$idUsuario,$estado);
-        $insercionSolicitud=$conn->prepare("INSERT INTO solicitud (nombreEvento,fechaEvento,horaInicio,horaFinal,observacion,idLugar,idFacultad,idActividad,idUsuario) VALUES (:nombreEvento,:fechaEvento,:horaInicio,:horaFinal,:observacion,:idLugar,:idFacultad,:idActividad,:idUsuario)");
+        $insercionSolicitud=$conn->prepare("INSERT INTO solicitud (nombreEvento,fechaEvento,horaInicio,horaFinal,observacion,idLugar,idFacultad,idActividad,idUsuario,estado) VALUES (:nombreEvento,:fechaEvento,:horaInicio,:horaFinal,:observacion,:idLugar,:idFacultad,:idActividad,:idUsuario,:estado)");
        
         try
         {
@@ -176,13 +176,15 @@
               echo ("Otro error ");
               echo $e;
             }
+            echo $e;
+            
           }
-        header ('Location: ../paginas/formEvento.php');
+          header ('Location: ../paginas/menuPrincipal.php');
     }
     else
     {
         echo "NO ESTA DEFINIDO";
         echo '<meta http-equiv="refresh" content="5; url=../paginas/formEvento.php">';
     }
-
+            
 ?>

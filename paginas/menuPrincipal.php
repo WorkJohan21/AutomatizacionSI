@@ -44,6 +44,7 @@
     <h4 class="titulosHeaderBlack"><?php echo "Bienvenid@: ".$datoUser->nombre." ".$datoUser->apellido."!"; ?></h4>
     <br>
 
+<div class="col1">
         <?php if ($datoUser->tipoUsuario==2) { ?>  
 
             <div class="cajaopc"> <!--cajaopc2 es el estilo que le quería aplicar pero no funciona, viene de estiloMenu.css-->
@@ -83,31 +84,19 @@
             <br><br><br>
 
         <?php } ?>
-  
+</div>
+
 <!--Calendario-->
 
-            <div class="calendar">
-                <div class="calendar__info">
-                    <div class="calendar__prev" id="prev-month">&#9664;</div>
-                    <div class="calendar__month" id="month"></div>
-                    <div class="calendar__year" id="year"></div>
-                    <div class="calendar__next" id="next-month">&#9654;</div>
-                </div>
-            
-                <div class="calendar__week">
-                    <div class="calendar__day calendar__item">Mon</div>
-                    <div class="calendar__day calendar__item">Tue</div>
-                    <div class="calendar__day calendar__item">Wed</div>
-                    <div class="calendar__day calendar__item">Thu</div>
-                    <div class="calendar__day calendar__item">Fri</div>
-                    <div class="calendar__day calendar__item">Sat</div>
-                    <div class="calendar__day calendar__item">Sun</div>
-                </div>
-            
-                <div class="calendar__dates" id="dates"></div>
-            </div>
+<div class="col2" >
+<iframe src="calendario.php" frameBorder="0" height="710" width="600"  title="Iframe Example"></iframe>
+</div>
+
+
 
         </div>
+
+
 <script src="../JS/scripts.js"></script>
 <footer id="footer">
         <img src="../imagenes/logo-footer.png" class="logo">

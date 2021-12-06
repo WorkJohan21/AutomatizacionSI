@@ -49,24 +49,24 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php while ($ordenes=$sql->fetch(PDO::FETCH_OBJ)) {  ?>
+                            <?php while ($solicitud=$sql->fetch(PDO::FETCH_OBJ)) {  ?>
                             <tr>
-                                <td> <?php echo $ordenes->nombreEvento; ?> </td>
+                                <td> <?php echo $solicitud->nombreEvento; ?> </td>
                                 <td>
                                     <form action="../procesos/administrarEvento.php" method="POST">
-                                        <input type="hidden" class="textoCuerpoBlack" name="aceptar" value="<?php echo $ordenes->idSolicitud; ?>">
+                                        <input type="hidden" class="textoCuerpoBlack" name="aceptar" value="<?php echo $solicitud->idSolicitud; ?>">
                                         <button class="butonLogout" type="submit">Aceptar</button>
                                     </form>
                                 </td>
                                 <td>
                                     <form action="../procesos/administrarEvento.php" method="POST">
-                                        <input type="hidden" class="textoCuerpoBlack" name="rechazar" value="<?php echo $ordenes->idSolicitud; ?>">
+                                        <input type="hidden" class="textoCuerpoBlack" name="rechazar" value="<?php echo $solicitud->idSolicitud; ?>">
                                         <button class="butonLogout" type="submit">Rechazar</button>
                                     </form>
                                 </td>
                                 <td>
                                     <form action="../procesos/administrarEvento.php" method="POST">
-                                        <input type="hidden" class="textoCuerpoBlack" name="modificar" value="<?php echo $ordenes->idSolicitud; ?>">
+                                        <input type="hidden" class="textoCuerpoBlack" name="modificar" value="<?php echo $solicitud->idSolicitud; ?>">
                                         <button class="butonLogout" type="submit">Modificar</button>
                                     </form>
                                 </td>

@@ -3,14 +3,14 @@
     include("../procesos/verificar.php");
     include("../procesos/consultaUser.php");
 
-    $sql=$conn->query("SELECT * FROM solicitud");
+    $sql=$conn->query("SELECT * FROM orden");
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Solicitudes de Eventos</title>
+	<title>Solicitudes de Equipos</title>
 	<link rel="stylesheet" type="text/css" href="../CSS/estilo.css">
     <link rel="icon" type="image/x-icon" href="../imagenes/logo.png">
 	<meta name ="viewport" content ="width=device-width, initial-scale=1, shrink-to-fill=no">
@@ -34,7 +34,7 @@
             </header>
             <br><br>
             <div class="centrar">
-                <h3 class="titulosHeaderBlack">LISTA DE SOLICITUDES DE EVENTOS</h3>
+                <h3 class="titulosHeaderBlack">LISTA DE SOLICITUDES DE EQUIPOS</h3>
             </div>
             <!--PRIMER DIV --><br><br>
                 <div class=centrar>
@@ -51,22 +51,22 @@
                         <tbody>
                             <?php while ($ordenes=$sql->fetch(PDO::FETCH_OBJ)) {  ?>
                             <tr>
-                                <td> <?php echo $ordenes->nombreEvento; ?> </td>
+                                <td> <?php echo $ordenes->nomActividad2; ?> </td>
                                 <td>
-                                    <form action="../procesos/administrarEvento.php" method="POST">
-                                        <input type="hidden" class="textoCuerpoBlack" name="aceptar" value="<?php echo $ordenes->idSolicitud; ?>">
+                                    <form action="../procesos/aceptar.php" method="POST">
+                                        <input type="hidden" class="textoCuerpoBlack" name="aceptar" value="<?php echo $ordenes->idOrden; ?>">
                                         <button class="butonLogout" type="submit">Aceptar</button>
                                     </form>
                                 </td>
                                 <td>
-                                    <form action="../procesos/administrarEvento.php" method="POST">
-                                        <input type="hidden" class="textoCuerpoBlack" name="rechazar" value="<?php echo $ordenes->idSolicitud; ?>">
+                                    <form action="../procesos/aceptar.php" method="POST">
+                                        <input type="hidden" class="textoCuerpoBlack" name="rechazar" value="<?php echo $ordenes->idOrden; ?>">
                                         <button class="butonLogout" type="submit">Rechazar</button>
                                     </form>
                                 </td>
                                 <td>
-                                    <form action="../procesos/administrarEvento.php" method="POST">
-                                        <input type="hidden" class="textoCuerpoBlack" name="modificar" value="<?php echo $ordenes->idSolicitud; ?>">
+                                    <form action="../procesos/aceptar.php" method="POST">
+                                        <input type="hidden" class="textoCuerpoBlack" name="modificar" value="<?php echo $ordenes->idOrden; ?>">
                                         <button class="butonLogout" type="submit">Modificar</button>
                                     </form>
                                 </td>

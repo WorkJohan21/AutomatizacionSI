@@ -83,6 +83,11 @@
             </div>
             <br><br><br>
 
+            <div class="cajaopc">
+                <a href="aprobarEquipo.php"><button class="opciones"><img src="../imagenes/formulario.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Lista de Solicitudes de Equipos</h5></button></a>
+            </div>
+            <br><br><br>
+
         <?php } ?>
 </div>
 

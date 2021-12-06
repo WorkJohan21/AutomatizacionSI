@@ -427,3 +427,14 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Siste
     5. Modifique la pagina MenuPrincipal para mostrar el nuevo calendario, poniendole un iFrame 
     (no pude externalizarle los css x problemas de referencias child/parent) 
 
+6/12/21
+
+    -Christian
+
+    Dividí las solicitudes en solicitudes de equipos y solicitudes de eventos, ahora son 2 páginas diferentes.
+
+    Las solicitudes de equipo funcionan bien.
+    
+    A las solicitudes de eventos, tengo que arreglarles el archivo que las procesa ya que no actualiza el estado del evento, no sé si algo más se daño, creo que más nada. 
+
+    A luego veo si lo arregló o si alguien sabe como hay que modificar la consulta para que funcione se lo agradecería.

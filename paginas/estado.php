@@ -7,6 +7,10 @@
 	INNER JOIN orden_usuario ON orden.idOrden=orden_usuario.idOrden
 	INNER JOIN usuario ON usuario.id=orden_usuario.idUsuario
 	WHERE usuario.id='$datoUser->id'");
+
+	$sql2=$conn->query("SELECT solicitud.nombreEvento, solicitud.estado FROM solicitud 
+	INNER JOIN usuario ON usuario.id=solicitud.idUsuario
+	WHERE usuario.id='$datoUser->id'");
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,18 +43,30 @@
 				<table align="center" cellspacing="20" cellpadding="10">
 					<thead>
 						<tr>
-							<th class="titulosHeaderBlack">Evento</th>
+							<th class="titulosHeaderBlack">Solicitud de Evento</th>
+							<th class="titulosHeaderBlack">Estado</th>
+							<th class="titulosHeaderBlack">Solicitud de Equipo</th>
 							<th class="titulosHeaderBlack">Estado</th>
 						</tr>
 					</thead>
+					
 					<tbody>
-						<?php while ($estado=$sql->fetch(PDO::FETCH_OBJ)) {  ?>
-                            <tr>
-                            	<td class="textoCuerpoBlack"> <?php echo $estado->nomActividad2; ?> </td>
-								<td class="textoCuerpoBlack"> <?php echo $estado->estado; ?> </td>
-                        	</tr>
-                        <?php } ?>
+							<?php while ($estado=$sql->fetch(PDO::FETCH_OBJ)) {  ?>
+                            	<tr>							
+									<td class="textoCuerpoBlack"> <?php echo $estado->nomActividad2; ?> </td>
+									<td class="textoCuerpoBlack"> <?php echo $estado->estado; ?> </td>																						
+
+								<?php while ($estado2=$sql2->fetch(PDO::FETCH_OBJ)) {  ?>
+									<td class="textoCuerpoBlack"> <?php echo $estado2->nombreEvento; ?> </td>
+									<td class="textoCuerpoBlack"> <?php echo $estado2->estado; ?> </td>
+								</tr>	
+                       			<?php } ?>						
+
+							<?php } ?>	
+
+						
 					</tbody>
+
 				</table>
 			</div>
 

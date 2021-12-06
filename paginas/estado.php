@@ -43,9 +43,9 @@
 				<table align="center" cellspacing="20" cellpadding="10">
 					<thead>
 						<tr>
-							<th class="titulosHeaderBlack">Solicitud de Evento</th>
-							<th class="titulosHeaderBlack">Estado</th>
 							<th class="titulosHeaderBlack">Solicitud de Equipo</th>
+							<th class="titulosHeaderBlack">Estado</th>
+							<th class="titulosHeaderBlack">Solicitud de Evento</th>
 							<th class="titulosHeaderBlack">Estado</th>
 						</tr>
 					</thead>

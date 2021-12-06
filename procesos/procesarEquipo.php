@@ -67,7 +67,7 @@ if (isset ($_REQUEST['nomActividad'])&& isset($_REQUEST['lugarActividad']))
       $cantNueva=$cantActual-$cant[$especificoCantidad];
 
       //Ahora que se tiene el nuevo valor de cantidad de equipos disponibles, vamos a actualizar el campo cantDispo en la tabla equipo de la BD
-      $cantUpdate=$conn->exec("UPDATE equipo SET cantDispo='$cantNueva' WHERE idEquipo='$seleccionados'");
+      //$cantUpdate=$conn->exec("UPDATE equipo SET cantDispo='$cantNueva' WHERE idEquipo='$seleccionados'");
 
 
       //Los BindParam
@@ -96,15 +96,18 @@ if (isset ($_REQUEST['nomActividad'])&& isset($_REQUEST['lugarActividad']))
       echo ("Otro error ");
       echo $e;
     }
+    echo'<script type="text/javascript">alert("Error, intente de nuevo");window.location.href="../paginas/formEvento.php";</script>';
   }
+  echo'<script type="text/javascript">alert("Se ha registrado su orden de equipo con éxito");window.location.href="../paginas/menuPrincipal.php";</script>';
   //$msg="Error de Conexion a la BD";
-  header ('Location: ../paginas/formEquipo.php');
+  //header ('Location: ../paginas/formEquipo.php');
  
 }
 else
 {
   echo "NO ESTA DEFINIDO";
-  echo '<meta http-equiv="refresh" content="5; url=../paginas/formEquipo.php">';
+  echo'<script type="text/javascript">alert("No se ha podido registrar su solicitud, intentelo de nuevo");window.location.href="../paginas/formEquipo.php";</script>';
+  //echo '<meta http-equiv="refresh" content="5; url=../paginas/formEquipo.php">';
 }
 
 ?>

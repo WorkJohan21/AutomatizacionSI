@@ -433,8 +433,10 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Siste
 
     Dividí las solicitudes en solicitudes de equipos y solicitudes de eventos, ahora son 2 páginas diferentes.
 
-    Las solicitudes de equipo funcionan bien.
+    Las solicitudes de equipo funcionan bien. Las de eventos no
     
     A las solicitudes de eventos, tengo que arreglarles el archivo que las procesa ya que no actualiza el estado del evento, no sé si algo más se daño, creo que más nada. 
+
+    El archivo que administra los eventos ahora es administrarEvento.php, y aceptar.php sigue siendo el de equipos
 
     A luego veo si lo arregló o si alguien sabe como hay que modificar la consulta para que funcione se lo agradecería.

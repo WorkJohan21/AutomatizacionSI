@@ -39,13 +39,35 @@
 				<h3 class="titulosHeader">Universidad Tecnológica de Panamá<br>Departamento de Protocolo, Ceremonial y Eventos<br><i>"Camino a la excelencia a través del mejoramiento continuo"</i></h3>
 			</header>
 			<br><br>
+
+			<div class="centrar">
+				<table align="center" cellspacing="20" cellpadding="10">
+					<thead>
+						<tr>
+							<th class="titulosHeaderBlack">Solicitud de Evento</th>
+							<th class="titulosHeaderBlack">Estado</th>
+						</tr>
+					</thead>
+					
+					<tbody>
+						<?php while ($estado2=$sql2->fetch(PDO::FETCH_OBJ)) {  ?>
+							<td class="textoCuerpoBlack"> <?php echo $estado2->nombreEvento; ?> </td>
+							<td class="textoCuerpoBlack"> <?php echo $estado2->estado; ?> </td>
+						</tr>	
+						<?php } ?>			
+					</tbody>
+
+				</table>
+			</div>
+
+			<br>
+			<br>
+
 			<div class="centrar">
 				<table align="center" cellspacing="20" cellpadding="10">
 					<thead>
 						<tr>
 							<th class="titulosHeaderBlack">Solicitud de Equipo</th>
-							<th class="titulosHeaderBlack">Estado</th>
-							<th class="titulosHeaderBlack">Solicitud de Evento</th>
 							<th class="titulosHeaderBlack">Estado</th>
 						</tr>
 					</thead>
@@ -54,17 +76,8 @@
 							<?php while ($estado=$sql->fetch(PDO::FETCH_OBJ)) {  ?>
                             	<tr>							
 									<td class="textoCuerpoBlack"> <?php echo $estado->nomActividad2; ?> </td>
-									<td class="textoCuerpoBlack"> <?php echo $estado->estado; ?> </td>																						
-
-								<?php while ($estado2=$sql2->fetch(PDO::FETCH_OBJ)) {  ?>
-									<td class="textoCuerpoBlack"> <?php echo $estado2->nombreEvento; ?> </td>
-									<td class="textoCuerpoBlack"> <?php echo $estado2->estado; ?> </td>
-								</tr>	
-                       			<?php } ?>						
-
+									<td class="textoCuerpoBlack"> <?php echo $estado->estado; ?> </td>					
 							<?php } ?>	
-
-						
 					</tbody>
 
 				</table>

@@ -431,9 +431,11 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Siste
 
     -Christian
 
-    Dividí las solicitudes en solicitudes de equipos y solicitudes de eventos, ahora son 2 páginas diferentes.
+    Ahora el estado de la solicitud muestra los dos tipos de solicitudes y estan separadas en dos columnas según el tipo de solicitud y cada una tiene su esstado independiente.
 
-    Las solicitudes de equipo funcionan bien. Las de eventos no
+    Dividí las solicitudes en solicitudes de equipos y solicitudes de eventos, ahora son 2 páginas diferentes, esto es para el admin.
+
+    Las solicitudes de equipo funcionan bien. Las de eventos no.
     
     A las solicitudes de eventos, tengo que arreglarles el archivo que las procesa ya que no actualiza el estado del evento, no sé si algo más se daño, creo que más nada. 
 

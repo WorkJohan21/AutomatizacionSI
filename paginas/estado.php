@@ -28,6 +28,21 @@
 
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+		table {
+		  border-collapse: collapse;
+		  width: 80%;
+		}
+		th{
+			background-color: #B7A57A;
+		}
+		th, td {
+		  text-align: left;
+		  border-bottom: 1px solid #DDD;
+		  border: 1px purple;
+  		  border-radius: 20px;
+		}
+
+		tr:hover {background-color: #D3C0D3;}
 	</style>
 </head>
 <body class="cuerpo">
@@ -44,8 +59,8 @@
 				<table align="center" cellspacing="20" cellpadding="10">
 					<thead>
 						<tr>
-							<th class="titulosHeaderBlack">Solicitud de Evento</th>
-							<th class="titulosHeaderBlack">Estado</th>
+							<th class="titulosHeaderBlack" style="text-align: center;">Solicitud de Evento</th>
+							<th class="titulosHeaderBlack" style="text-align: center;">Estado</th>
 						</tr>
 					</thead>
 					
@@ -67,8 +82,8 @@
 				<table align="center" cellspacing="20" cellpadding="10">
 					<thead>
 						<tr>
-							<th class="titulosHeaderBlack">Solicitud de Equipo</th>
-							<th class="titulosHeaderBlack">Estado</th>
+							<th class="titulosHeaderBlack" style="text-align: center;">Solicitud de Equipo</th>
+							<th class="titulosHeaderBlack" style="text-align: center;">Estado</th>
 						</tr>
 					</thead>
 					

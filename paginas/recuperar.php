@@ -45,7 +45,7 @@
 
          <div class="mt-4">
              <div class="d-flex justify-content-center links">
-                 <label class="textoCuerpoBlack">Aun no tiene cuenta?</label><a href="../paginas/registro.php" class="ml-2"><label class="textoCuerpoBlack"></label>Registrese aqui</label></a>
+             <label class="textoCuerpoBlack">¿Aun no tiene cuenta? </label><a style="text-decoration:none" href="registro.php" class="ml-2"><label class="textoCuerpoBlack"></label> Registrese aquí</label></a>
              </div>
          </div>
       </form>

@@ -51,7 +51,7 @@
 
                 <div class="checkbox mb-3">
                     <br><label>
-                        <input type="checkbox" value="remember-me">Recordar Usuario
+                        <input type="checkbox" value="remember-me"> Recordar Usuario
                     </label>
                 </div>
 
@@ -61,11 +61,11 @@
            
             <div class="mt-4">
                 <div class="d-flex justify-content-center links">
-                    <label class="textoCuerpoBlack">Aun no tiene cuenta?</label><a href="paginas/registro.php" class="ml-2"><label class="textoCuerpoBlack"></label>Registrese aqui</label></a>
+                    <label class="textoCuerpoBlack">¿Aun no tiene cuenta? </label><a style="text-decoration:none" href="paginas/registro.php" class="ml-2"><label class="textoCuerpoBlack"></label> Registrese aquí</label></a>
                 </div>
                 
                 <div class="d-flex justify-content-center links">
-                    <a href="paginas/recuperar.php" class="ml-2">Olvido su contrasena</a>
+                    <a style="text-decoration:none" href="paginas/recuperar.php" class="ml-2">¿Olvidó su contraseña?</a>
                     
                 </div>
             </div>

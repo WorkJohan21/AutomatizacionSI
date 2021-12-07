@@ -87,100 +87,119 @@
         {
             $especificoImprenta=$im-1;
             echo "<br>".$im." n de copias ".$copias[$especificoImprenta]." n de originales ".$originales[$especificoImprenta]." tamano ".$tamanoImprenta[$especificoImprenta]." tipo".$materialImprenta[$especificoImprenta]." color".$colorImprenta[$especificoImprenta]."<br>";
-        }*/
+        }*/        
+        $sql7=$conn->query("SELECT * FROM solicitud");
 
-        $datos = new Solicitud($nombreEvento,$fecha,$horaInicio,$horaFinal,$observacion,$lugar,$facultad,$actividad,$idUsuario,$estado);
-        $insercionSolicitud=$conn->prepare("INSERT INTO solicitud (nombreEvento,fechaEvento,horaInicio,horaFinal,observacion,idLugar,idFacultad,idActividad,idUsuario,estado) VALUES (:nombreEvento,:fechaEvento,:horaInicio,:horaFinal,:observacion,:idLugar,:idFacultad,:idActividad,:idUsuario,:estado)");
-       
-        try
-        {
-            //Insercion en la tabla solicitud
-            $insercionSolicitud->execute((array)$datos);
+        $cond = 0;
 
-            //Obtencion del idSolicitud del registro que se acaba de introducir
-            $result=$conn->query("SELECT * FROM solicitud WHERE nombreEvento='$nombreEvento'");
-            $datosSolicitud=$result->fetch(PDO::FETCH_OBJ);
-            $idSolicitud=$datosSolicitud->idSolicitud;
-
-
-            //Procedemos a la insercion de los servicios de protocolo
-            $insercionProtocolo=$conn->prepare("INSERT INTO solicitud_protocolo (idSolicitud, idProtocolo) VALUES (:idSolicitud, :idProtocolo)");
-
-            //Primero con los protocolos de precedencia
-            foreach ($precedencia as $p)
-            {
-                $datosProPrecedencia = new solicitud_protocolo($idSolicitud,$p);
-                $insercionProtocolo->execute((array)$datosProPrecedencia);
+        while($solicitud=$sql7->fetch(PDO::FETCH_OBJ))
+        { 
+            if(($solicitud->fechaEvento == $fecha) and ($solicitud->idLugar == $lugar)){
+                if($horaInicio < $horaFinal){
+                    if((($horaInicio >= $solicitud->horaInicio) and ($horaInicio <= $solicitud->horaFinal)) or (($horaFinal >= $solicitud->horaInicio) and  ($horaFinal <= $solicitud->horaFinal)))
+                        $cond=1;
+                }
+                else{ $cond=1; }
             }
-
-            //Ahora los protocolos de planeacion
-            foreach ($planeacion as $pla)
-            {
-                $datosProPlaneacion = new solicitud_protocolo($idSolicitud,$pla);
-                $insercionProtocolo->execute((array)$datosProPlaneacion);
-            }
-
-             //Ahora los protocolos de precedencia 2
-            foreach ($protocoloPrecedencia as $pPre)
-            {
-                $datosProPrecedencia2 = new solicitud_protocolo($idSolicitud,$pPre);
-                $insercionProtocolo->execute((array)$datosProPrecedencia2);
-            }
-
-            //Ahora los protocolos de contenido
-            foreach ($protocoloContenido as $c)
-            {
-                $datosProContenido = new solicitud_protocolo($idSolicitud,$c);
-                $insercionProtocolo->execute((array)$datosProContenido);
-            }
-
-            //Esos serian todos los de protocolo
-
-            //Se sigue con los servicios de prensa
-            //Procedemos con el query de insercion
-            $insercionPrensa=$conn->prepare("INSERT INTO solicitud_prensa (idSolicitud,idPrensa) VALUES (:idSolicitud,:idPrensa)");
-
-            foreach ($prensa as $pren)
-            {
-                $datosPrensa = new solicitud_prensa($idSolicitud,$pren);
-                $insercionPrensa->execute((array)$datosPrensa);
-            }
-
-
-            //Ahora siguen los protocolos de diseno
-            $especificoDiseno;
-            $insercionDiseno=$conn->prepare("INSERT INTO solicitud_diseno (idSolicitud, idDiseno, tamano, orientacion) VALUES (:idSolicitud, :idDiseno, :tamano, :orientacion)");
-            foreach ($nombreDiseno as $nd)
-            {
-                $especificoDiseno=$nd-1;
-                $datosDiseno = new solicitud_diseno($idSolicitud,$nd,$tamanoDiseno[$especificoDiseno],$orientacionDiseno[$especificoDiseno]);
-                $insercionDiseno->execute((array)$datosDiseno);
-            }
-
-
-            //Ahora siguen los protocolos de imprenta
-            $especificoImprenta;
-            $insercionImprenta=$conn->prepare("INSERT INTO solicitud_imprenta (idSolicitud,idImprenta,nCopias,nOriginales,tipoMaterial,tamanoMaterial,colo) VALUES (:idSolicitud,:idImprenta,:nCopias,:nOriginales,:tipoMaterial,:tamanoMaterial,:colo)");
-            foreach ($imprenta as $im)
-            {
-                $especificoImprenta=$im-1;
-                $datosImprenta = new solicitud_imprenta($idSolicitud,$im,$copias[$especificoImprenta],$originales[$especificoImprenta],$materialImprenta[$especificoImprenta],$tamanoImprenta[$especificoImprenta],$colorImprenta[$especificoImprenta]);
-                $insercionImprenta->execute((array)$datosImprenta);
-            }
-
         }
-        catch (PDOException $e){
-            if ($e->errorInfo[1]==1062){ //error de duplicacion de datos
-            $msg="Correo electronico ya esta registrado en el sistema";
-            }else{
-              echo ("Otro error ");
-              echo $e;
+
+        if($cond == 1){ 
+            echo'<script type="text/javascript">alert("Ya existe un evento programado en el lugar para el día y la hora seleccionada.");window.location.href="../paginas/formEvento.php";</script>';
+        }
+        else{
+            $datos = new Solicitud($nombreEvento,$fecha,$horaInicio,$horaFinal,$observacion,$lugar,$facultad,$actividad,$idUsuario,$estado);
+            $insercionSolicitud=$conn->prepare("INSERT INTO solicitud (nombreEvento,fechaEvento,horaInicio,horaFinal,observacion,idLugar,idFacultad,idActividad,idUsuario,estado) VALUES (:nombreEvento,:fechaEvento,:horaInicio,:horaFinal,:observacion,:idLugar,:idFacultad,:idActividad,:idUsuario,:estado)");
+           
+            try
+            {
+                //Insercion en la tabla solicitud
+                $insercionSolicitud->execute((array)$datos);
+
+                //Obtencion del idSolicitud del registro que se acaba de introducir
+                $result=$conn->query("SELECT * FROM solicitud WHERE nombreEvento='$nombreEvento'");
+                $datosSolicitud=$result->fetch(PDO::FETCH_OBJ);
+                $idSolicitud=$datosSolicitud->idSolicitud;
+
+
+                //Procedemos a la insercion de los servicios de protocolo
+                $insercionProtocolo=$conn->prepare("INSERT INTO solicitud_protocolo (idSolicitud, idProtocolo) VALUES (:idSolicitud, :idProtocolo)");
+
+                //Primero con los protocolos de precedencia
+                foreach ($precedencia as $p)
+                {
+                    $datosProPrecedencia = new solicitud_protocolo($idSolicitud,$p);
+                    $insercionProtocolo->execute((array)$datosProPrecedencia);
+                }
+
+                //Ahora los protocolos de planeacion
+                foreach ($planeacion as $pla)
+                {
+                    $datosProPlaneacion = new solicitud_protocolo($idSolicitud,$pla);
+                    $insercionProtocolo->execute((array)$datosProPlaneacion);
+                }
+
+                 //Ahora los protocolos de precedencia 2
+                foreach ($protocoloPrecedencia as $pPre)
+                {
+                    $datosProPrecedencia2 = new solicitud_protocolo($idSolicitud,$pPre);
+                    $insercionProtocolo->execute((array)$datosProPrecedencia2);
+                }
+
+                //Ahora los protocolos de contenido
+                foreach ($protocoloContenido as $c)
+                {
+                    $datosProContenido = new solicitud_protocolo($idSolicitud,$c);
+                    $insercionProtocolo->execute((array)$datosProContenido);
+                }
+
+                //Esos serian todos los de protocolo
+
+                //Se sigue con los servicios de prensa
+                //Procedemos con el query de insercion
+                $insercionPrensa=$conn->prepare("INSERT INTO solicitud_prensa (idSolicitud,idPrensa) VALUES (:idSolicitud,:idPrensa)");
+
+                foreach ($prensa as $pren)
+                {
+                    $datosPrensa = new solicitud_prensa($idSolicitud,$pren);
+                    $insercionPrensa->execute((array)$datosPrensa);
+                }
+
+
+                //Ahora siguen los protocolos de diseno
+                $especificoDiseno;
+                $insercionDiseno=$conn->prepare("INSERT INTO solicitud_diseno (idSolicitud, idDiseno, tamano, orientacion) VALUES (:idSolicitud, :idDiseno, :tamano, :orientacion)");
+                foreach ($nombreDiseno as $nd)
+                {
+                    $especificoDiseno=$nd-1;
+                    $datosDiseno = new solicitud_diseno($idSolicitud,$nd,$tamanoDiseno[$especificoDiseno],$orientacionDiseno[$especificoDiseno]);
+                    $insercionDiseno->execute((array)$datosDiseno);
+                }
+
+
+                //Ahora siguen los protocolos de imprenta
+                $especificoImprenta;
+                $insercionImprenta=$conn->prepare("INSERT INTO solicitud_imprenta (idSolicitud,idImprenta,nCopias,nOriginales,tipoMaterial,tamanoMaterial,colo) VALUES (:idSolicitud,:idImprenta,:nCopias,:nOriginales,:tipoMaterial,:tamanoMaterial,:colo)");
+                foreach ($imprenta as $im)
+                {
+                    $especificoImprenta=$im-1;
+                    $datosImprenta = new solicitud_imprenta($idSolicitud,$im,$copias[$especificoImprenta],$originales[$especificoImprenta],$materialImprenta[$especificoImprenta],$tamanoImprenta[$especificoImprenta],$colorImprenta[$especificoImprenta]);
+                    $insercionImprenta->execute((array)$datosImprenta);
+                }
+
             }
-            echo $e;
-            echo'<script type="text/javascript">alert("Error, intente de nuevo");window.location.href="../paginas/formEvento.php";</script>';
-          }
-          //header ('Location: ../paginas/menuPrincipal.php');
-          echo'<script type="text/javascript">alert("Solicitud creada exitosamente");window.location.href="../paginas/menuPrincipal.php";</script>';
+            catch (PDOException $e){
+                if ($e->errorInfo[1]==1062){ //error de duplicacion de datos
+                $msg="Correo electronico ya esta registrado en el sistema";
+                }else{
+                  echo ("Otro error ");
+                  echo $e;
+                }
+                echo $e;
+                echo'<script type="text/javascript">alert("Error, intente de nuevo");window.location.href="../paginas/formEvento.php";</script>';
+              }
+              //header ('Location: ../paginas/menuPrincipal.php');
+            echo'<script type="text/javascript">alert("Solicitud creada exitosamente");window.location.href="../paginas/menuPrincipal.php";</script>';
+        }
     }
     else
     {

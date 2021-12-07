@@ -436,3 +436,14 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Siste
     Las listas de solicitudes de eventos y la lista de equipos ya funcionan
     
     El archivo que administra los eventos ahora es administrarEvento.php, y aceptar.php sigue siendo el de equipos
+
+7/12/21
+
+    -Edwin
+    Disculpen que haga esto a cada rato, pero agregue un campo a la tabla orden_equipo, para manejar que equipos han sido devueltos
+    Este es el sql
+    ALTER TABLE orden_equipo
+    ADD estadoEquipo varchar(100)
+    DEFAULT 'Pendiente'
+
+    Se agregaron 2 archivos, devolverEquipos.php y retiroEquipos.php, que son los encargados de devolver los equipos a la BD

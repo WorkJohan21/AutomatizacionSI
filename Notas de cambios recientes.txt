@@ -449,4 +449,5 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Siste
     Se agregaron 2 archivos, devolverEquipos.php y retiroEquipos.php, que son los encargados de devolver los equipos a la BD
 
     -Leo
-    Se aseguró que las solicitudes de Eventos no choquen <Proceso en procesarEvento.php>
+    Se aseguró que las solicitudes de Eventos no choquen <Proceso en procesarEvento.php>.
+    Se mejoró el estilo de los estados de solicitudes de eventos.

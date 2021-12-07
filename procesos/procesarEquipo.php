@@ -51,10 +51,12 @@ if (isset ($_REQUEST['nomActividad'])&& isset($_REQUEST['lugarActividad']))
 
     //Insercion para la tabla orden_equipo
     $especificoCantidad;
-    $insercion2=$conn->prepare("INSERT INTO orden_equipo (idOrden, idEquipo, cantSolicitada) VALUES (:idOrden, :idEquipo, :cantSolicitada)");
+    $insercion2=$conn->prepare("INSERT INTO orden_equipo (idOrden, idEquipo, cantSolicitada, estadoEquipo) VALUES (:idOrden, :idEquipo, :cantSolicitada, :estadoEquipo)");
 
     foreach ($equipo as $seleccionados)
     {
+      $estadoEquipo="Pendiente";
+
       //Esta variable va a seleccionar el valor correspondiente del arreglo de cantidad de equipos solicitados($cant) en base al equipo que se selecciono
       $especificoCantidad=$seleccionados-1;
 
@@ -74,6 +76,7 @@ if (isset ($_REQUEST['nomActividad'])&& isset($_REQUEST['lugarActividad']))
       $insercion2->bindParam(':idOrden',$idOrden,PDO::PARAM_INT);
       $insercion2->bindParam(':idEquipo',$seleccionados,PDO::PARAM_INT);
       $insercion2->bindParam(':cantSolicitada',$cant[$especificoCantidad],PDO::PARAM_INT);
+      $insercion2->bindParam(':estadoEquipo',$estadoEquipo, PDO::PARAM_STR,100);
 
       $insercion2->execute();
     }

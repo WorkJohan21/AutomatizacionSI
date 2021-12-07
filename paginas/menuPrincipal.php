@@ -81,12 +81,16 @@
             <div class="cajaopc">
                 <a href="aprobarEvento.php"><button class="opciones"><img src="../imagenes/formulario.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Lista de Solicitudes de Eventos</h5></button></a>
             </div>
-            <br><br><br>
+            <br><br>
 
             <div class="cajaopc">
                 <a href="aprobarEquipo.php"><button class="opciones"><img src="../imagenes/formulario.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Lista de Solicitudes de Equipos</h5></button></a>
             </div>
-            <br><br><br>
+            <br><br>
+
+            <div class="cajaopc">
+                <a href="retiroEquipos.php"><button class="opciones"><img src="../imagenes/formulario.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Devolución de Equipos</h5></button></a>
+            </div>
 
         <?php } ?>
 </div>

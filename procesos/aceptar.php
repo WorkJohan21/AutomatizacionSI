@@ -18,6 +18,8 @@
             $cantNueva=$cantActual-$cant;
             
             $cantUpdate=$conn->exec("UPDATE equipo SET cantDispo='$cantNueva' WHERE idEquipo='$orden_equipo->idEquipo'");
+
+            $estadoUpdate=$conn->exec("UPDATE orden_equipo SET estadoEquipo='Aprobado' WHERE idOrden='$idOrden' AND idEquipo='$orden_equipo->idEquipo'");
         }
 
         $sql=$conn->query("UPDATE orden SET estado='Aprobado' WHERE idOrden='$idOrden'");

@@ -66,8 +66,8 @@
 					
 					<tbody>
 						<?php while ($estado2=$sql2->fetch(PDO::FETCH_OBJ)) {  ?>
-							<td class="textoCuerpoBlack" style="text-align: center;"> <?php echo $estado2->nombreEvento; ?> </td>
-							<td class="textoCuerpoBlack" style="text-align: center;"> <?php echo $estado2->estado; ?> </td>
+							<td class="textoCuerpoBlack"> <?php echo $estado2->nombreEvento; ?> </td>
+							<td class="textoCuerpoBlack"> <?php echo $estado2->estado; ?> </td>
 						</tr>	
 						<?php } ?>			
 					</tbody>
@@ -90,24 +90,13 @@
 					<tbody>
 							<?php while ($estado=$sql->fetch(PDO::FETCH_OBJ)) {  ?>
                             	<tr>							
-									<td class="textoCuerpoBlack" style="text-align: center;"> <?php echo $estado->nomActividad2; ?> </td>
-									<td class="textoCuerpoBlack" style="text-align: center;"> <?php echo $estado->estado; ?> </td>					
+									<td class="textoCuerpoBlack"> <?php echo $estado->nomActividad2; ?> </td>
+									<td class="textoCuerpoBlack"> <?php echo $estado->estado; ?> </td>					
 							<?php } ?>	
 					</tbody>
 
 				</table>
 			</div>
-
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
 
 			<div>
             	<a href="menuPrincipal.php"><button class="redondo espacioBoton5" type="submit"><label class="textoCuerpo">REGRESAR</label></button></a>

@@ -98,6 +98,15 @@
 				</table>
 			</div>
 
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
 			<div>
             	<a href="menuPrincipal.php"><button class="redondo espacioBoton5" type="submit"><label class="textoCuerpo">REGRESAR</label></button></a>
             <div>

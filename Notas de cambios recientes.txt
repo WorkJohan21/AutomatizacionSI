@@ -451,3 +451,6 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Siste
     -Leo
     Se aseguró que las solicitudes de Eventos no choquen <Proceso en procesarEvento.php>.
     Se mejoró el estilo de los estados de solicitudes de eventos.
+
+    -Christian
+    Le añadí espacios hacia abajo con la etiqueta <br> en los botones de regresar de las siguientes páginas: estado, aprobarEvento, aprobarEquipo y reitoEquipo

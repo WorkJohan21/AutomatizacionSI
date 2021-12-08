@@ -454,3 +454,13 @@ INSERT INTO departamento (nombreDepa, idFacultad) VALUES ('Departamento de Siste
 
     -Christian
     Le añadí espacios hacia abajo con la etiqueta <br> en los botones de regresar de las siguientes páginas: estado, aprobarEvento, aprobarEquipo y reitoEquipo
+
+
+
+    -Alex
+    Modifique las consultas del calendario.php para recoger datos de orden y solicitud
+    
+    Añadi descripcion de los colores en menuPrincipal
+    
+    Cree un nuevo archivo columnaCalendario.css para separar los estilos, estiloMenu parece q da errores de referencia
+

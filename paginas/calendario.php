@@ -23,7 +23,11 @@
 <?php
 include("../config/conexion.php");
 
-  $SqlEventos   = $conn->query("SELECT idOrden as id, nomActividad2 as evento, fechaActividad as fecha_inicio, fechaActividad as fecha_fin FROM orden WHERE estado ='Aprobado'");
+  $SqlEventos   = $conn->query("
+  SELECT idSolicitud as id, nombreEvento as evento, fechaEvento as fecha_inicio, fechaEvento as fecha_fin,  '#ef5705' as color_evento FROM solicitud WHERE estado ='Aprobado'
+  UNION
+  SELECT idOrden as id, nomActividad2 as evento, fechaActividad as fecha_inicio, fechaActividad as fecha_fin,  '#007b91' as color_evento FROM orden WHERE estado ='Aprobado'
+  ");
  
 
 /*original
@@ -106,7 +110,8 @@ $(document).ready(function() {
           _id: '<?php echo $resulEventos->id; ?>',
           title: '<?php echo $resulEventos->evento; ?>',
           start: '<?php echo $resulEventos->fecha_inicio; ?>',
-          end:   '<?php echo $resulEventos->fecha_fin; ?>'
+          end:   '<?php echo $resulEventos->fecha_fin; ?>',
+          color:  '<?php echo $resulEventos->color_evento; ?>'
           },
         <?php } ?>
     ],

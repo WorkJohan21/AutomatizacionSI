@@ -185,17 +185,6 @@ padding: 10px;
 height: 300px; /* Should be removed. Only for demonstration */
 }
 
-.col1{
-      width: 50%;
-      margin-top: 100px;
-      float: left;
-      
-}
-.col2{
-      width: 50%;
-      display: inline-block;
-}
-
 
 .calendar1{
   position: absolute;
@@ -254,13 +243,4 @@ height: 300px; /* Should be removed. Only for demonstration */
     opacity: .3; }
 
 
-.extCalendar{
-  border: 2px solid; 
-  border-radius: 15px; 
-  padding:5px; 
-  background-color: #e6e6e7;
-}
-.intCalendar{
-  background-color: #FFFFFF; 
-  border-radius: 15px; 
-  margin: 10px;}
+

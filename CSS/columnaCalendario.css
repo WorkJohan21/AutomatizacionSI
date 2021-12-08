@@ -1,0 +1,47 @@
+.labelNaranja{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: #ef5705;
+    border-radius: 5px; 
+    padding:2px;
+    margin-bottom: 3px; 
+    font-size:16px;}
+
+.labelCeleste{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: #007b91;
+    border-radius: 5px; 
+    padding:2px; 
+    font-size:16px;}
+
+.extCalendar{
+  border: 2px solid; 
+  border-radius: 15px; 
+  padding:5px; 
+  background-color: #e6e6e7;
+}
+.intCalendar{
+  background-color: #FFFFFF; 
+  border-radius: 15px; 
+  margin: 10px;}
+
+.parteizquierda{
+    width: 50%;
+    margin-top: 50px;
+    float: left;
+    
+}
+.partederecha{
+    width: 50%;
+    display: inline-block;
+}
+
+.lblLetra{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.descripcion{
+    margin-left: 100px;;
+}

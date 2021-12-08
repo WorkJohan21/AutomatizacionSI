@@ -11,12 +11,12 @@
 	<title>Menu  Principal</title>
 	<link rel="stylesheet" type="text/css" href="../CSS/estiloMenu.css">
     <link rel="stylesheet" type="text/css" href="../CSS/estilo.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/columnaCalendario.css">
     <link rel="icon" type="image/x-icon" href="../imagenes/logo.png">
 	<meta name ="viewport" content ="width=device-width, initial-scale=1, shrink-to-fill=no">
     <meta name ="description" content ="">
     <meta name ="author" content ="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name ="generator" content ="Jekll v4.1.1">
-
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -44,7 +44,7 @@
     <h4 class="titulosHeaderBlack"><?php echo "Bienvenid@: ".$datoUser->nombre." ".$datoUser->apellido."!"; ?></h4>
     <br>
 
-<div class="col1">
+<div class="parteizquierda">
         <?php if ($datoUser->tipoUsuario==2) { ?>  
 
             <div class="cajaopc"> <!--cajaopc2 es el estilo que le quería aplicar pero no funciona, viene de estiloMenu.css-->
@@ -67,9 +67,7 @@
         <?php }?>
 
         <?php if ($datoUser->tipoUsuario==1) { ?>                    
-            
-            <br>
-            <br>
+
 
             <div class="cajaopc">
                 <a href="Inventario.php"><button class="opciones"><img src="../imagenes/caja2.png" width="30px" height="30px"><h5 class="textocuerpoBlack">Inventario</h5></button></a>
@@ -97,14 +95,23 @@
 
 <!--Calendario-->
 
-<div class="col2" >
-<iframe src="calendario.php" frameBorder="0" height="710" width="600"  title="Iframe Example"></iframe>
+<div class="partederecha" >
+<iframe src="calendario.php" frameBorder="0" height="550" width="600"  title="Iframe Example"></iframe>
+<br>
+            <!--DIV DE DESCRIPCION -->
+            <div class="descripcion">   
+            <h5 class="lblLetra">Descripción de Eventos Aprobados:</h5>
+            <br>
+            <label class="labelNaranja">Color Naranja: </label> <label class="lblLetra">Solicitud de Equipos</label> 
+            <br>
+            <label class="labelCeleste" >Color Celeste: </label> <label class="lblLetra">Solititud de Eventos </label>
+            </div>
 </div>
 
 
 
         </div>
-
+<br><br><br>
 
 <script src="../JS/scripts.js"></script>
 <footer id="footer">

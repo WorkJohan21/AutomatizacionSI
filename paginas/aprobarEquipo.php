@@ -79,6 +79,20 @@
                     </table>
                 </div>
                 <div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                
                     <a href="menuPrincipal.php"><button class="redondo espacioBoton5" type="submit"><label class="textoCuerpo">REGRESAR</label></button></a>
                 <div>
                 <br><br>

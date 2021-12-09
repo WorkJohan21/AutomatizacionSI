@@ -102,9 +102,9 @@
             <div class="descripcion">   
             <h5 class="lblLetra">Descripción de Eventos Aprobados:</h5>
             <br>
-            <label class="labelNaranja">Color Naranja: </label> <label class="lblLetra">Solicitud de Equipos</label> 
+            <label class="labelNaranja">Color Naranja: </label> <label class="lblLetra">Solicitud de Eventos</label> 
             <br>
-            <label class="labelCeleste" >Color Celeste: </label> <label class="lblLetra">Solititud de Eventos </label>
+            <label class="labelCeleste" >Color Celeste: </label> <label class="lblLetra">Solititud de Equipos </label>
             </div>
 </div>
 

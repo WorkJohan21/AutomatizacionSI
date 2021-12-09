@@ -36,7 +36,7 @@
 
          <div class="mt-4">
              <label for="email" class="textoCuerpoBlack espaciadoaltura">Correo Electronico: </label>
-             <input type="email" id="email" class="txtbox" placeholder="Ejem: correo@hotmail.com" name="email" size=25>
+             <input type="email" id="email" class="txtbox" placeholder="Ejem: correo@hotmail.com" name="email" size=25 required>
          </div>
          <br>
          <div><?php if(isset($_GET['msg'])) echo $_GET['msg'];?></div>

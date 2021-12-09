@@ -3,7 +3,7 @@
     include("../procesos/verificar.php");
     include("../procesos/consultaUser.php");
 
-    $sql=$conn->query("SELECT * FROM solicitud");
+    $sql=$conn->query("SELECT * FROM solicitud WHERE estado='Pendiente'");
 ?>
 
 <!DOCTYPE html>

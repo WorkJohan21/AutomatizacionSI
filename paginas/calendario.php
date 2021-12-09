@@ -1,7 +1,4 @@
-<!--Autor de Plantilla: Ing. Urian Viera -->
-<!--------- WEB DEVELOPER ------>
-<!--------- URIAN VIERA   ----------->
-<!--------- PORTAFOLIO:  https://blogangular-c7858.web.app  -------->
+
 
 <!DOCTYPE html>
 <html>
@@ -16,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="../CSS/calendar_css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../CSS/calendar_css/home.css">
   <link rel="stylesheet" type="text/css" href="../CSS/estiloMenu.css">
+  <link rel="stylesheet" type="text/css" href="../CSS/columnaCalendario.css">
 
 </head>
 <body>
@@ -30,27 +28,10 @@ include("../config/conexion.php");
   ");
  
 
-/*original
-  $SqlEventos   = ("SELECT * FROM eventoscalendar");
-  $resulEventos = mysqli_query($con, $SqlEventos);
-*/
 ?>
 <!--DIV Externo Calendario -->
 <div class="extCalendar">
-  <!--  <div class="container">
-
-      <div class="row">
-        <div class="col msjs">
-        </div>
-      </div>
-
-    <div class="row">
-      <div class="col-md-12 mb-3">
-      <h3 class="text-center" id="title">Calendario</h3>
-      </div>
-    </div>
-    </div>
--->
+  
 
     <!--DIV Calendario -->
     <div class="intCalendar" id="calendar"></div>

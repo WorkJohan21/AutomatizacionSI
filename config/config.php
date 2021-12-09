@@ -1,6 +1,6 @@
 <?php
-    define("HOST_NAME", "localhost");
-    define("USER_NAME", "estudiante");
-    define("PASS", "utp2021");
-    define("DATABASE", "automatizacion");
+    define("HOST_NAME", "sql110.epizy.com");
+    define("USER_NAME", "epiz_30550074");
+    define("PASS", "NGAGTRcKRm4nE");
+    define("DATABASE", "epiz_30550074_automatizacion");
 ?>

@@ -98,7 +98,7 @@
 							<div class="cajamarron"><!--name nombreActividad-->
 										<label class="textoCuerpoWhite">Nombre completo de la actividad:</label>
 										<input class="txtbox" type="text" id="nombreActividad" name="nombreActividad" size="40" maxlength="40" autofocus 
-										placeholder="Ingrese el nombre de la actividad" title="Escriba el nombre de la actividad"/>
+										placeholder="Ingrese el nombre de la actividad" title="Escriba el nombre de la actividad" required/>
 										<br><br><!--name facultad-->
 										<label class="textoCuerpoWhite"> Facultad o unidad que organiza:</label>  <select name="facultad" id="facultad">
 										<?php while ($facultades=$sql->fetch(PDO::FETCH_OBJ)) { ?>
@@ -109,12 +109,12 @@
 										<!--name fecha-->
 										<label class="textoCuerpoWhite">Fecha del evento:</label>
 										<input class="txtbox" type="date" name="fecha" id="fecha" size="20" maxlength="20" autofocus
-										placeholder="" title="Facultad de la universidad"/>
+										placeholder="" title="Facultad de la universidad" required/>
 										<br><br>
 										<label class="textoCuerpoWhite">Periodo cubierto:</label><!--name horaInicio-->
-										<input type="time" id="horaInicioEvento" class="txtbox" placeholder="" name="horaInicio" id="horaInicio">
+										<input type="time" id="horaInicioEvento" class="txtbox" placeholder="" name="horaInicio" id="horaInicio" required>
 										<label class="textoCuerpoWhite">a</label>
-										<input type="time" id="horaFinEvento" class="txtbox" placeholder="" name="horaFinal" id="horaFinal"><!--name horaFinal-->
+										<input type="time" id="horaFinEvento" class="txtbox" placeholder="" name="horaFinal" id="horaFinal" required><!--name horaFinal-->
 										<br><br>
 										<label class="textoCuerpoWhite">Lugar donde se realizará:</label>  <select name="lugar" id="lugar"><!--name lugar-->
 										<?php while ($lugares=$sql2->fetch(PDO::FETCH_OBJ)) { ?>
@@ -283,7 +283,7 @@
 						<br>
 
 						<h5 class="textoCuerpoWhite">INFORMACIÓN PARA NOTA DE PRENSA:</h5>
-						<textarea name="observacion" rows="8" cols="120" size="20" maxlength="1000" requerided placeholder="" title="Escriba el nombre de la actividad"></textarea>
+						<textarea name="observacion" rows="8" cols="120" size="20" maxlength="1000" required placeholder="" title="Escriba el nombre de la actividad"></textarea>
 						<br>
 						<br>
 						<br>

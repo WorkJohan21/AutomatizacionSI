@@ -136,7 +136,7 @@
                 <input type="text" id="nomSolicitante" class="txtbox" name="nomSolicitante" value="<?php echo $datoUser->nombre." ".$datoUser->apellido; ?>" readonly>
                 <br><br>
                 <label class="textoCuerpoWhite labelEspacio"> Unidad donde labora</label>
-                <select name="unidadLabor" id="unidadLabor" class="txtbox"><!--name unidadLabor-->
+                <select name="unidadLabor" id="unidadLabor" class="txtbox" required><!--name unidadLabor-->
                   <option value="1">Facultad de Ciencias y Tecnología</option>
                   <option value="2">Facultad de Ingeniería Civil</option>
                   <option value="3">Facultad de Ingeniería Eléctrica</option>
@@ -423,7 +423,7 @@
 						</select>       
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Observación de la Solicitud</label>
-            <textarea id="observacion" class="txtbox" name="observacion" rows="5" cols="40" placeholder="Observaciones"></textarea><!--name observacion-->
+            <textarea id="observacion" class="txtbox" name="observacion" rows="5" cols="40" placeholder="Observaciones" required></textarea><!--name observacion-->
             <br><br>
 </div>
 
@@ -432,7 +432,7 @@
             <label class="textoCuerpoWhite ">INFORMACIÓN DEL DÍA DE DEVOLUCIÓN</label>
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Devolución (Fecha)</label>
-            <input type="date" id="fechaDevlucion" class="txtbox" placeholder="" name="fechaDevolucion"><!--name fechaDevolucion-->     
+            <input type="date" id="fechaDevlucion" class="txtbox" placeholder="" name="fechaDevolucion" required><!--name fechaDevolucion-->     
             <br><br>
             <label class="textoCuerpoWhite labelEspacio">Quién Devuelve</label><!--name personaDevlv-->
             <input type="text" id="personaDevlv" class="txtbox" name="personaDevlv" value="<?php echo $datoUser->nombre." ".$datoUser->apellido; ?>"readonly>       

@@ -2,7 +2,7 @@
 	function SolicitarCambioContrasena($email, $hash)
 	{
 		// Host
-		$host="http://localhost/AutomatizacionSI"; //Poner dirección absoluta del host, si no, se creará una carpeta aparte
+		$host="http://dicomesutp.42web.io"; //Poner dirección absoluta del host, si no, se creará una carpeta aparte
 
 		$mensaje="Querido Usuario";
 		// Correo destino
